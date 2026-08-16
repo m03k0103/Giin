@@ -1,0 +1,139 @@
+{
+  "last_updated": "2026-08-16T10:43:50.439024",
+  "sources": [
+    "衆議院公式ウェブサイト (https://www.shugiin.go.jp/)",
+    "参議院公式ウェブサイト (https://www.sangiin.go.jp/)"
+  ],
+  "members": [
+    {
+      "id": "001",
+      "name": "逢沢  一郎",
+      "furigana": "あいさわ いちろう",
+      "house": "衆議院",
+      "party": "自民",
+      "elections": 14,
+      "birthdate": "1954年6月",
+      "birthplace": "岡山県",
+      "school": "慶應義塾大学",
+      "faculty": "工学部",
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/001.html"
+    },
+    {
+      "id": "002",
+      "name": "青木 ひとみ",
+      "furigana": "あおき ひとみ",
+      "house": "衆議院",
+      "party": "参政",
+      "elections": 1,
+      "birthdate": "1981年5月",
+      "birthplace": "群馬県",
+      "school": "渋川看護専門学校",
+      "faculty": "N/A",
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/002.html"
+    },
+    {
+      "id": "003",
+      "name": "青柳  仁士",
+      "furigana": "あおやぎ ひとし",
+      "house": "衆議院",
+      "party": "維新",
+      "elections": 3,
+      "birthdate": "1978年11月",
+      "birthplace": "東京都",
+      "school": "早稲田大学",
+      "faculty": "政治経済学部",
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/003.html"
+    },
+    {
+      "id": "004",
+      "name": "青山  繁晴",
+      "furigana": "あおやま しげはる",
+      "house": "衆議院",
+      "party": "自民",
+      "elections": 1,
+      "birthdate": "1952年7月25日",
+      "birthplace": "兵庫県",
+      "school": "慶應義塾大学",
+      "faculty": "文学部",
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/004.html"
+    },
+    {
+      "id": "005",
+      "name": "青山  周平",
+      "furigana": "あおやま しゅうへい",
+      "house": "衆議院",
+      "party": "自民",
+      "elections": 5,
+      "birthdate": "1977年4月",
+      "birthplace": "愛知県",
+      "school": "法政大学",
+      "faculty": "社会学部",
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/005.html"
+    },
+    {
+      "id": "006",
+      "name": "青木   愛",
+      "furigana": "あおき あい",
+      "house": "参議院",
+      "party": "立憲",
+      "elections": 3,
+      "birthdate": "1965年8月18日",
+      "birthplace": "東京都",
+      "school": "千葉大学",
+      "faculty": "教育学部",
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007006.htm"
+    },
+    {
+      "id": "007",
+      "name": "青木  一彦",
+      "furigana": "あおき かずひこ",
+      "house": "参議院",
+      "party": "自民",
+      "elections": 3,
+      "birthdate": "1961年3月25日",
+      "birthplace": "島根県",
+      "school": "早稲田大学",
+      "faculty": "教育学部",
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010001.htm"
+    },
+    {
+      "id": "008",
+      "name": "青島  健太",
+      "furigana": "あおしま けんた",
+      "house": "参議院",
+      "party": "維新",
+      "elections": 1,
+      "birthdate": "1958年4月7日",
+      "birthplace": "新潟県",
+      "school": "慶應義塾大学",
+      "faculty": "法学部",
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022002.htm"
+    },
+    {
+      "id": "009",
+      "name": "赤松   健",
+      "furigana": "あかまつ けん",
+      "house": "参議院",
+      "party": "自民",
+      "elections": 1,
+      "birthdate": "1968年7月5日",
+      "birthplace": "愛知県",
+      "school": "中央大学",
+      "faculty": "文学部",
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022003.htm"
+    },
+    {
+      "id": "010",
+      "name": "秋野  公造",
+      "furigana": "あきの こうぞう",
+      "house": "参議院",
+      "party": "公明",
+      "elections": 3,
+      "birthdate": "1967年7月11日",
+      "birthplace": "不明",
+      "school": "長崎大学",
+      "faculty": "医学部",
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010003.htm"
+    }
+  ]
+}

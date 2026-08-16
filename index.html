@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本の国会議員 年齢データ可視化</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>国会議員 年齢データ可視化システム</h1>
+            <p id="last-updated-text">データ更新日: 取得中...</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- サマリーセクション -->
+        <section id="summary-section" class="section">
+            <h2>年齢サマリー</h2>
+            <div class="summary-cards">
+                <!-- 衆議院 -->
+                <div class="card">
+                    <h3>衆議院</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">平均年齢</span>
+                        <span class="stat-value" id="shugiin-mean">-</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">中央値</span>
+                        <span class="stat-value" id="shugiin-median">-</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">最高年齢</span>
+                        <span class="stat-value" id="shugiin-max">-</span>
+                    </div>
+                </div>
+
+                <!-- 参議院 -->
+                <div class="card">
+                    <h3>参議院</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">平均年齢</span>
+                        <span class="stat-value" id="sangiin-mean">-</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">中央値</span>
+                        <span class="stat-value" id="sangiin-median">-</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">最高年齢</span>
+                        <span class="stat-value" id="sangiin-max">-</span>
+                    </div>
+                </div>
+
+                <!-- 日本国民（参考情報） -->
+                <div class="card reference-card">
+                    <h3>日本国民（参考情報）</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">平均年齢 (全体)</span>
+                        <span class="stat-value" id="japan-mean">48.6歳</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">平均年齢 (有権者)</span>
+                        <span class="stat-value" id="japan-voter-mean">53.2歳</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">中央値</span>
+                        <span class="stat-value" id="japan-median">49.4歳</span>
+                    </div>
+                    <div class="reference-note">※2024年4月時点 総務省統計局調べ（概算値）</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 会派別データセクション -->
+        <section id="party-section" class="section">
+            <h2>会派別 年齢データ</h2>
+            <div class="table-container">
+                <table id="party-table">
+                    <thead>
+                        <tr>
+                            <th>会派名</th>
+                            <th>所属人数</th>
+                            <th>平均年齢</th>
+                            <th>中央値</th>
+                            <th>最高年齢</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- JavaScriptで挿入 -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 出身地別データ（棒グラフ）セクション -->
+        <section id="birthplace-section" class="section">
+            <h2>出身地別データ（棒グラフ）</h2>
+            <div class="controls">
+                <div class="filter-group">
+                    <label for="birthplace-house-filter">議院:</label>
+                    <select id="birthplace-house-filter">
+                        <option value="all">全体 (衆参両院)</option>
+                        <option value="衆議院">衆議院</option>
+                        <option value="参議院">参議院</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="birthplace-sort">並び順:</label>
+                    <select id="birthplace-sort">
+                        <option value="count_desc">議員数が多い順 (降順)</option>
+                        <option value="count_asc">議員数が少ない順 (昇順)</option>
+                        <option value="geo">地域順 (北海道〜沖縄・外国・不明)</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="birthplace-display-mode">表示対象:</label>
+                    <select id="birthplace-display-mode">
+                        <option value="nonzero">出身者がいる地域のみ</option>
+                        <option value="top20">上位20地域</option>
+                        <option value="all">全国47都道府県＋外国・不明</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="chart-card">
+                <div id="birthplace-chart" class="bar-chart-container">
+                    <!-- JavaScriptで棒グラフを挿入 -->
+                </div>
+                <div id="birthplace-chart-summary" class="chart-summary"></div>
+            </div>
+        </section>
+
+        <!-- 個別リストセクション -->
+        <section id="members-section" class="section">
+            <h2>議員 個別リスト</h2>
+            
+            <div class="controls">
+                <div class="filter-group">
+                    <label for="filter-house">議院:</label>
+                    <select id="filter-house">
+                        <option value="all">すべて</option>
+                        <option value="衆議院">衆議院</option>
+                        <option value="参議院">参議院</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="filter-party">会派:</label>
+                    <select id="filter-party">
+                        <option value="all">すべて</option>
+                        <!-- JavaScriptで挿入 -->
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filter-school">出身校:</label>
+                    <select id="filter-school">
+                        <option value="all">すべて (全校)</option>
+                        <!-- JavaScriptで挿入 -->
+                    </select>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table id="members-table">
+                    <thead>
+                        <tr>
+                            <th class="sortable" id="sort-id">ID ▲</th>
+                            <th>氏名</th>
+                            <th>議院</th>
+                            <th>会派</th>
+                            <th class="sortable" id="sort-elections">当選回数</th>
+                            <th>生年月日</th>
+                            <th class="sortable" id="sort-age">年齢</th>
+                            <th class="sortable" id="sort-birthplace">出身地</th>
+                            <th class="sortable" id="sort-school">出身校</th>
+                            <th>学部名</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- JavaScriptで挿入 -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="pagination-info" class="pagination-info"></div>
+        </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
