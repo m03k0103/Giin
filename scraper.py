@@ -25,6 +25,54 @@ if sys.platform == 'win32':
 import requests
 from bs4 import BeautifulSoup
 
+# GLOBAL_RULES.md §4 に準拠した標準ブラウザヘッダー (Chrome 128相当)
+DEFAULT_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'Accept-Language': 'ja,en-US;q=0.9,en;q=0.8',
+    'Sec-Ch-Ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+    'Sec-Ch-Ua-Mobile': '?0',
+    'Sec-Ch-Ua-Platform': '"Windows"',
+    'Upgrade-Insecure-Requests': '1'
+}
+
+def load_diet_data(filepath='data.js'):
+    """
+    data.js (window.DIET_DATA = ...;) から辞書データをロード
+    """
+    if not os.path.exists(filepath):
+        return None
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read().strip()
+        prefix = "window.DIET_DATA = "
+        if content.startswith(prefix):
+            content = content[len(prefix):].strip()
+        if content.endswith(';'):
+            content = content[:-1].strip()
+        return json.loads(content)
+    except Exception as e:
+        print(f"[警告] {filepath} の読み込みに失敗しました: {e}", file=sys.stderr)
+        return None
+
+def atomic_save_diet_data(filepath, data):
+    """
+    一時ファイル（.tmp）を経由して os.replace() でアトミックに data.js を保存
+    """
+    tmp_path = filepath + '.tmp'
+    try:
+        with open(tmp_path, 'w', encoding='utf-8') as f:
+            f.write("window.DIET_DATA = " + json.dumps(data, ensure_ascii=False, indent=2) + ";\n")
+        os.replace(tmp_path, filepath)
+        return True
+    except Exception as e:
+        if os.path.exists(tmp_path):
+            try:
+                os.remove(tmp_path)
+            except Exception:
+                pass
+        raise e
+
 # 漢字数字の変換用
 KANJI_NUMS = {'〇': 0, '一': 1, '二': 2, '三': 3, '四': 4, '五': 5, '六': 6, '七': 7, '八': 8, '九': 9, '十': 10, '0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}
 
@@ -203,39 +251,31 @@ def kanji_to_int(kstr):
 
 def backup_existing_full_data():
     """
-    既存のdata.json/data.jsに全件データが含まれている場合、data_full.json / data_full.jsに退避
+    既存の data.js に全件データが含まれている場合、data_full.js に退避
     """
-    if os.path.exists('data.json'):
-        try:
-            with open('data.json', 'r', encoding='utf-8') as f:
-                existing = json.load(f)
-            members = existing.get('members', [])
-            count = len(members)
-            # 20名以上（テストデータより明らかに多い全件データなど）の場合に退避
-            if count > 20:
-                shutil.copyfile('data.json', 'data_full.json')
-                if os.path.exists('data.js'):
-                    shutil.copyfile('data.js', 'data_full.js')
-                print(f"[データ退避] 既存の全件データ（{count}名）を data_full.json および data_full.js に退避しました。")
-                return True
-        except Exception as e:
-            print(f"[警告] バックアップ作成失敗: {e}", file=sys.stderr)
+    existing = load_diet_data('data.js')
+    if existing:
+        members = existing.get('members', [])
+        count = len(members)
+        # 20名以上（テストデータより明らかに多い全件データなど）の場合に退避
+        if count > 20:
+            atomic_save_diet_data('data_full.js', existing)
+            print(f"[データ退避] 既存の全件データ（{count}名）を data_full.js に退避しました。")
+            return True
     return False
 
 def restore_full_data():
     """
-    退避済みの全件データ（data_full.json/data_full.js）から data.json/data.js を復元
+    退避済みの全件データ（data_full.js）から data.js を復元
     """
-    if os.path.exists('data_full.json') and os.path.exists('data_full.js'):
-        shutil.copyfile('data_full.json', 'data.json')
-        shutil.copyfile('data_full.js', 'data.js')
-        with open('data.json', 'r', encoding='utf-8') as f:
-            data = json.load(f)
+    data = load_diet_data('data_full.js')
+    if data:
         count = len(data.get('members', []))
-        print(f"[復元完了] data_full.json から全件データ（{count}名）を data.json / data.js に復元しました。")
+        atomic_save_diet_data('data.js', data)
+        print(f"[復元完了] data_full.js から全件データ（{count}名）を data.js に復元しました。")
         return True
     else:
-        print("[エラー] 退避ファイル（data_full.json / data_full.js）が見つかりません。", file=sys.stderr)
+        print("[エラー] 退避ファイル（data_full.js）が見つかりません。", file=sys.stderr)
         return False
 
 def get_shugiin_total_count(headers):
@@ -738,11 +778,14 @@ def scrape_sangiin(headers, total_count=248, sleep_sec=1.0, limit=None):
         
     return members
 
-def update_members_by_id(target_id_str, headers):
+def update_members_by_id(target_id_str, headers=None):
     """
     指定されたIDの議員データのみを再取得して更新する。
     target_id_str: '001' や '001,005,010' などのID指定文字列
     """
+    if headers is None:
+        headers = DEFAULT_HEADERS
+        
     start_time = datetime.now()
     print(f"=== 国会議員データ個別ID更新 ===")
     print(f"開始日時: {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
@@ -757,23 +800,21 @@ def update_members_by_id(target_id_str, headers):
     print(f"更新対象ID: {', '.join(target_ids)}")
     
     target_files = []
-    if os.path.exists('data.json'):
-        target_files.append('data.json')
-    if os.path.exists('data_full.json'):
-        target_files.append('data_full.json')
+    if os.path.exists('data.js'):
+        target_files.append('data.js')
+    if os.path.exists('data_full.js'):
+        target_files.append('data_full.js')
         
     if not target_files:
-        print("[エラー] data.json または data_full.json が見つかりません。", file=sys.stderr)
+        print("[エラー] data.js または data_full.js が見つかりません。", file=sys.stderr)
         return
 
     updated_total = 0
     
-    for json_file in target_files:
-        try:
-            with open(json_file, 'r', encoding='utf-8') as f:
-                file_data = json.load(f)
-        except Exception as e:
-            print(f"[エラー] {json_file} の読み込み失敗: {e}", file=sys.stderr)
+    for js_file in target_files:
+        file_data = load_diet_data(js_file)
+        if not file_data:
+            print(f"[エラー] {js_file} の読み込み失敗", file=sys.stderr)
             continue
             
         members = file_data.get('members', [])
@@ -787,14 +828,15 @@ def update_members_by_id(target_id_str, headers):
             m = id_map[tid]
             url = m.get('profile_url') or m.get('source_url')
             if not url:
-                print(f"[{json_file}] ID: {tid} ({m.get('name')}) のプロフィールURLがありません。")
+                print(f"[{js_file}] ID: {tid} ({m.get('name')}) のプロフィールURLがありません。")
                 continue
                 
-            print(f"\n[{json_file}][ID: {tid}] {m.get('name')} ({m.get('house')}・{m.get('party')}) 更新中...")
+            lock_label = " [manualLock保持]" if m.get('manualLock') else ""
+            print(f"\n[{js_file}][ID: {tid}] {m.get('name')} ({m.get('house')}・{m.get('party')}){lock_label} 更新中...")
             print(f"URL: {url}")
             
             try:
-                time.sleep(0.5)
+                time.sleep(1.0)
                 if m.get('house') == '衆議院':
                     res = requests.get(url, headers=headers, timeout=10)
                     res.encoding = 'cp932'
@@ -842,13 +884,7 @@ def update_members_by_id(target_id_str, headers):
                 
         if file_updated_count > 0:
             file_data['last_updated'] = datetime.now().isoformat()
-            with open(json_file, 'w', encoding='utf-8') as f:
-                json.dump(file_data, f, ensure_ascii=False, indent=2)
-                
-            js_file = json_file.replace('.json', '.js')
-            with open(js_file, 'w', encoding='utf-8') as f:
-                f.write("window.DIET_DATA = " + json.dumps(file_data, ensure_ascii=False, indent=2) + ";\n")
-                
+            atomic_save_diet_data(js_file, file_data)
             updated_total += file_updated_count
             
     end_time = datetime.now()
@@ -872,26 +908,20 @@ def main():
     parser.add_argument("-t", "--test", action="store_true", help="テストモード: 衆議院・参議院それぞれ5名ずつのデータを迅速に取得します")
     parser.add_argument("-l", "--limit", type=int, default=None, help="各議院からの取得上限人数（例: 5）")
     parser.add_argument("-i", "--id", type=str, default=None, help="指定したIDの議員データのみを再取得・更新します（例: --id 001 または -i 001,005）")
-    parser.add_argument("-r", "--restore", action="store_true", help="退避済みの全件データ（data_full.json / data_full.js）から復元します")
+    parser.add_argument("-r", "--restore", action="store_true", help="退避済みの全件データ（data_full.js）から復元します")
     args = parser.parse_args()
 
     if args.restore:
         restore_full_data()
         return
 
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-    }
+    headers = DEFAULT_HEADERS
 
     if args.id:
         update_members_by_id(args.id, headers)
         return
 
     limit = 5 if args.test else args.limit
-
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-    }
     
     start_time = datetime.now()
     
@@ -899,6 +929,15 @@ def main():
     print(f"開始日時: {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
     print("情報源: 衆議院公式ウェブサイト (https://www.shugiin.go.jp/) および 参議院公式ウェブサイト (https://www.sangiin.go.jp/)")
     
+    # 既存データのロード（手動修正 manualLock の保護用）
+    existing_data = load_diet_data('data.js') or {}
+    existing_map = {}
+    for em in existing_data.get('members', []):
+        if em.get('id'):
+            existing_map[em.get('id')] = em
+        if em.get('house') and em.get('name'):
+            existing_map[(em.get('house'), em.get('name'))] = em
+
     # テスト実行時、既存の全件データが存在する場合は退避
     if limit:
         backup_existing_full_data()
@@ -933,6 +972,7 @@ def main():
     
     processed_members = []
     error_logs = []
+    locked_count = 0
     
     for idx, m in enumerate(all_raw_members, start=1):
         member_id = f"{idx:03d}"
@@ -944,20 +984,42 @@ def main():
         clean_furi = unicodedata.normalize('NFKC', m['furigana'])
         clean_furi = re.sub(r'\s+', ' ', clean_furi).strip()
             
-        # 生年月（日）データを保持し、年齢はデータとしては持たない
-        processed_members.append({
+        # 既存の手動調整データ（manualLock）の照合と保護
+        key = (m['house'], m['name'])
+        prev_m = existing_map.get(member_id) or existing_map.get(key)
+        is_locked = bool(prev_m and prev_m.get('manualLock'))
+        
+        if is_locked:
+            locked_count += 1
+            final_birthdate = prev_m.get('birthdate') or m['birthdate']
+            final_birthplace = prev_m.get('birthplace') or m['birthplace']
+            final_school = prev_m.get('school') or m['school']
+            final_faculty = prev_m.get('faculty') or m['faculty']
+            final_elections = prev_m.get('elections') if prev_m.get('elections') is not None else m['elections']
+        else:
+            final_birthdate = m['birthdate']
+            final_birthplace = m['birthplace']
+            final_school = m['school']
+            final_faculty = m['faculty']
+            final_elections = m['elections']
+            
+        record = {
             "id": member_id,
             "name": m['name'],
             "furigana": clean_furi,
             "house": m['house'],
             "party": m['party'],
-            "elections": m['elections'],
-            "birthdate": m['birthdate'],
-            "birthplace": m['birthplace'],
-            "school": m['school'],
-            "faculty": m['faculty'],
+            "elections": final_elections,
+            "birthdate": final_birthdate,
+            "birthplace": final_birthplace,
+            "school": final_school,
+            "faculty": final_faculty,
             "profile_url": m['source_url']
-        })
+        }
+        if is_locked:
+            record["manualLock"] = True
+            
+        processed_members.append(record)
         
     end_time = datetime.now()
     elapsed = end_time - start_time
@@ -977,32 +1039,22 @@ def main():
         "members": processed_members
     }
     
-    # 常に data.json / data.js に保存
-    with open('data.json', 'w', encoding='utf-8') as f:
-        json.dump(output_data, f, ensure_ascii=False, indent=2)
+    # data.js にアトミック保存
+    atomic_save_diet_data('data.js', output_data)
         
-    with open('data.js', 'w', encoding='utf-8') as f:
-        f.write("window.DIET_DATA = " + json.dumps(output_data, ensure_ascii=False, indent=2) + ";\n")
-        
-    # 全件取得時（limitなし）は data_full.json / data_full.js としても保存
+    # 全件取得時（limitなし）は data_full.js としても保存
     if not limit:
-        with open('data_full.json', 'w', encoding='utf-8') as f:
-            json.dump(output_data, f, ensure_ascii=False, indent=2)
-        with open('data_full.js', 'w', encoding='utf-8') as f:
-            f.write("window.DIET_DATA = " + json.dumps(output_data, ensure_ascii=False, indent=2) + ";\n")
+        atomic_save_diet_data('data_full.js', output_data)
     else:
-        # テスト時は data_test.json / data_test.js にも保存
-        with open('data_test.json', 'w', encoding='utf-8') as f:
-            json.dump(output_data, f, ensure_ascii=False, indent=2)
-        with open('data_test.js', 'w', encoding='utf-8') as f:
-            f.write("window.DIET_DATA = " + json.dumps(output_data, ensure_ascii=False, indent=2) + ";\n")
+        # テスト時は data_test.js に保存
+        atomic_save_diet_data('data_test.js', output_data)
         
     if error_logs:
         with open('error_logs.txt', 'w', encoding='utf-8') as f:
             f.write("\n".join(error_logs))
             
     print(f"\n" + "=" * 45)
-    print(f"[完了] データを data.json および data.js に保存しました。（総計: {len(processed_members)}名）")
+    print(f"[完了] データを data.js にアトミック保存しました。（総計: {len(processed_members)}名 / manualLock保護: {locked_count}名）")
     print(f"開始日時: {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"終了日時: {end_time.strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"処理時間: {duration_str}")

@@ -99,7 +99,7 @@ async function fetchData() {
     try {
         let data = null;
         
-        // 1. file:// プロトコル等で直接開いた場合、data.js のグローバル変数を利用
+        // data.js により定義されたグローバル変数（window.DIET_DATA）を利用
         if (typeof window.DIET_DATA !== 'undefined' && window.DIET_DATA && window.DIET_DATA.members) {
             data = window.DIET_DATA;
         } else if (typeof window.membersData !== 'undefined' && window.membersData && window.membersData.members) {
@@ -107,12 +107,7 @@ async function fetchData() {
         } else if (typeof membersData !== 'undefined' && membersData && membersData.members) {
             data = membersData;
         } else {
-            // 2. Webサーバー経由等の場合は fetch API で取得
-            const response = await fetch('data.json');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            data = await response.json();
+            throw new Error("議員データ（window.DIET_DATA）が見つかりません。data.js が正しく読み込まれているか確認してください。");
         }
         
         // 年齢の基準日: 当年1月1日時点

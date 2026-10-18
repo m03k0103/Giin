@@ -81,7 +81,8 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/006.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/006.html",
+      "manualLock": true
     },
     {
       "id": "007",
@@ -341,7 +342,8 @@ window.DIET_DATA = {
       "birthplace": "兵庫県",
       "school": "東京大学",
       "faculty": "不明",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/026.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/026.html",
+      "manualLock": true
     },
     {
       "id": "027",
@@ -471,7 +473,8 @@ window.DIET_DATA = {
       "birthplace": "広島県",
       "school": "大阪外国語大学",
       "faculty": "外国語学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/034.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/034.html",
+      "manualLock": true
     },
     {
       "id": "037",
@@ -913,7 +916,8 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東京立正高等学校",
       "faculty": "N/A",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/070.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/070.html",
+      "manualLock": true
     },
     {
       "id": "071",
@@ -1472,7 +1476,8 @@ window.DIET_DATA = {
       "birthplace": "京都府",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/113.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/113.html",
+      "manualLock": true
     },
     {
       "id": "114",
@@ -1641,7 +1646,8 @@ window.DIET_DATA = {
       "birthplace": "静岡県",
       "school": "東京大学",
       "faculty": "教養学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/126.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/126.html",
+      "manualLock": true
     },
     {
       "id": "127",
@@ -1784,7 +1790,8 @@ window.DIET_DATA = {
       "birthplace": "青森県",
       "school": "東京大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/137.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/137.html",
+      "manualLock": true
     },
     {
       "id": "138",
@@ -1810,7 +1817,8 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "米国メリーランド大学",
       "faculty": "不明",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/139.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/139.html",
+      "manualLock": true
     },
     {
       "id": "140",
@@ -1901,7 +1909,8 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/146.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/146.html",
+      "manualLock": true
     },
     {
       "id": "147",
@@ -2018,7 +2027,8 @@ window.DIET_DATA = {
       "birthplace": "山口県",
       "school": "長崎大学",
       "faculty": "医学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/155.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/155.html",
+      "manualLock": true
     },
     {
       "id": "156",
@@ -2330,7 +2340,8 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/170.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/170.html",
+      "manualLock": true
     },
     {
       "id": "180",
@@ -2759,7 +2770,8 @@ window.DIET_DATA = {
       "birthplace": "外国",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/212.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/212.html",
+      "manualLock": true
     },
     {
       "id": "213",
@@ -3045,7 +3057,8 @@ window.DIET_DATA = {
       "birthplace": "神奈川県",
       "school": "國學院大学",
       "faculty": "文学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/234.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/234.html",
+      "manualLock": true
     },
     {
       "id": "235",
@@ -3435,7 +3448,8 @@ window.DIET_DATA = {
       "birthplace": "外国",
       "school": "学習院大学",
       "faculty": "文学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/267.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/267.html",
+      "manualLock": true
     },
     {
       "id": "265",
@@ -3578,7 +3592,8 @@ window.DIET_DATA = {
       "birthplace": "千葉県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/277.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/277.html",
+      "manualLock": true
     },
     {
       "id": "276",
@@ -4098,7 +4113,8 @@ window.DIET_DATA = {
       "birthplace": "沖縄県",
       "school": "上智大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/315.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/315.html",
+      "manualLock": true
     },
     {
       "id": "316",
@@ -4566,7 +4582,8 @@ window.DIET_DATA = {
       "birthplace": "外国",
       "school": "成蹊大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/351.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/351.html",
+      "manualLock": true
     },
     {
       "id": "352",
@@ -5892,7 +5909,8 @@ window.DIET_DATA = {
       "birthplace": "不明",
       "school": "慶應義塾大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/453.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/453.html",
+      "manualLock": true
     },
     {
       "id": "454",
@@ -6152,7 +6170,8 @@ window.DIET_DATA = {
       "birthplace": "熊本県",
       "school": "法政大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016004.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016004.htm",
+      "manualLock": true
     },
     {
       "id": "474",
@@ -6204,7 +6223,8 @@ window.DIET_DATA = {
       "birthplace": "石川県",
       "school": "国際基督教大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7001006.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7001006.htm",
+      "manualLock": true
     },
     {
       "id": "478",
@@ -6438,7 +6458,8 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "関西外国語大学",
       "faculty": "外国語学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025009.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025009.htm",
+      "manualLock": true
     },
     {
       "id": "496",
@@ -6815,7 +6836,8 @@ window.DIET_DATA = {
       "birthplace": "広島県",
       "school": "法政大学",
       "faculty": "工学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022008.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022008.htm",
+      "manualLock": true
     },
     {
       "id": "525",
@@ -6906,7 +6928,8 @@ window.DIET_DATA = {
       "birthplace": "岡山県",
       "school": "慶應義塾大学",
       "faculty": "理工学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016014.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016014.htm",
+      "manualLock": true
     },
     {
       "id": "532",
@@ -7101,7 +7124,8 @@ window.DIET_DATA = {
       "birthplace": "神奈川県",
       "school": "神奈川県立平塚養護学校高等部",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019015.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019015.htm",
+      "manualLock": true
     },
     {
       "id": "547",
@@ -7530,7 +7554,8 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "神奈川県立柿生高校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022021.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022021.htm",
+      "manualLock": true
     },
     {
       "id": "580",
@@ -7686,7 +7711,8 @@ window.DIET_DATA = {
       "birthplace": "千葉県",
       "school": "不明",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025034.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025034.htm",
+      "manualLock": true
     },
     {
       "id": "592",
@@ -7712,7 +7738,8 @@ window.DIET_DATA = {
       "birthplace": "外国",
       "school": "北京大学",
       "faculty": "哲学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025019.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025019.htm",
+      "manualLock": true
     },
     {
       "id": "594",
@@ -7725,7 +7752,8 @@ window.DIET_DATA = {
       "birthplace": "埼玉県",
       "school": "城西歯科大学",
       "faculty": "歯学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7003005.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7003005.htm",
+      "manualLock": true
     },
     {
       "id": "595",
@@ -7777,7 +7805,8 @@ window.DIET_DATA = {
       "birthplace": "富山県",
       "school": "一橋大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019026.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019026.htm",
+      "manualLock": true
     },
     {
       "id": "599",
@@ -7972,7 +8001,8 @@ window.DIET_DATA = {
       "birthplace": "秋田県",
       "school": "早稲田大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019030.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019030.htm",
+      "manualLock": true
     },
     {
       "id": "614",
@@ -8076,7 +8106,8 @@ window.DIET_DATA = {
       "birthplace": "福岡県",
       "school": "屋久島おおぞら高等学校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025039.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025039.htm",
+      "manualLock": true
     },
     {
       "id": "622",
@@ -8232,7 +8263,8 @@ window.DIET_DATA = {
       "birthplace": "鹿児島県",
       "school": "ラ・サール高校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004046.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004046.htm",
+      "manualLock": true
     },
     {
       "id": "634",
@@ -8635,7 +8667,8 @@ window.DIET_DATA = {
       "birthplace": "熊本県",
       "school": "星薬科大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019034.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019034.htm",
+      "manualLock": true
     },
     {
       "id": "665",

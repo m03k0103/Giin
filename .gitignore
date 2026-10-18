@@ -2,9 +2,15 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.log
+*.tmp
 .env
 .venv
 env/
 venv/
 .DS_Store
 Thumbs.db
+
+# ローカル作業用・退避用データファイル（本番は data.js のみGit管理）
+data_full.js
+data_test.js
+error_logs.txt
