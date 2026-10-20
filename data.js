@@ -1,8 +1,9 @@
 window.DIET_DATA = {
-  "last_updated": "2026-08-16T13:41:02.823151",
+  "last_updated": "2026-10-21T08:30:38.781672",
   "sources": [
     "衆議院公式ウェブサイト (https://www.shugiin.go.jp/)",
-    "参議院公式ウェブサイト (https://www.sangiin.go.jp/)"
+    "参議院公式ウェブサイト (https://www.sangiin.go.jp/)",
+    "Wikipedia / Wikidata (https://ja.wikipedia.org/, https://www.wikidata.org/)"
   ],
   "members": [
     {
@@ -731,10 +732,11 @@ window.DIET_DATA = {
       "party": "自民",
       "elections": 2,
       "birthdate": "1963年11月13日",
-      "birthplace": "不明",
+      "birthplace": "愛媛県",
       "school": "専修大学",
       "faculty": "経営学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/057.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/057.html",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "057",
@@ -887,10 +889,11 @@ window.DIET_DATA = {
       "party": "自民",
       "elections": 3,
       "birthdate": "1971年2月23日",
-      "birthplace": "不明",
+      "birthplace": "宮城県",
       "school": "東京大学",
       "faculty": "不明",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/068.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/068.html",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "069",
@@ -1108,11 +1111,12 @@ window.DIET_DATA = {
       "house": "衆議院",
       "party": "中道",
       "elections": 10,
-      "birthdate": "不明",
+      "birthdate": "1956年12月21日",
       "birthplace": "埼玉県",
       "school": "早稲田大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/085.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/085.html",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "086",
@@ -1565,10 +1569,11 @@ window.DIET_DATA = {
       "party": "自民",
       "elections": 5,
       "birthdate": "1964年9月",
-      "birthplace": "不明",
+      "birthplace": "山口県",
       "school": "中央大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/120.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/120.html",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "121",
@@ -2950,10 +2955,11 @@ window.DIET_DATA = {
       "party": "自民",
       "elections": 2,
       "birthdate": "1962年11月9日",
-      "birthplace": "不明",
+      "birthplace": "大阪府",
       "school": "早稲田大学",
       "faculty": "政経学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/226.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/226.html",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "227",
@@ -3119,11 +3125,12 @@ window.DIET_DATA = {
       "house": "衆議院",
       "party": "みらい",
       "elections": 1,
-      "birthdate": "不明",
+      "birthdate": "1986年9月21日",
       "birthplace": "京都府",
       "school": "慶應義塾大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/239.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/239.html",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "240",
@@ -3642,10 +3649,11 @@ window.DIET_DATA = {
       "party": "自民",
       "elections": 2,
       "birthdate": "1967年2月25日",
-      "birthplace": "不明",
+      "birthplace": "愛知県",
       "school": "早稲田大学",
       "faculty": "商学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/280.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/280.html",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "280",
@@ -3681,10 +3689,11 @@ window.DIET_DATA = {
       "party": "自民",
       "elections": 4,
       "birthdate": "1982年1月19日",
-      "birthplace": "不明",
+      "birthplace": "東京都",
       "school": "慶應義塾大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/286.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/286.html",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "283",
@@ -4097,10 +4106,11 @@ window.DIET_DATA = {
       "party": "自民",
       "elections": 9,
       "birthdate": "1962年10月15日",
-      "birthplace": "不明",
+      "birthplace": "兵庫県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/314.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/314.html",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "315",
@@ -4423,10 +4433,11 @@ window.DIET_DATA = {
       "party": "自民",
       "elections": 3,
       "birthdate": "1961年",
-      "birthplace": "不明",
+      "birthplace": "東京都",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/340.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/340.html",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "340",
@@ -6128,10 +6139,11 @@ window.DIET_DATA = {
       "party": "公明",
       "elections": 3,
       "birthdate": "1967年7月11日",
-      "birthplace": "不明",
+      "birthplace": "兵庫県",
       "school": "長崎大学",
       "faculty": "医学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010003.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010003.htm",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "471",
@@ -6247,10 +6259,11 @@ window.DIET_DATA = {
       "party": "みらい",
       "elections": 1,
       "birthdate": "1990年12月1日",
-      "birthplace": "不明",
+      "birthplace": "東京都",
       "school": "東京大学",
       "faculty": "工学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025005.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025005.htm",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "480",
@@ -6690,10 +6703,11 @@ window.DIET_DATA = {
       "party": "自民",
       "elections": 3,
       "birthdate": "1957年4月2日",
-      "birthplace": "不明",
+      "birthplace": "山口県",
       "school": "東京大学",
       "faculty": "工学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013001.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013001.htm",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "514",
@@ -7265,10 +7279,11 @@ window.DIET_DATA = {
       "party": "自民",
       "elections": 3,
       "birthdate": "1967年11月2日",
-      "birthplace": "不明",
+      "birthplace": "長崎県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013021.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013021.htm",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "558",
@@ -8130,10 +8145,11 @@ window.DIET_DATA = {
       "party": "自民",
       "elections": 1,
       "birthdate": "1974年5月7日",
-      "birthplace": "不明",
+      "birthplace": "山梨県",
       "school": "山梨大学",
       "faculty": "教育学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022030.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022030.htm",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "624",
@@ -8469,10 +8485,11 @@ window.DIET_DATA = {
       "party": "無所属",
       "elections": 2,
       "birthdate": "1971年1月3日",
-      "birthplace": "不明",
+      "birthplace": "静岡県",
       "school": "日本福祉大学",
       "faculty": "女子短期大学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016033.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016033.htm",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "650",
@@ -8704,10 +8721,11 @@ window.DIET_DATA = {
       "party": "立憲",
       "elections": 4,
       "birthdate": "1964年9月29日",
-      "birthplace": "不明",
+      "birthplace": "東京都",
       "school": "国際基督教大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007055.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007055.htm",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "668",
@@ -8717,10 +8735,11 @@ window.DIET_DATA = {
       "party": "自民",
       "elections": 2,
       "birthdate": "1971年",
-      "birthplace": "不明",
+      "birthplace": "奈良県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016035.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016035.htm",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "669",
@@ -8795,10 +8814,11 @@ window.DIET_DATA = {
       "party": "自民",
       "elections": 5,
       "birthdate": "1959年1月20日",
-      "birthplace": "不明",
+      "birthplace": "福岡県",
       "school": "明治大学",
       "faculty": "商学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7001046.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7001046.htm",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "675",
@@ -8886,10 +8906,11 @@ window.DIET_DATA = {
       "party": "自民",
       "elections": 3,
       "birthdate": "1950年4月21日",
-      "birthplace": "不明",
+      "birthplace": "東京都",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010050.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010050.htm",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "682",
@@ -8977,10 +8998,11 @@ window.DIET_DATA = {
       "party": "立憲",
       "elections": 4,
       "birthdate": "1956年4月20日",
-      "birthplace": "不明",
+      "birthplace": "新潟県",
       "school": "新潟大学",
       "faculty": "法文学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7001047.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7001047.htm",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "689",
@@ -9133,10 +9155,11 @@ window.DIET_DATA = {
       "party": "自民",
       "elections": 1,
       "birthdate": "1967年10月24日",
-      "birthplace": "不明",
+      "birthplace": "三重県",
       "school": "神戸大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022041.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022041.htm",
+      "secondary_source": "wikipedia"
     },
     {
       "id": "701",

@@ -1,6 +1,6 @@
 # 国会議員 属性データ可視化ダッシュボード 改善・機能拡充マスタードキュメント (Drops.md)
 
-> 最終更新: 2026-10-18  
+> 最終更新: 2026-10-21  
 > 運用規約は [`GLOBAL_RULES.md`](file:///C:/Users/m03k0/.gemini/antigravity/rules/GLOBAL_RULES.md) 第3章7項、および [`Agent.md`](file:///d:/dev/Giin/Agent.md) に準拠します。  
 > 未着手の将来構想テーマは **「Track（トラック）」** として管理し、着手・完了した個別施策単位にはその時点の最新連番を付与して **「Drop（ドロップ）」** としてアーカイブ化します。  
 > 本ドキュメントは、国会議員 属性データ可視化ダッシュボードの継続的改善ロードマップおよび実施記録を一元管理するマスタードキュメントです。
@@ -11,6 +11,7 @@
 
 | Track ID | 構想テーマ | 主な対象・内容 | 到達目標・期待価値 | ステータス |
 |:---:|:---|:---|:---|:---:|
+| **Track [Secondary-Source-Wikipedia]** | **公認二次データソース（Wikipedia/Wikidata）連携基盤** | **公式障害時フォールバック & 属性欠損自動補完**<br>- `wiki_client.py`（Wikidata SPARQL & Wikipedia MediaWiki API）の新設<br>- `scraper.py` の公式取得障害時自動フォールバックおよび欠損補完（`--wiki-enrich`）<br>- `manualLock: true` 最優先保護と補完メタデータ（`secondary_source`）の付与 | 公式サイト通信障害時の事業継続性確保、出身地・生年月日欠損レコードの客観的解決 | **【完了】 (Drop 8)** |
 | **Track [Data-Integrity]** | **データ保護・保存堅牢化・リポジトリ整理** | **`manualLock` 対応・アトミック保存・重複ファイル整理・標準ヘッダー**<br>- `scraper.py` の手動修正データ保護フラグ（`manualLock: true`）対応<br>- `data.json` 廃止と `data.js` への一本化・一時ファイル経由アトミック書き込み（`os.replace`）<br>- Git 管理対象からの重複バックアップ（`data_full.*`）除外・`.gitignore` 整備<br>- 標準ブラウザヘッダー（Chrome 128相当）およびレートリミット（0.35〜1.0秒）の厳格適用 | スクレイピング再取得時の手動修正データ保護、保存中断によるファイル破損防止、リポジトリ軽量化 | **【完了】 (Drop 7)** |
 | **Track [Testing]** | **統合テストスイート・パーサー回帰テスト基盤構築** | **`testing/run_test_suite.py` の新設・パーサー回帰テスト網羅**<br>- 生年月日、出身地、出身校・学部の全過去エッジケース（ID 036, 070, 234, 315, 477, 546, 591, 594, 621, 633 等）の単体テスト作成<br>- データセット整合性（712名欠損ゼロ・型チェック）およびHTML構造・JS構文スモークテストの1コマンド階層実行 | パーサー改修時の回帰バグ防止、品質保証の自動化 | 構想（次期候補） |
 | **Track [UI-Consistency-Perf]** | **初回ソート不整合是正・DOM描画最適化・XSS保護** | **ソート状態のUI同期 & `DocumentFragment` 一括描画 & エスケープ徹底**<br>- 初回読み込み時のソート状態（ヘッダー表示 `ID ▲` と実際の年齢降順の乖離）の解消<br>- 712行のテーブル描画を `DocumentFragment` による一括DOM挿入へ最適化<br>- 動的プロパティ描画時のHTMLサニタイズ・エスケープ処理の徹底 | 初期表示の整合性確保、一覧テーブル再描画の体感速度向上、堅牢なセキュリティ | 構想 |
@@ -20,6 +21,18 @@
 ---
 
 ## 2. 各Trackの詳細
+
+### 【Track: Secondary-Source-Wikipedia】公認二次データソース（Wikipedia/Wikidata）連携基盤
+
+衆議院・参議院公式サイトの通信障害や公式プロフィールにおける属性記載の欠損に対し、中立かつ網羅的なオープンデータである Wikipedia / Wikidata から安全に属性をフォールバック・補完する。
+
+| CR ID | 分類 | 内容 | 対象ファイル | 状態 |
+|:---:|:---:|:---|:---|:---:|
+| **CR-SW-1** | 二次ソース連携 | **Wikipedia / Wikidata 連携クライアントモジュール（`wiki_client.py`）の新設**<br>Wikidata SPARQL クエリおよび Wikipedia MediaWiki API（Infobox/導入部）から生年月日・出身地・出身校を取得し、ドメインパーサーと連携して正規化するクライアントを実装 | `wiki_client.py`<br>`test_wiki_client.py` | **【完了】 (Drop 8)** |
+| **CR-SW-2** | フォールバック統合 | **`scraper.py` への自動フォールバックおよび欠損補完機能（`--wiki-enrich`）の実装**<br>公式障害時の自動フォールバックと、属性欠損議員の自動補完コマンドを新設。`manualLock: true` レコードは最優先保護し、補完データには `secondary_source: "wikipedia"` を付与 | `scraper.py` | **【完了】 (Drop 8)** |
+| **CR-SW-3** | 規約・ドキュメント | **公認二次データソース運用の明文化**<br>`Agent.md` の情報源原則を一次（衆参公式）＋公認二次（Wikipedia/Wikidata）に改訂し、`README.md` に CLI オプションを追記 | `Agent.md`<br>`README.md`<br>`Drops.md` | **【完了】 (Drop 8)** |
+
+---
 
 ### 【Track: Data-Integrity】データ保護・保存堅牢化・リポジトリ整理
 
@@ -79,7 +92,7 @@
 
 ---
 
-## 3. 実装済 Drop一覧（Drop 1 〜 Drop 7）
+## 3. 実装済 Drop一覧（Drop 1 〜 Drop 8）
 
 | Drop ID | 完了日 | 施策名 | 主な変更対象 | 到達成果・定量数値 | ステータス |
 |:---:|:---:|:---|:---|:---|:---:|
@@ -89,11 +102,20 @@
 | **Drop 4** | 2026-08-16 | **属性抽出拡張 & 出身校パーサー正規化**<br>(当選回数取得・1/1基準日・学歴クレンジング) | `scraper.py`, `index.html`, `app.js` | 当選回数（`elections`）取得・ソート対応、年齢計算基準日の「当年1月1日時点」統一、出身校フィルタ（所属人数順）新設、大学略称展開・旧字体統一・接頭辞除去・現校名括弧書き対応・教職除外（延べ80名超正常化） | 【完了】 |
 | **Drop 5** | 2026-10-04 | **公開基盤整備 & 名称・出典改訂**<br>(GitHub Pages・人口統計資料集2024・名称変更) | `index.html`, `README.md`, Git リポジトリ | GitHub リポジトリ開設 & GitHub Pages 公開、日本国民参考データの国立社会保障・人口問題研究所「人口統計資料集(2024)」表12-8（平均48.2歳・中央値49.4歳）同期、システム名称の「国会議員 属性データ可視化ダッシュボード」変更 | 【完了】 |
 | **Drop 6** | 2026-10-18 | **開発運用規約整備**<br>(`Drops.md`・`Agent.md` 策定 & `GLOBAL_RULES.md` 連携) | `Drops.md`, `Agent.md` | `GLOBAL_RULES.md` §3-7 に完全準拠した `Drops.md`（標準4大構成）の新設、共通規範を `GLOBAL_RULES.md` へ完全委譲しプロジェクト固有ドメイン規約に特化した `Agent.md` の新設 | 【完了】 |
-| **Drop 7** | 2026-10-18 | **Track [Data-Integrity]**<br>(`data.js`一本化・手動保護・アトミック保存・衛生化) | `scraper.py`, `app.js`, `data.js`, `.gitignore`, `README.md`, `Agent.md` | 33名の手動修正レコード `manualLock: true` 保護、`data.json` 廃止と `data.js` への一本化（重複600KB+削減）、一時ファイルアトミック置換（`os.replace`）、退避ファイルGit除外、標準Chrome 128ヘッダー適用 | **【完了】** |
+| **Drop 7** | 2026-10-18 | **Track [Data-Integrity]**<br>(`data.js`一本化・手動保護・アトミック保存・衛生化) | `scraper.py`, `app.js`, `data.js`, `.gitignore`, `README.md`, `Agent.md` | 33名の手動修正レコード `manualLock: true` 保護、`data.json` 廃止と `data.js` への一本化（重複600KB+削減）、一時ファイルアトミック置換（`os.replace`）、退避ファイルGit除外、標準Chrome 128ヘッダー適用 | 【完了】 |
+| **Drop 8** | 2026-10-21 | **Track [Secondary-Source-Wikipedia]**<br>(Wikipedia/Wikidata 二次ソース連携・欠損補完) | `wiki_client.py`, `test_wiki_client.py`, `scraper.py`, `data.js`, `Agent.md`, `README.md` | Wikipedia/Wikidata 公認二次ソース連携クライアント新設、公式障害時自動フォールバックおよび欠損補完（`--wiki-enrich`）実装、公式記載なしの出身地「不明」21名・生年月日2名を全件解決、手動保護33名完全堅持 | **【完了】** |
 
 ---
 
 ## 4. アーカイブ：実装済み一覧（詳細）
+
+### 【Drop 8】Track [Secondary-Source-Wikipedia]: Wikipedia / Wikidata 二次データソース連携基盤（2026-10-21）
+- **背景・課題**: 衆議院・参議院の公式サイトを唯一の情報源として運用してきたが、公式サーバーの一時的な通信障害や、公式プロフィールにそもそも出身地や生年月日が記載されていない議員（出身地「不明」21名等）が存在し、自動パイプラインのみではデータが欠損したままとなっていた。特定政党に偏らない客観的かつ網羅的な二次データソースの公認連携が求められた。
+- **技術的変更内容**:
+  1. **連携クライアント新設（CR-SW-1）**: `wiki_client.py` を新規作成。Wikipedia MediaWiki API（`ja.wikipedia.org`）による Infobox 政治家・導入部抽出と、Wikidata SPARQL API（`P569` 生年月日、`P19` 出生地、`P69` 出身校）のハイブリッド連携を実装。Wikitextのクレンジング、通称名検索、既存のドメイン正規化関数（`extract_birthplace`, `extract_school_and_faculty`）との完全統合を実現。単体テスト `test_wiki_client.py`（合格率100%）を整備。
+  2. **自動フォールバック & 補完機能（CR-SW-2）**: `scraper.py` に公式取得障害時および属性欠損時の自動フォールバックロジック、ならびに全件の欠損属性を一括補完する `--wiki-enrich` コマンドを追加。手動確定した `manualLock: true` レコード（33名）は最優先でスキップ・保護し、二次ソース補完時には `secondary_source: "wikipedia"` メタデータを記録。
+  3. **規約・マスタードキュメント同期（CR-SW-3）**: `Agent.md` の情報源原則を「一次情報源（衆参公式）＋公認二次情報源（Wikipedia/Wikidata）」に改訂し、`README.md`、`Drops.md` を更新。
+- **定量成果**: 出身地「不明」21名（井原巧氏、世耕弘成氏、上野宏史氏等）および生年月日欠損2名（大島敦氏、高山聡史氏）を Wikipedia / Wikidata より 100% 補完特定、`data.js` 整合性 712名および `manualLock` 33名完全維持。
 
 ### 【Drop 7】Track [Data-Integrity]: data.js 一本化・manualLock 保護・アトミック保存・リポジトリ整理（2026-10-18）
 - **背景・課題**: `scraper.py` での全件再スクレイピング時に、これまで手動で調査・修正した33名の議員属性データが公式ページの記述によって上書き・消失する危険があった。また、`data.json` と `data.js` の二重管理による容量冗長性、保存中断時のJSON/JS破損リスク、手元退避ファイル（`data_full.*`）がGit管理下に置かれていた衛生上の問題が存在していた。
