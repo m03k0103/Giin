@@ -324,6 +324,48 @@ select:focus {
     text-align: right;
 }
 
+
+/* Source Distinction (Primary vs Wikipedia Secondary) */
+.source-legend {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    padding: 6px 14px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.source-legend .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-badge {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+}
+
+.legend-badge.primary {
+    background-color: #333333;
+}
+
+.legend-badge.wiki {
+    background-color: #2563eb;
+}
+
+.source-wiki {
+    color: #2563eb !important;
+    font-weight: 500;
+}
+
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;

@@ -24,6 +24,7 @@ if sys.platform == 'win32':
 
 import requests
 from bs4 import BeautifulSoup
+import wiki_client
 
 # GLOBAL_RULES.md §4 に準拠した標準ブラウザヘッダー (Chrome 128相当)
 DEFAULT_HEADERS = {
@@ -878,7 +879,31 @@ def update_members_by_id(target_id_str, headers=None):
                 print(f"  -> 出身地:   {m['birthplace']}")
                 print(f"  -> 出身校:   {m['school']}")
                 print(f"  -> 学部名:   {m['faculty']}")
+                # 二次データソース（Wikipedia / Wikidata）フォールバック
+                if not m.get('manualLock') and (not bdate or bplace == '不明' or sch == '不明'):
+                    try:
+                        wdata = wiki_client.get_secondary_member_data(
+                            m.get('name'),
+                            house=m.get('house'),
+                            extract_birthplace_fn=extract_birthplace,
+                            extract_school_fn=extract_school_and_faculty
+                        )
+                        if wdata:
+                            if not bdate and wdata.get('birthdate'):
+                                m['birthdate'] = wdata['birthdate']
+                                print(f"  -> [Wikipedia補完] 生年月日: {m['birthdate']}")
+                            if bplace == '不明' and wdata.get('birthplace') and wdata['birthplace'] != '不明':
+                                m['birthplace'] = wdata['birthplace']
+                                print(f"  -> [Wikipedia補完] 出身地:   {m['birthplace']}")
+                            if sch == '不明' and wdata.get('school') and wdata['school'] != '不明':
+                                m['school'] = wdata['school']
+                                m['faculty'] = wdata.get('faculty', 'N/A')
+                                print(f"  -> [Wikipedia補完] 出身校:   {m['school']} ({m['faculty']})")
+                            m['secondary_source'] = wdata.get('source', 'wikipedia')
+                    except Exception as we:
+                        pass
                 file_updated_count += 1
+
             except Exception as e:
                 print(f"[エラー] ID: {tid} ({url}) の更新処理失敗: {e}", file=sys.stderr)
                 
@@ -903,16 +928,127 @@ def update_members_by_id(target_id_str, headers=None):
     print(f"処理時間: {duration_str}")
     print("=" * 45)
 
+
+def enrich_members_with_wiki(target_ids=None):
+    """
+    data.js 内の「不明」属性を持つ議員に対し、Wikipedia / Wikidata から安全に補完
+    manualLock: true のレコードは保護
+    """
+    filepath = 'data.js'
+    file_data = load_diet_data(filepath)
+    if not file_data:
+        print("[エラー] data.js が読み込めません。", file=sys.stderr)
+        return
+        
+    members = file_data.get('members', [])
+    updated_count = 0
+    start_time = datetime.now()
+    
+    print("=== Wikipedia / Wikidata による欠損属性の補完（--wiki-enrich） ===")
+    print(f"開始日時: {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
+    
+    target_set = set(target_ids) if target_ids else None
+    
+    for m in members:
+        mid = m.get('id')
+        if target_set and mid not in target_set:
+            continue
+            
+        # manualLock は保護
+        if m.get('manualLock'):
+            continue
+            
+        need_bdate = not m.get('birthdate') or m.get('birthdate') == '不明'
+        need_bplace = not m.get('birthplace') or m.get('birthplace') == '不明'
+        need_school = not m.get('school') or m.get('school') == '不明'
+        
+        if not (need_bdate or need_bplace or need_school):
+            continue
+            
+        name = m.get('name')
+        house = m.get('house')
+        print(f"[ID: {mid}] {name} ({house}) の補完データを Wikipedia から照会中...")
+        time.sleep(1.0)
+        
+        try:
+            wdata = wiki_client.get_secondary_member_data(
+                name=name,
+                house=house,
+                extract_birthplace_fn=extract_birthplace,
+                extract_school_fn=extract_school_and_faculty
+            )
+            if not wdata:
+                print(f"  -> Wikipedia/Wikidata に該当情報なし")
+                continue
+                
+            field_updated = False
+            updated_fields = list(m.get('secondary_fields', []))
+            if need_bdate and wdata.get('birthdate'):
+                m['birthdate'] = wdata['birthdate']
+                print(f"  -> [生年月日補完] {m['birthdate']}")
+                field_updated = True
+                if 'birthdate' not in updated_fields:
+                    updated_fields.append('birthdate')
+                
+            if need_bplace and wdata.get('birthplace') and wdata['birthplace'] != '不明':
+                m['birthplace'] = wdata['birthplace']
+                print(f"  -> [出身地補完]   {m['birthplace']}")
+                field_updated = True
+                if 'birthplace' not in updated_fields:
+                    updated_fields.append('birthplace')
+                
+            if need_school and wdata.get('school') and wdata['school'] != '不明':
+                m['school'] = wdata['school']
+                m['faculty'] = wdata.get('faculty', 'N/A')
+                print(f"  -> [出身校補完]   {m['school']} ({m['faculty']})")
+                field_updated = True
+                if 'school' not in updated_fields:
+                    updated_fields.append('school')
+                
+            if field_updated:
+                m['secondary_source'] = wdata.get('source', 'wikipedia')
+                m['secondary_fields'] = updated_fields
+                updated_count += 1
+        except Exception as e:
+            print(f"  -> 照会エラー: {e}", file=sys.stderr)
+            
+    if updated_count > 0:
+        file_data['last_updated'] = datetime.now().isoformat()
+        sources = file_data.get('sources', [])
+        wiki_source = "Wikipedia / Wikidata (https://ja.wikipedia.org/, https://www.wikidata.org/)"
+        if wiki_source not in sources:
+            sources.append(wiki_source)
+        file_data['sources'] = sources
+        
+        atomic_save_diet_data('data.js', file_data)
+        if os.path.exists('data_full.js'):
+            atomic_save_diet_data('data_full.js', file_data)
+            
+    end_time = datetime.now()
+    duration = end_time - start_time
+    print(f"\n[補完完了] {updated_count}名の属性を Wikipedia / Wikidata から補完しました。（処理時間: {duration.total_seconds():.2f}秒）")
+
+
 def main():
     parser = argparse.ArgumentParser(description="国会議員データ収集スクリプト（衆議院・参議院公式ウェブサイト）")
     parser.add_argument("-t", "--test", action="store_true", help="テストモード: 衆議院・参議院それぞれ5名ずつのデータを迅速に取得します")
     parser.add_argument("-l", "--limit", type=int, default=None, help="各議院からの取得上限人数（例: 5）")
     parser.add_argument("-i", "--id", type=str, default=None, help="指定したIDの議員データのみを再取得・更新します（例: --id 001 または -i 001,005）")
     parser.add_argument("-r", "--restore", action="store_true", help="退避済みの全件データ（data_full.js）から復元します")
+    parser.add_argument("--wiki-enrich", action="store_true", help="既存の data.js 内で出身地や出身校が「不明」の議員に対し、Wikipedia/Wikidata から補完・更新を実行します")
+    parser.add_argument("--use-wiki", action="store_true", help="個別更新(-i)や欠損時に Wikipedia/Wikidata を優先・併用して補完します")
     args = parser.parse_args()
 
     if args.restore:
         restore_full_data()
+        return
+
+    if args.wiki_enrich:
+        target_ids = None
+        if args.id:
+            raw_ids = [x.strip() for x in re.split(r'[,、\s]+', args.id.strip()) if x.strip()]
+            target_ids = [f"{int(x):03d}" if x.isdigit() else x for x in raw_ids if x]
+        enrich_members_with_wiki(target_ids=target_ids)
         return
 
     headers = DEFAULT_HEADERS
