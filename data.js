@@ -736,7 +736,10 @@ window.DIET_DATA = {
       "school": "専修大学",
       "faculty": "経営学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/057.html",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "057",
@@ -893,7 +896,10 @@ window.DIET_DATA = {
       "school": "東京大学",
       "faculty": "不明",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/068.html",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "069",
@@ -1116,7 +1122,10 @@ window.DIET_DATA = {
       "school": "早稲田大学",
       "faculty": "法学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/085.html",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthdate"
+      ]
     },
     {
       "id": "086",
@@ -1573,7 +1582,10 @@ window.DIET_DATA = {
       "school": "中央大学",
       "faculty": "法学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/120.html",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "121",
@@ -2959,7 +2971,10 @@ window.DIET_DATA = {
       "school": "早稲田大学",
       "faculty": "政経学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/226.html",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "227",
@@ -3130,7 +3145,10 @@ window.DIET_DATA = {
       "school": "慶應義塾大学",
       "faculty": "経済学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/239.html",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthdate"
+      ]
     },
     {
       "id": "240",
@@ -3653,7 +3671,10 @@ window.DIET_DATA = {
       "school": "早稲田大学",
       "faculty": "商学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/280.html",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "280",
@@ -3693,7 +3714,10 @@ window.DIET_DATA = {
       "school": "慶應義塾大学",
       "faculty": "法学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/286.html",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "283",
@@ -4110,7 +4134,10 @@ window.DIET_DATA = {
       "school": "東京大学",
       "faculty": "法学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/314.html",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "315",
@@ -4437,7 +4464,10 @@ window.DIET_DATA = {
       "school": "東京大学",
       "faculty": "法学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/340.html",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "340",
@@ -6143,7 +6173,10 @@ window.DIET_DATA = {
       "school": "長崎大学",
       "faculty": "医学部",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010003.htm",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "471",
@@ -6263,7 +6296,10 @@ window.DIET_DATA = {
       "school": "東京大学",
       "faculty": "工学部",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025005.htm",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "480",
@@ -6707,7 +6743,10 @@ window.DIET_DATA = {
       "school": "東京大学",
       "faculty": "工学部",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013001.htm",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "514",
@@ -7283,7 +7322,10 @@ window.DIET_DATA = {
       "school": "東京大学",
       "faculty": "法学部",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013021.htm",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "558",
@@ -8149,7 +8191,10 @@ window.DIET_DATA = {
       "school": "山梨大学",
       "faculty": "教育学部",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022030.htm",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "624",
@@ -8489,7 +8534,10 @@ window.DIET_DATA = {
       "school": "日本福祉大学",
       "faculty": "女子短期大学部",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016033.htm",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "650",
@@ -8725,7 +8773,10 @@ window.DIET_DATA = {
       "school": "国際基督教大学",
       "faculty": "不明",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007055.htm",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "668",
@@ -8739,7 +8790,10 @@ window.DIET_DATA = {
       "school": "東京大学",
       "faculty": "法学部",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016035.htm",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "669",
@@ -8818,7 +8872,10 @@ window.DIET_DATA = {
       "school": "明治大学",
       "faculty": "商学部",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7001046.htm",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "675",
@@ -8910,7 +8967,10 @@ window.DIET_DATA = {
       "school": "東京大学",
       "faculty": "法学部",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010050.htm",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "682",
@@ -9002,7 +9062,10 @@ window.DIET_DATA = {
       "school": "新潟大学",
       "faculty": "法文学部",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7001047.htm",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "689",
@@ -9159,7 +9222,10 @@ window.DIET_DATA = {
       "school": "神戸大学",
       "faculty": "法学部",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022041.htm",
-      "secondary_source": "wikipedia"
+      "secondary_source": "wikipedia",
+      "secondary_fields": [
+        "birthplace"
+      ]
     },
     {
       "id": "701",

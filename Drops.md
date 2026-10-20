@@ -29,7 +29,7 @@
 | CR ID | 分類 | 内容 | 対象ファイル | 状態 |
 |:---:|:---:|:---|:---|:---:|
 | **CR-SW-1** | 二次ソース連携 | **Wikipedia / Wikidata 連携クライアントモジュール（`wiki_client.py`）の新設**<br>Wikidata SPARQL クエリおよび Wikipedia MediaWiki API（Infobox/導入部）から生年月日・出身地・出身校を取得し、ドメインパーサーと連携して正規化するクライアントを実装 | `wiki_client.py`<br>`test_wiki_client.py` | **【完了】 (Drop 8)** |
-| **CR-SW-2** | フォールバック統合 | **`scraper.py` への自動フォールバックおよび欠損補完機能（`--wiki-enrich`）の実装**<br>公式障害時の自動フォールバックと、属性欠損議員の自動補完コマンドを新設。`manualLock: true` レコードは最優先保護し、補完データには `secondary_source: "wikipedia"` を付与 | `scraper.py` | **【完了】 (Drop 8)** |
+| **CR-SW-2** | フォールバック統合 & UI識別 | **`scraper.py` 欠損補完（`--wiki-enrich`）& UIフォント色分けによる出典識別**<br>公式障害時フォールバックと欠損補完コマンド新設。手動保護（`manualLock`）堅持の上、属性別メタデータ（`secondary_fields`）を記録。フロントエンドテーブルにて Wikipedia 由来データを青文字（`.source-wiki`）および凡例で明示 | `scraper.py`<br>`app.js`<br>`index.html`<br>`style.css`<br>`data.js` | **【完了】 (Drop 8)** |
 | **CR-SW-3** | 規約・ドキュメント | **公認二次データソース運用の明文化**<br>`Agent.md` の情報源原則を一次（衆参公式）＋公認二次（Wikipedia/Wikidata）に改訂し、`README.md` に CLI オプションを追記 | `Agent.md`<br>`README.md`<br>`Drops.md` | **【完了】 (Drop 8)** |
 
 ---
@@ -113,7 +113,7 @@
 - **背景・課題**: 衆議院・参議院の公式サイトを唯一の情報源として運用してきたが、公式サーバーの一時的な通信障害や、公式プロフィールにそもそも出身地や生年月日が記載されていない議員（出身地「不明」21名等）が存在し、自動パイプラインのみではデータが欠損したままとなっていた。特定政党に偏らない客観的かつ網羅的な二次データソースの公認連携が求められた。
 - **技術的変更内容**:
   1. **連携クライアント新設（CR-SW-1）**: `wiki_client.py` を新規作成。Wikipedia MediaWiki API（`ja.wikipedia.org`）による Infobox 政治家・導入部抽出と、Wikidata SPARQL API（`P569` 生年月日、`P19` 出生地、`P69` 出身校）のハイブリッド連携を実装。Wikitextのクレンジング、通称名検索、既存のドメイン正規化関数（`extract_birthplace`, `extract_school_and_faculty`）との完全統合を実現。単体テスト `test_wiki_client.py`（合格率100%）を整備。
-  2. **自動フォールバック & 補完機能（CR-SW-2）**: `scraper.py` に公式取得障害時および属性欠損時の自動フォールバックロジック、ならびに全件の欠損属性を一括補完する `--wiki-enrich` コマンドを追加。手動確定した `manualLock: true` レコード（33名）は最優先でスキップ・保護し、二次ソース補完時には `secondary_source: "wikipedia"` メタデータを記録。
+  2. **自動フォールバック & 補完機能 & UI出典色分け（CR-SW-2）**: `scraper.py` に公式取得障害時および属性欠損時の自動フォールバックロジック、全件欠損属性を一括補完する `--wiki-enrich` コマンドを追加。手動確定した `manualLock: true` レコード（33名）は最優先でスキップ・保護し、二次ソース補完時には `secondary_source: "wikipedia"` および `secondary_fields: ["birthplace"]` 等の属性別メタデータを記録。さらにフロントエンド（`index.html`, `app.js`, `style.css`）において、一次情報源由来（通常色）と Wikipedia 由来（青文字 `.source-wiki`、ツールチップ付）を明確に識別できる凡例およびスタイルを配備。
   3. **規約・マスタードキュメント同期（CR-SW-3）**: `Agent.md` の情報源原則を「一次情報源（衆参公式）＋公認二次情報源（Wikipedia/Wikidata）」に改訂し、`README.md`、`Drops.md` を更新。
 - **定量成果**: 出身地「不明」21名（井原巧氏、世耕弘成氏、上野宏史氏等）および生年月日欠損2名（大島敦氏、高山聡史氏）を Wikipedia / Wikidata より 100% 補完特定、`data.js` 整合性 712名および `manualLock` 33名完全維持。
 

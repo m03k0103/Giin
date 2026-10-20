@@ -982,24 +982,32 @@ def enrich_members_with_wiki(target_ids=None):
                 continue
                 
             field_updated = False
+            updated_fields = list(m.get('secondary_fields', []))
             if need_bdate and wdata.get('birthdate'):
                 m['birthdate'] = wdata['birthdate']
                 print(f"  -> [生年月日補完] {m['birthdate']}")
                 field_updated = True
+                if 'birthdate' not in updated_fields:
+                    updated_fields.append('birthdate')
                 
             if need_bplace and wdata.get('birthplace') and wdata['birthplace'] != '不明':
                 m['birthplace'] = wdata['birthplace']
                 print(f"  -> [出身地補完]   {m['birthplace']}")
                 field_updated = True
+                if 'birthplace' not in updated_fields:
+                    updated_fields.append('birthplace')
                 
             if need_school and wdata.get('school') and wdata['school'] != '不明':
                 m['school'] = wdata['school']
                 m['faculty'] = wdata.get('faculty', 'N/A')
                 print(f"  -> [出身校補完]   {m['school']} ({m['faculty']})")
                 field_updated = True
+                if 'school' not in updated_fields:
+                    updated_fields.append('school')
                 
             if field_updated:
                 m['secondary_source'] = wdata.get('source', 'wikipedia')
+                m['secondary_fields'] = updated_fields
                 updated_count += 1
         except Exception as e:
             print(f"  -> 照会エラー: {e}", file=sys.stderr)

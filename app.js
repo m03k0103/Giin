@@ -434,17 +434,48 @@ function renderMembersList() {
             ? `<a href="${m.profile_url}" target="_blank" rel="noopener noreferrer" class="profile-link" title="公式プロフィールページを開く">${m.name} 🔗</a>`
             : m.name;
         const elecDisplay = m.elections !== undefined && m.elections !== null ? `${m.elections}回` : '-';
+
+        const secFields = m.secondary_fields || (m.secondary_source === 'wikipedia' ? ['birthplace'] : []);
+        const isWikiBdate = secFields.includes('birthdate');
+        const isWikiBplace = secFields.includes('birthplace');
+        const isWikiSchool = secFields.includes('school');
+
+        const bdateText = m.birthdate || '-';
+        const bdateDisplay = isWikiBdate 
+            ? `<span class="source-wiki" title="Wikipedia（二次情報源）より取得">${bdateText}</span>` 
+            : bdateText;
+
+        const ageText = formatAge(m.age);
+        const ageDisplay = isWikiBdate 
+            ? `<span class="source-wiki" title="Wikipedia（二次情報源）生年月日より算出">${ageText}</span>` 
+            : ageText;
+
+        const bplaceText = m.birthplace || '-';
+        const bplaceDisplay = isWikiBplace 
+            ? `<span class="source-wiki" title="Wikipedia（二次情報源）より取得">${bplaceText}</span>` 
+            : bplaceText;
+
+        const schoolText = m.school || '-';
+        const schoolDisplay = isWikiSchool 
+            ? `<span class="source-wiki" title="Wikipedia（二次情報源）より取得">${schoolText}</span>` 
+            : schoolText;
+
+        const facultyText = m.faculty || '-';
+        const facultyDisplay = (isWikiSchool && m.faculty && m.faculty !== '-' && m.faculty !== 'N/A')
+            ? `<span class="source-wiki" title="Wikipedia（二次情報源）より取得">${facultyText}</span>` 
+            : facultyText;
+
         tr.innerHTML = `
             <td>${m.id || '-'}</td>
             <td>${nameCell}</td>
             <td>${m.house}</td>
             <td>${m.party}</td>
             <td>${elecDisplay}</td>
-            <td>${m.birthdate || '-'}</td>
-            <td>${formatAge(m.age)}</td>
-            <td>${m.birthplace || '-'}</td>
-            <td>${m.school || '-'}</td>
-            <td>${m.faculty || '-'}</td>
+            <td>${bdateDisplay}</td>
+            <td>${ageDisplay}</td>
+            <td>${bplaceDisplay}</td>
+            <td>${schoolDisplay}</td>
+            <td>${facultyDisplay}</td>
         `;
         tbody.appendChild(tr);
     });
