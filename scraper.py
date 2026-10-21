@@ -832,7 +832,7 @@ def update_members_by_id(target_id_str, headers=None):
                 print(f"[{js_file}] ID: {tid} ({m.get('name')}) のプロフィールURLがありません。")
                 continue
                 
-            lock_label = " [manualLock保持]" if m.get('manualLock') else ""
+            lock_label = ""
             print(f"\n[{js_file}][ID: {tid}] {m.get('name')} ({m.get('house')}・{m.get('party')}){lock_label} 更新中...")
             print(f"URL: {url}")
             
@@ -880,7 +880,7 @@ def update_members_by_id(target_id_str, headers=None):
                 print(f"  -> 出身校:   {m['school']}")
                 print(f"  -> 学部名:   {m['faculty']}")
                 # 二次データソース（Wikipedia / Wikidata）フォールバック
-                if not m.get('manualLock') and (not bdate or bplace == '不明' or sch == '不明'):
+                if not bdate or bplace == '不明' or sch == '不明':
                     try:
                         wdata = wiki_client.get_secondary_member_data(
                             m.get('name'),
@@ -932,7 +932,6 @@ def update_members_by_id(target_id_str, headers=None):
 def enrich_members_with_wiki(target_ids=None):
     """
     data.js 内の「不明」属性を持つ議員に対し、Wikipedia / Wikidata から安全に補完
-    manualLock: true のレコードは保護
     """
     filepath = 'data.js'
     file_data = load_diet_data(filepath)
@@ -954,9 +953,6 @@ def enrich_members_with_wiki(target_ids=None):
         if target_set and mid not in target_set:
             continue
             
-        # manualLock は保護
-        if m.get('manualLock'):
-            continue
             
         need_bdate = not m.get('birthdate') or m.get('birthdate') == '不明'
         need_bdate_sub = bool(m.get('birthdate') and not re.search(r'\d+年\d+月\d+日', m.get('birthdate')))
@@ -1132,7 +1128,7 @@ def main():
     print(f"開始日時: {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
     print("情報源: 衆議院公式ウェブサイト (https://www.shugiin.go.jp/) および 参議院公式ウェブサイト (https://www.sangiin.go.jp/)")
     
-    # 既存データのロード（手動修正 manualLock の保護用）
+    # 既存データのロード（二次ソース補完属性のインテリジェントマージ用）
     existing_data = load_diet_data('data.js') or {}
     existing_map = {}
     for em in existing_data.get('members', []):
@@ -1175,7 +1171,6 @@ def main():
     
     processed_members = []
     error_logs = []
-    locked_count = 0
     
     for idx, m in enumerate(all_raw_members, start=1):
         member_id = f"{idx:03d}"
@@ -1187,24 +1182,57 @@ def main():
         clean_furi = unicodedata.normalize('NFKC', m['furigana'])
         clean_furi = re.sub(r'\s+', ' ', clean_furi).strip()
             
-        # 既存の手動調整データ（manualLock）の照合と保護
+        # 既存データとのインテリジェントマージ（二次ソース補完属性の安全継承）
         key = (m['house'], m['name'])
         prev_m = existing_map.get(member_id) or existing_map.get(key)
-        is_locked = bool(prev_m and prev_m.get('manualLock'))
         
-        if is_locked:
-            locked_count += 1
-            final_birthdate = prev_m.get('birthdate') or m['birthdate']
-            final_birthplace = prev_m.get('birthplace') or m['birthplace']
-            final_school = prev_m.get('school') or m['school']
-            final_faculty = prev_m.get('faculty') or m['faculty']
-            final_elections = prev_m.get('elections') if prev_m.get('elections') is not None else m['elections']
+        final_elections = m['elections']
+        final_birthdate = m['birthdate']
+        final_birthplace = m['birthplace']
+        final_school = m['school']
+        final_faculty = m['faculty']
+        final_gender = '男性'
+        secondary_fields = []
+        secondary_source = None
+        
+        if prev_m:
+            prev_sec = prev_m.get('secondary_fields', [])
+            
+            # 1. 生年月日の月日補完（Wikipedia由来）の継承
+            if any(k in prev_sec for k in ['birthdate_day', 'birthdate_month_day', 'birthdate']):
+                prev_b = prev_m.get('birthdate')
+                if prev_b and final_birthdate and prev_b.startswith(final_birthdate):
+                    final_birthdate = prev_b
+                    for s_tag in ['birthdate_day', 'birthdate_month_day', 'birthdate']:
+                        if s_tag in prev_sec and s_tag not in secondary_fields:
+                            secondary_fields.append(s_tag)
+                            
+            # 2. 出身地補完（Wikipedia由来）の継承
+            if 'birthplace' in prev_sec and final_birthplace == '不明' and prev_m.get('birthplace') != '不明':
+                final_birthplace = prev_m.get('birthplace')
+                if 'birthplace' not in secondary_fields:
+                    secondary_fields.append('birthplace')
+                    
+            # 3. 出身校・学部名補完（Wikipedia由来）の継承
+            if 'school' in prev_sec and final_school == '不明' and prev_m.get('school') != '不明':
+                final_school = prev_m.get('school')
+                final_faculty = prev_m.get('faculty', '-')
+                if 'school' not in secondary_fields:
+                    secondary_fields.append('school')
+                    
+            # 4. 性別属性（Wikipedia/Wikidata由来）の継承
+            if prev_m.get('gender'):
+                final_gender = prev_m.get('gender')
+            if 'gender' in prev_sec or final_gender:
+                if 'gender' not in secondary_fields:
+                    secondary_fields.append('gender')
+                    
+            if prev_m.get('secondary_source'):
+                secondary_source = prev_m.get('secondary_source')
         else:
-            final_birthdate = m['birthdate']
-            final_birthplace = m['birthplace']
-            final_school = m['school']
-            final_faculty = m['faculty']
-            final_elections = m['elections']
+            # 新規議員の場合も性別タグを設定
+            secondary_fields.append('gender')
+            secondary_source = 'wikipedia'
             
         record = {
             "id": member_id,
@@ -1212,6 +1240,7 @@ def main():
             "furigana": clean_furi,
             "house": m['house'],
             "party": m['party'],
+            "gender": final_gender,
             "elections": final_elections,
             "birthdate": final_birthdate,
             "birthplace": final_birthplace,
@@ -1219,8 +1248,9 @@ def main():
             "faculty": final_faculty,
             "profile_url": m['source_url']
         }
-        if is_locked:
-            record["manualLock"] = True
+        if secondary_fields:
+            record["secondary_source"] = secondary_source or "wikipedia"
+            record["secondary_fields"] = secondary_fields
             
         processed_members.append(record)
         
@@ -1257,7 +1287,7 @@ def main():
             f.write("\n".join(error_logs))
             
     print(f"\n" + "=" * 45)
-    print(f"[完了] データを data.js にアトミック保存しました。（総計: {len(processed_members)}名 / manualLock保護: {locked_count}名）")
+    print(f"[完了] データを data.js にアトミック保存しました。（総計: {len(processed_members)}名 / インテリジェントマージ適用）")
     print(f"開始日時: {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"終了日時: {end_time.strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"処理時間: {duration_str}")
