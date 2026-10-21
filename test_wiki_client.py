@@ -25,6 +25,27 @@ class TestWikiClient(unittest.TestCase):
         self.assertEqual(wiki_client.parse_wiki_birthdate("1974年12月"), "1974年12月")
         self.assertEqual(wiki_client.parse_wiki_birthdate("1965年"), "1965年")
 
+    def test_validate_and_extract_birthdate_supplement(self):
+        # パターン1: YYYY年M月 -> 日のみ補完
+        new_b, sec_type = wiki_client.validate_and_extract_birthdate_supplement("1954年6月", "1954年6月10日")
+        self.assertEqual(new_b, "1954年6月10日")
+        self.assertEqual(sec_type, "birthdate_day")
+
+        # 年月が不一致の場合は補完拒否 (別人の誤認防止)
+        new_b, sec_type = wiki_client.validate_and_extract_birthdate_supplement("1977年4月", "1984年12月5日")
+        self.assertIsNone(new_b)
+        self.assertIsNone(sec_type)
+
+        # パターン2: YYYY年 -> 月日を補完
+        new_b, sec_type = wiki_client.validate_and_extract_birthdate_supplement("1965年", "1965年8月23日")
+        self.assertEqual(new_b, "1965年8月23日")
+        self.assertEqual(sec_type, "birthdate_month_day")
+
+        # 年が不一致の場合は補完拒否
+        new_b, sec_type = wiki_client.validate_and_extract_birthdate_supplement("1966年", "1970年1月1日")
+        self.assertIsNone(new_b)
+        self.assertIsNone(sec_type)
+
     def test_strip_wikitext(self):
         raw = "{{JPN}} [[岡山県]][[御津郡]]<ref>注釈</ref>"
         cleaned = wiki_client.strip_wikitext(raw)
@@ -37,7 +58,9 @@ class TestWikiClient(unittest.TestCase):
             ("逢沢一郎", "衆議院", "1954年6月10日", "岡山県", ["慶應義塾大学"]),
             ("石破茂", "衆議院", "1957年2月4日", "東京都", ["慶應義塾大学"]),
             ("浮島とも子", "衆議院", "1963年2月1日", "東京都", ["東京立正高等学校"]),
-            ("小泉進次郎", "衆議院", "1981年4月14日", "神奈川県", ["コロンビア大学", "関東学院大学"])
+            ("小泉進次郎", "衆議院", "1981年4月14日", "神奈川県", ["コロンビア大学", "関東学院大学"]),
+            ("青山周平", "衆議院", "1977年4月28日", None, None),
+            ("東徹", "衆議院", "1966年9月16日", None, None)
         ]
         
         for name, house, expected_bdate, expected_pref, expected_schools in test_cases:

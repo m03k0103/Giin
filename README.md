@@ -68,7 +68,7 @@ python scraper.py --wiki-enrich
 # 特定IDのみ補完
 python scraper.py --wiki-enrich -i 056,226
 ```
-> 公式プロフィールに出身地や生年月日が記載されていない議員レコードに対し、Wikipedia / Wikidata から安全に属性を照会・補完します（`manualLock: true` レコードは保護）。
+> 公式プロフィールに出身地や生年月日（月日）が記載されていない議員レコードに対し、Wikipedia / Wikidata から安全に属性を照会・補完します（生年のフォント色は通常色のまま維持し、補完された月日・日および出身地のみを青色フォント表示。`manualLock: true` レコードは保護）。
 
 - **全件データの復元（テスト実行後に全件データへ戻す場合）:**
 ```bash

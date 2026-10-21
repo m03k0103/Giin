@@ -436,19 +436,39 @@ function renderMembersList() {
         const elecDisplay = m.elections !== undefined && m.elections !== null ? `${m.elections}回` : '-';
 
         const secFields = m.secondary_fields || (m.secondary_source === 'wikipedia' ? ['birthplace'] : []);
-        const isWikiBdate = secFields.includes('birthdate');
+        const isWikiBdateFull = secFields.includes('birthdate');
+        const isWikiBdateDay = secFields.includes('birthdate_day');
+        const isWikiBdateMonthDay = secFields.includes('birthdate_month_day');
         const isWikiBplace = secFields.includes('birthplace');
         const isWikiSchool = secFields.includes('school');
 
-        const bdateText = m.birthdate || '-';
-        const bdateDisplay = isWikiBdate 
-            ? `<span class="source-wiki" title="Wikipedia（二次情報源）より取得">${bdateText}</span>` 
-            : bdateText;
+        let bdateDisplay = m.birthdate || '-';
+        if (m.birthdate) {
+            if (isWikiBdateDay) {
+                // 日のみ補完: YYYY年M月 は通常色、D日 のみ青色
+                const match = m.birthdate.match(/^(\d+年\d+月)(\d+日)$/);
+                if (match) {
+                    bdateDisplay = `${match[1]}<span class="source-wiki" title="日をWikipediaより補完">${match[2]}</span>`;
+                }
+            } else if (isWikiBdateMonthDay) {
+                // 月日を補完: YYYY年 は通常色、M月D日 のみ青色
+                const match = m.birthdate.match(/^(\d+年)(\d+月\d+日)$/);
+                if (match) {
+                    bdateDisplay = `${match[1]}<span class="source-wiki" title="月日をWikipediaより補完">${match[2]}</span>`;
+                }
+            } else if (isWikiBdateFull) {
+                // 公式に生年月日未記載で全量補完: 生年は通常色、月日のみ青色
+                const match = m.birthdate.match(/^(\d+年)(.*)$/);
+                if (match) {
+                    bdateDisplay = `${match[1]}<span class="source-wiki" title="月日をWikipediaより補完">${match[2]}</span>`;
+                } else {
+                    bdateDisplay = `<span class="source-wiki" title="Wikipediaより補完">${m.birthdate}</span>`;
+                }
+            }
+        }
 
-        const ageText = formatAge(m.age);
-        const ageDisplay = isWikiBdate 
-            ? `<span class="source-wiki" title="Wikipedia（二次情報源）生年月日より算出">${ageText}</span>` 
-            : ageText;
+        // 年齢（生年に基づくため通常色を維持）
+        const ageDisplay = formatAge(m.age);
 
         const bplaceText = m.birthplace || '-';
         const bplaceDisplay = isWikiBplace 

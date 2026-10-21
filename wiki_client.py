@@ -104,6 +104,44 @@ def parse_wiki_birthdate(raw_text):
         
     return None
 
+def validate_and_extract_birthdate_supplement(official_bdate, wiki_bdate):
+    """
+    公式生年月（日）と Wikipedia 生年月日を照合し、
+    年（および月）が一致する場合にのみ月日を補完。
+    
+    戻り値:
+        (new_birthdate, secondary_field_type) または (None, None)
+        secondary_field_type: 'birthdate_day'（日のみ補完）または 'birthdate_month_day'（月日補完）
+    """
+    if not official_bdate or not wiki_bdate:
+        return None, None
+        
+    m_wiki = re.search(r'(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日', str(wiki_bdate))
+    if not m_wiki:
+        return None, None
+        
+    w_y, w_m, w_d = m_wiki.group(1), str(int(m_wiki.group(2))), str(int(m_wiki.group(3)))
+    
+    # パターン1: 公式が YYYY年M月 (月まで判明、日のみ欠損)
+    m_ym = re.fullmatch(r'(\d{4})年\s*(\d{1,2})月', str(official_bdate).strip())
+    if m_ym:
+        o_y, o_m = m_ym.group(1), str(int(m_ym.group(2)))
+        # 年と月が公式と完全一致する場合のみ日を補完
+        if o_y == w_y and o_m == w_m:
+            return f"{o_y}年{o_m}月{w_d}日", "birthdate_day"
+        return None, None
+        
+    # パターン2: 公式が YYYY年 (年のみ判明、月日が欠損)
+    m_y = re.fullmatch(r'(\d{4})年', str(official_bdate).strip())
+    if m_y:
+        o_y = m_y.group(1)
+        # 年が公式と完全一致する場合のみ月日を補完
+        if o_y == w_y:
+            return f"{o_y}年{w_m}月{w_d}日", "birthdate_month_day"
+        return None, None
+        
+    return None, None
+
 def fetch_wikipedia_page_content(title):
     """
     Wikipedia API より指定されたタイトルのページ内容（Wikitext）を取得
@@ -242,13 +280,18 @@ def get_secondary_member_data(name, house=None, extract_birthplace_fn=None, extr
         'secondary_source': True
     }
 
-    # 1. まず Wikipedia の記事取得を試行（最速・安定）
-    wiki_title, content = fetch_wikipedia_page_content(clean_name)
+    # 1. まず Wikipedia の記事取得を試行
+    # 政治家曖昧さ回避記事（例: 青山周平 (政治家)）があれば最優先
+    wiki_title, content = fetch_wikipedia_page_content(f"{clean_name} (政治家)")
     if not content:
+        wiki_title, content = fetch_wikipedia_page_content(clean_name)
+    if not content or (content and "曖昧さ回避" in content):
         # 曖昧さ回避や通称名（例: 浮島智子 -> 浮島とも子）の検索
         candidate_title = search_wikipedia_title(clean_name, house)
         if candidate_title and candidate_title != clean_name:
-            wiki_title, content = fetch_wikipedia_page_content(candidate_title)
+            c_title, c_content = fetch_wikipedia_page_content(candidate_title)
+            if c_content and "曖昧さ回避" not in c_content:
+                wiki_title, content = c_title, c_content
 
     if content:
         res['wiki_title'] = wiki_title
