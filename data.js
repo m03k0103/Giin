@@ -1,5 +1,5 @@
 window.DIET_DATA = {
-  "last_updated": "2026-10-21T21:25:34.910589",
+  "last_updated": "2026-10-21T21:31:34.957521",
   "sources": [
     "衆議院公式ウェブサイト (https://www.shugiin.go.jp/)",
     "参議院公式ウェブサイト (https://www.sangiin.go.jp/)",
@@ -8317,15 +8317,18 @@ window.DIET_DATA = {
       "house": "衆議院",
       "party": "自民",
       "elections": 2,
-      "birthdate": "1964年1月",
-      "birthplace": "不明",
+      "birthdate": "1964年1月11日",
+      "birthplace": "長野県",
       "school": "慶應義塾大学",
       "faculty": "経済学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/453.html",
       "gender": "男性",
       "secondary_fields": [
-        "gender"
-      ]
+        "gender",
+        "birthdate_day",
+        "birthplace"
+      ],
+      "secondary_source": "wikipedia"
     },
     {
       "id": "454",
