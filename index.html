@@ -121,10 +121,20 @@
                 </div>
 
                 <div class="filter-group">
+                    <label for="birthplace-gender-mode">性別表示:</label>
+                    <select id="birthplace-gender-mode">
+                        <option value="color">性別の色分けあり</option>
+                        <option value="mono">性別の色分けなし</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
                     <label for="birthplace-sort">並び順:</label>
                     <select id="birthplace-sort">
                         <option value="count_desc">議員数が多い順 (降順)</option>
                         <option value="count_asc">議員数が少ない順 (昇順)</option>
+                        <option value="female_desc">女性比率が高い順 (降順)</option>
+                        <option value="female_asc">女性比率が低い順 (昇順)</option>
                         <option value="geo">地域順 (北海道〜沖縄・外国・不明)</option>
                     </select>
                 </div>
@@ -140,6 +150,10 @@
             </div>
 
             <div class="chart-card">
+                <div id="birthplace-legend" class="generation-legend" style="display: none;">
+                    <span class="legend-item"><span class="legend-box male"></span>男性</span>
+                    <span class="legend-item"><span class="legend-box female"></span>女性</span>
+                </div>
                 <div id="birthplace-chart" class="bar-chart-container">
                     <!-- JavaScriptで棒グラフを挿入 -->
                 </div>

@@ -433,6 +433,41 @@ select:focus {
     border-bottom-right-radius: 4px;
 }
 
+#birthplace-chart {
+    overflow-x: auto;
+}
+
+#birthplace-chart .bar-row {
+    grid-template-columns: 80px 1fr 340px;
+    min-width: 600px;
+}
+
+#birthplace-chart .bar-value {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+#birthplace-chart .bar-value .bar-count {
+    min-width: 44px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+#birthplace-chart .bar-value .bar-percentage {
+    min-width: 54px;
+    font-variant-numeric: tabular-nums;
+}
+
+#birthplace-chart .bar-value .bar-gender-detail {
+    min-width: 110px;
+    font-size: 0.75rem;
+    font-weight: normal;
+    color: var(--text-secondary);
+    font-variant-numeric: tabular-nums;
+}
+
 #generation-chart {
     overflow-x: auto;
 }

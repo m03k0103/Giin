@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('birthplace-house-filter').addEventListener('change', renderBirthplaceChart);
     document.getElementById('birthplace-sort').addEventListener('change', renderBirthplaceChart);
+    document.getElementById('birthplace-gender-mode').addEventListener('change', renderBirthplaceChart);
     document.getElementById('birthplace-display-mode').addEventListener('change', renderBirthplaceChart);
     document.getElementById('generation-house-filter').addEventListener('change', renderGenerationChart);
     document.getElementById('generation-gender-mode').addEventListener('change', renderGenerationChart);
@@ -192,43 +193,58 @@ const PREFECTURE_ORDER = [
 
 function renderBirthplaceChart() {
     const houseFilter = document.getElementById('birthplace-house-filter').value;
+    const genderMode = document.getElementById('birthplace-gender-mode').value;
     const sortMode = document.getElementById('birthplace-sort').value;
     const displayMode = document.getElementById('birthplace-display-mode').value;
+    const legendEl = document.getElementById('birthplace-legend');
+
+    if (genderMode === 'color') {
+        legendEl.style.display = 'flex';
+    } else {
+        legendEl.style.display = 'none';
+    }
 
     const filteredMembers = globalData.members.filter(m => {
         return houseFilter === 'all' || m.house === houseFilter;
     });
 
     const totalCount = filteredMembers.length;
+    const container = document.getElementById('birthplace-chart');
+    const summaryEl = document.getElementById('birthplace-chart-summary');
+
     if (totalCount === 0) {
-        document.getElementById('birthplace-chart').innerHTML = '<div style="padding: 20px; text-align: center; color: var(--text-secondary);">該当するデータがありません。</div>';
-        document.getElementById('birthplace-chart-summary').textContent = '';
+        container.innerHTML = '<div style="padding: 20px; text-align: center; color: var(--text-secondary);">該当するデータがありません。</div>';
+        summaryEl.textContent = '';
         return;
     }
 
-    // 各出身地の人数を集計
-    const countMap = {};
-    PREFECTURE_ORDER.forEach(p => { countMap[p] = 0; });
+    // 各出身地の人数・男女内訳を集計
+    const statsMap = {};
+    PREFECTURE_ORDER.forEach(p => {
+        statsMap[p] = { name: p, count: 0, male: 0, female: 0 };
+    });
     
     filteredMembers.forEach(m => {
         const bp = m.birthplace || '不明';
-        countMap[bp] = (countMap[bp] || 0) + 1;
+        if (!statsMap[bp]) {
+            statsMap[bp] = { name: bp, count: 0, male: 0, female: 0 };
+        }
+        statsMap[bp].count++;
+        if (m.gender === '女性') {
+            statsMap[bp].female++;
+        } else {
+            statsMap[bp].male++;
+        }
     });
 
     let chartData = [];
     if (displayMode === 'all') {
-        chartData = PREFECTURE_ORDER.map(name => ({
-            name: name,
-            count: countMap[name] || 0
-        }));
+        chartData = PREFECTURE_ORDER.map(name => statsMap[name] || { name, count: 0, male: 0, female: 0 });
     } else {
         // 出身者がいる地域のみ (nonzero / top20)
-        chartData = Object.keys(countMap)
-            .filter(name => countMap[name] > 0)
-            .map(name => ({
-                name: name,
-                count: countMap[name]
-            }));
+        chartData = Object.keys(statsMap)
+            .filter(name => statsMap[name].count > 0)
+            .map(name => statsMap[name]);
     }
 
     // ソート適用
@@ -236,6 +252,18 @@ function renderBirthplaceChart() {
         chartData.sort((a, b) => b.count - a.count || PREFECTURE_ORDER.indexOf(a.name) - PREFECTURE_ORDER.indexOf(b.name));
     } else if (sortMode === 'count_asc') {
         chartData.sort((a, b) => a.count - b.count || PREFECTURE_ORDER.indexOf(a.name) - PREFECTURE_ORDER.indexOf(b.name));
+    } else if (sortMode === 'female_desc') {
+        chartData.sort((a, b) => {
+            const ratioA = a.count > 0 ? (a.female / a.count) : -1;
+            const ratioB = b.count > 0 ? (b.female / b.count) : -1;
+            return ratioB - ratioA || b.count - a.count || PREFECTURE_ORDER.indexOf(a.name) - PREFECTURE_ORDER.indexOf(b.name);
+        });
+    } else if (sortMode === 'female_asc') {
+        chartData.sort((a, b) => {
+            const ratioA = a.count > 0 ? (a.female / a.count) : 999;
+            const ratioB = b.count > 0 ? (b.female / b.count) : 999;
+            return ratioA - ratioB || a.count - b.count || PREFECTURE_ORDER.indexOf(a.name) - PREFECTURE_ORDER.indexOf(b.name);
+        });
     } else if (sortMode === 'geo') {
         chartData.sort((a, b) => PREFECTURE_ORDER.indexOf(a.name) - PREFECTURE_ORDER.indexOf(b.name));
     }
@@ -245,7 +273,6 @@ function renderBirthplaceChart() {
     }
 
     const maxCount = Math.max(...chartData.map(d => d.count), 1);
-    const container = document.getElementById('birthplace-chart');
     container.innerHTML = '';
 
     chartData.forEach(item => {
@@ -253,28 +280,62 @@ function renderBirthplaceChart() {
         row.className = 'bar-row';
 
         const percentage = totalCount > 0 ? ((item.count / totalCount) * 100).toFixed(1) : '0.0';
-        const widthPercent = maxCount > 0 ? ((item.count / maxCount) * 100).toFixed(1) : '0';
-        
-        let barClass = 'bar-fill';
-        if (item.name === '外国') barClass += ' foreign';
-        if (item.name === '不明') barClass += ' unknown';
+        const femaleRatio = item.count > 0 ? ((item.female / item.count) * 100).toFixed(1) : null;
+        const femaleRatioDisplay = femaleRatio !== null ? `${femaleRatio}%` : '-';
+        const femaleBadgeHtml = `<span class="bar-female-badge" title="${item.name}の女性比率: ${femaleRatioDisplay}">女性比率 ${femaleRatioDisplay}</span>`;
+
+        let trackHtml = '';
+        let valueHtml = '';
+
+        if (genderMode === 'color') {
+            const maleWidth = maxCount > 0 ? ((item.male / maxCount) * 100).toFixed(1) : '0';
+            const femaleWidth = maxCount > 0 ? ((item.female / maxCount) * 100).toFixed(1) : '0';
+
+            trackHtml = `
+                <div class="bar-track stacked" title="${item.name}: 全体 ${item.count}名 (男性 ${item.male}名, 女性 ${item.female}名 / 女性比率 ${femaleRatioDisplay})">
+                    ${item.male > 0 ? `<div class="bar-fill male" style="width: ${maleWidth}%;" title="男性: ${item.male}名"></div>` : ''}
+                    ${item.female > 0 ? `<div class="bar-fill female" style="width: ${femaleWidth}%;" title="女性: ${item.female}名"></div>` : ''}
+                </div>
+            `;
+            valueHtml = `
+                <div class="bar-value">
+                    <span class="bar-count">${item.count}名</span>
+                    <span class="bar-percentage">(${percentage}%)</span>
+                    <span class="bar-gender-detail">(男:${item.male} 女:${item.female})</span>
+                    ${femaleBadgeHtml}
+                </div>
+            `;
+        } else {
+            const widthPercent = maxCount > 0 ? ((item.count / maxCount) * 100).toFixed(1) : '0';
+            let barClass = 'bar-fill';
+            if (item.name === '外国') barClass += ' foreign';
+            if (item.name === '不明') barClass += ' unknown';
+
+            trackHtml = `
+                <div class="bar-track" title="${item.name}: ${item.count}名 (${percentage}%) / 女性比率: ${femaleRatioDisplay}">
+                    <div class="${barClass}" style="width: ${widthPercent}%;"></div>
+                </div>
+            `;
+            valueHtml = `
+                <div class="bar-value">
+                    <span class="bar-count">${item.count}名</span>
+                    <span class="bar-percentage">(${percentage}%)</span>
+                    ${femaleBadgeHtml}
+                </div>
+            `;
+        }
 
         row.innerHTML = `
             <div class="bar-label">${item.name}</div>
-            <div class="bar-track">
-                <div class="${barClass}" style="width: ${widthPercent}%;"></div>
-            </div>
-            <div class="bar-value">
-                <span>${item.count}名</span>
-                <span class="bar-percentage">(${percentage}%)</span>
-            </div>
+            ${trackHtml}
+            ${valueHtml}
         `;
         container.appendChild(row);
     });
 
     const houseLabel = houseFilter === 'all' ? '全体 (衆参両院)' : houseFilter;
-    const distinctRegions = Object.keys(countMap).filter(k => countMap[k] > 0 && k !== '不明' && k !== '外国').length;
-    document.getElementById('birthplace-chart-summary').textContent = 
+    const distinctRegions = Object.keys(statsMap).filter(k => statsMap[k].count > 0 && k !== '不明' && k !== '外国').length;
+    summaryEl.textContent = 
         `集計対象: ${houseLabel}（計${totalCount}名） / 出身都道府県数: ${distinctRegions}/47都道府県`;
 }
 
