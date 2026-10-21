@@ -34,6 +34,10 @@
                         <span class="stat-label">最高年齢</span>
                         <span class="stat-value" id="shugiin-max">-</span>
                     </div>
+                    <div class="stat-row">
+                        <span class="stat-label">女性議員</span>
+                        <span class="stat-value" id="shugiin-female">-</span>
+                    </div>
                 </div>
 
                 <!-- 参議院 -->
@@ -51,6 +55,10 @@
                         <span class="stat-label">最高年齢</span>
                         <span class="stat-value" id="sangiin-max">-</span>
                     </div>
+                    <div class="stat-row">
+                        <span class="stat-label">女性議員</span>
+                        <span class="stat-value" id="sangiin-female">-</span>
+                    </div>
                 </div>
 
                 <!-- 日本国民（参考情報） -->
@@ -64,6 +72,10 @@
                         <span class="stat-label">中央値</span>
                         <span class="stat-value" id="japan-median">49.4歳</span>
                     </div>
+                    <div class="stat-row">
+                        <span class="stat-label">女性比率</span>
+                        <span class="stat-value" id="japan-female">51.4%</span>
+                    </div>
                     <div class="reference-note">出典: <a href="https://www.ipss.go.jp/syoushika/tohkei/Popular/P_Detail2024.asp?fname=T12-08.htm" target="_blank" rel="noopener noreferrer">国立社会保障・人口問題研究所「人口統計資料集(2024)」</a></div>
                 </div>
             </div>
@@ -74,7 +86,7 @@
             <h2>会派別 年齢データ</h2>
             <div class="source-legend">
                 <span class="legend-item"><span class="legend-badge primary"></span>通常色: 衆参公式Web（一次情報源・生年など）</span>
-                <span class="legend-item"><span class="legend-badge wiki"></span><span class="source-wiki">青色文字</span>: Wikipedia / Wikidata 補完（生年月日の月日・出身地など）</span>
+                <span class="legend-item"><span class="legend-badge wiki"></span><span class="source-wiki">青色文字</span>: Wikipedia / Wikidata 補完（生年月日の月日・性別・出身地など）</span>
             </div>
 
             <div class="table-container">
@@ -150,6 +162,15 @@
                 </div>
 
                 <div class="filter-group">
+                    <label for="filter-gender">性別:</label>
+                    <select id="filter-gender">
+                        <option value="all">すべて</option>
+                        <option value="男性">男性</option>
+                        <option value="女性">女性</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
                     <label for="filter-party">会派:</label>
                     <select id="filter-party">
                         <option value="all">すべて</option>
@@ -176,7 +197,7 @@
 
             <div class="source-legend">
                 <span class="legend-item"><span class="legend-badge primary"></span>通常色: 衆参公式Web（一次情報源・生年など）</span>
-                <span class="legend-item"><span class="legend-badge wiki"></span><span class="source-wiki">青色文字</span>: Wikipedia / Wikidata 補完（生年月日の月日・出身地など）</span>
+                <span class="legend-item"><span class="legend-badge wiki"></span><span class="source-wiki">青色文字</span>: Wikipedia / Wikidata 補完（生年月日の月日・性別・出身地など）</span>
             </div>
 
             <div class="table-container">
@@ -190,6 +211,7 @@
                             <th class="sortable" id="sort-elections">当選回数</th>
                             <th>生年月日</th>
                             <th class="sortable" id="sort-age">年齢</th>
+                            <th class="sortable" id="sort-gender">性別</th>
                             <th class="sortable" id="sort-birthplace">出身地</th>
                             <th class="sortable" id="sort-school">出身校</th>
                             <th class="sortable" id="sort-faculty">学部名</th>

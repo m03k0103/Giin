@@ -1,5 +1,5 @@
 window.DIET_DATA = {
-  "last_updated": "2026-10-21T20:38:29.350388",
+  "last_updated": "2026-10-21T21:12:06.476026",
   "sources": [
     "衆議院公式ウェブサイト (https://www.shugiin.go.jp/)",
     "参議院公式ウェブサイト (https://www.sangiin.go.jp/)",
@@ -20,8 +20,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/001.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "002",
@@ -37,8 +39,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/002.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "003",
@@ -54,8 +58,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/003.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "004",
@@ -68,7 +74,11 @@ window.DIET_DATA = {
       "birthplace": "兵庫県",
       "school": "慶應義塾大学",
       "faculty": "文学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/004.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/004.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "005",
@@ -84,8 +94,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/005.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "006",
@@ -99,7 +111,11 @@ window.DIET_DATA = {
       "school": "東京大学",
       "faculty": "法学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/006.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "007",
@@ -115,8 +131,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/007.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "008",
@@ -132,8 +150,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/008.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "009",
@@ -146,7 +166,11 @@ window.DIET_DATA = {
       "birthplace": "宮城県",
       "school": "中央大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/009.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/009.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "010",
@@ -159,7 +183,11 @@ window.DIET_DATA = {
       "birthplace": "長崎県",
       "school": "法政大学",
       "faculty": "大学院政策創造研究科",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/010.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/010.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "011",
@@ -175,8 +203,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/011.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "012",
@@ -192,8 +222,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/012.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "013",
@@ -209,8 +241,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/013.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "014",
@@ -226,8 +260,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/014.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "015",
@@ -243,8 +279,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/015.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "016",
@@ -260,8 +298,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/016.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "017",
@@ -277,8 +317,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/017.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "018",
@@ -291,7 +333,11 @@ window.DIET_DATA = {
       "birthplace": "宮城県",
       "school": "イリノイ大学",
       "faculty": "不明",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/018.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/018.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "019",
@@ -304,7 +350,11 @@ window.DIET_DATA = {
       "birthplace": "福岡県",
       "school": "熊本大学",
       "faculty": "医学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/019.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/019.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "020",
@@ -320,8 +370,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/020.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "021",
@@ -337,8 +389,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/021.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "022",
@@ -354,8 +408,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/022.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "023",
@@ -371,8 +427,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/023.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "024",
@@ -388,8 +446,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/024.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "025",
@@ -402,7 +462,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "岡山県立農業大学",
       "faculty": "不明",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/025.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/025.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "026",
@@ -416,7 +480,11 @@ window.DIET_DATA = {
       "school": "東京大学",
       "faculty": "不明",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/026.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "027",
@@ -432,8 +500,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/027.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "028",
@@ -446,7 +516,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "立命館大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/028.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/028.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "029",
@@ -462,8 +536,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/029.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "030",
@@ -476,7 +552,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "神戸学院大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/030.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/030.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "031",
@@ -492,8 +572,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/031.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "032",
@@ -509,8 +591,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/032.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "033",
@@ -526,8 +610,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/035.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "034",
@@ -543,8 +629,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/036.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "035",
@@ -557,7 +645,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "慶應義塾大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/033.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/033.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "036",
@@ -571,7 +663,11 @@ window.DIET_DATA = {
       "school": "大阪外国語大学",
       "faculty": "外国語学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/034.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "037",
@@ -587,8 +683,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/037.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "038",
@@ -601,7 +699,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "関西医療学園専門学校",
       "faculty": "N/A",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/038.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/038.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "039",
@@ -614,7 +716,11 @@ window.DIET_DATA = {
       "birthplace": "福岡県",
       "school": "一橋大学",
       "faculty": "社会学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/039.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/039.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "040",
@@ -627,7 +733,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東京大学",
       "faculty": "教育学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/040.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/040.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "041",
@@ -643,8 +753,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/042.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "042",
@@ -660,8 +772,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/043.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "043",
@@ -674,7 +788,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "慶應義塾大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/044.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/044.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "044",
@@ -690,8 +808,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/045.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "045",
@@ -707,8 +827,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/046.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "046",
@@ -721,7 +843,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "神戸大学",
       "faculty": "医学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/047.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/047.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "047",
@@ -737,8 +863,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/048.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "048",
@@ -754,8 +882,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/041.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "049",
@@ -768,7 +898,11 @@ window.DIET_DATA = {
       "birthplace": "福井県",
       "school": "早稲田大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/049.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/049.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "050",
@@ -784,8 +918,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/050.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "051",
@@ -798,7 +934,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "愛知大学",
       "faculty": "経営学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/051.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/051.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "052",
@@ -811,7 +951,11 @@ window.DIET_DATA = {
       "birthplace": "群馬県",
       "school": "明治大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/052.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/052.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "053",
@@ -827,8 +971,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/053.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "054",
@@ -844,8 +990,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/054.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "055",
@@ -861,8 +1009,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/055.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "056",
@@ -878,8 +1028,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/057.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthplace"
-      ]
+        "birthplace",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "057",
@@ -895,8 +1047,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/058.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "058",
@@ -912,8 +1066,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/056.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "059",
@@ -929,8 +1085,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/059.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "060",
@@ -946,8 +1104,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/060.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "061",
@@ -963,8 +1123,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/061.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "062",
@@ -977,7 +1139,11 @@ window.DIET_DATA = {
       "birthplace": "佐賀県",
       "school": "九州大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/062.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/062.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "063",
@@ -993,8 +1159,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/063.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "064",
@@ -1007,7 +1175,11 @@ window.DIET_DATA = {
       "birthplace": "大分県",
       "school": "早稲田大学",
       "faculty": "政治経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/064.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/064.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "065",
@@ -1023,8 +1195,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/065.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "066",
@@ -1040,8 +1214,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/066.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "067",
@@ -1057,8 +1233,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/067.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "068",
@@ -1074,8 +1252,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/068.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthplace"
-      ]
+        "birthplace",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "069",
@@ -1091,8 +1271,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/069.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "070",
@@ -1106,7 +1288,11 @@ window.DIET_DATA = {
       "school": "東京立正高等学校",
       "faculty": "N/A",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/070.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "071",
@@ -1122,8 +1308,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/071.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "072",
@@ -1139,8 +1327,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/072.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "073",
@@ -1153,7 +1343,11 @@ window.DIET_DATA = {
       "birthplace": "新潟県",
       "school": "新潟大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/073.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/073.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "074",
@@ -1169,8 +1363,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/074.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "075",
@@ -1186,8 +1382,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/075.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "076",
@@ -1203,8 +1401,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/076.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "077",
@@ -1220,8 +1420,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/077.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "078",
@@ -1234,7 +1436,11 @@ window.DIET_DATA = {
       "birthplace": "宮崎県",
       "school": "成城大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/078.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/078.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "079",
@@ -1250,8 +1456,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/079.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "080",
@@ -1267,8 +1475,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/080.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "081",
@@ -1281,7 +1491,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "大阪産業大学",
       "faculty": "不明",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/081.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/081.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "082",
@@ -1297,8 +1511,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/082.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "083",
@@ -1311,7 +1527,11 @@ window.DIET_DATA = {
       "birthplace": "滋賀県",
       "school": "早稲田大学",
       "faculty": "政治経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/083.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/083.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "084",
@@ -1327,8 +1547,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/084.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "085",
@@ -1344,8 +1566,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/085.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate"
-      ]
+        "birthdate",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "086",
@@ -1358,7 +1582,11 @@ window.DIET_DATA = {
       "birthplace": "愛媛県",
       "school": "慶應義塾大学",
       "faculty": "総合政策学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/086.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/086.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "087",
@@ -1371,7 +1599,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "慶應義塾大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/087.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/087.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "088",
@@ -1387,8 +1619,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/088.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "089",
@@ -1404,8 +1638,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/089.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "090",
@@ -1421,8 +1657,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/090.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "091",
@@ -1438,8 +1676,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/092.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "092",
@@ -1452,7 +1692,11 @@ window.DIET_DATA = {
       "birthplace": "佐賀県",
       "school": "創価大学",
       "faculty": "不明",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/093.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/093.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "093",
@@ -1468,8 +1712,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/094.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "094",
@@ -1485,8 +1731,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/091.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "095",
@@ -1502,8 +1750,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/095.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "096",
@@ -1519,8 +1769,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/096.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "097",
@@ -1536,8 +1788,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/098.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "098",
@@ -1550,7 +1804,11 @@ window.DIET_DATA = {
       "birthplace": "高知県",
       "school": "東京大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/097.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/097.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "099",
@@ -1566,8 +1824,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/099.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "100",
@@ -1580,7 +1840,11 @@ window.DIET_DATA = {
       "birthplace": "石川県",
       "school": "国立石川工業高等専門学校",
       "faculty": "N/A",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/100.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/100.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "101",
@@ -1596,8 +1860,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/101.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "102",
@@ -1613,8 +1879,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/102.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "103",
@@ -1630,8 +1898,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/103.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "104",
@@ -1644,7 +1914,11 @@ window.DIET_DATA = {
       "birthplace": "宮城県",
       "school": "東京大学",
       "faculty": "大学院法学政治学研究科",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/104.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/104.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "105",
@@ -1660,8 +1934,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/105.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "106",
@@ -1677,8 +1953,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/106.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "107",
@@ -1691,7 +1969,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/107.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/107.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "108",
@@ -1704,7 +1986,11 @@ window.DIET_DATA = {
       "birthplace": "神奈川県",
       "school": "東京大学",
       "faculty": "工学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/108.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/108.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "109",
@@ -1720,8 +2006,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/109.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "110",
@@ -1737,8 +2025,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/111.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "111",
@@ -1751,7 +2041,11 @@ window.DIET_DATA = {
       "birthplace": "茨城県",
       "school": "日本大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/110.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/110.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "112",
@@ -1764,7 +2058,11 @@ window.DIET_DATA = {
       "birthplace": "静岡県",
       "school": "学習院大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/112.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/112.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "113",
@@ -1778,7 +2076,11 @@ window.DIET_DATA = {
       "school": "東京大学",
       "faculty": "法学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/113.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "114",
@@ -1791,7 +2093,11 @@ window.DIET_DATA = {
       "birthplace": "山形県",
       "school": "慶應義塾大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/115.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/115.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "115",
@@ -1807,8 +2113,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/116.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "116",
@@ -1824,8 +2132,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/117.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "117",
@@ -1841,8 +2151,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/118.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "118",
@@ -1858,8 +2170,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/119.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "119",
@@ -1875,8 +2189,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/114.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "120",
@@ -1893,8 +2209,10 @@ window.DIET_DATA = {
       "secondary_source": "wikipedia",
       "secondary_fields": [
         "birthplace",
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "121",
@@ -1910,8 +2228,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/121.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "122",
@@ -1927,8 +2247,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/122.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "123",
@@ -1944,8 +2266,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/123.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "124",
@@ -1961,8 +2285,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/124.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "125",
@@ -1975,7 +2301,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "専修大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/125.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/125.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "126",
@@ -1989,7 +2319,11 @@ window.DIET_DATA = {
       "school": "東京大学",
       "faculty": "教養学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/126.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "127",
@@ -2002,7 +2336,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "帝京大学",
       "faculty": "文学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/127.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/127.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "128",
@@ -2018,8 +2356,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/128.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "129",
@@ -2035,8 +2375,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/129.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "130",
@@ -2049,7 +2391,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東京大学",
       "faculty": "文学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/130.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/130.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "131",
@@ -2065,8 +2411,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/131.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "132",
@@ -2082,8 +2430,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/132.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "133",
@@ -2099,8 +2449,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/133.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "134",
@@ -2116,8 +2468,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/134.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "135",
@@ -2130,7 +2484,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "一橋大学",
       "faculty": "商学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/135.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/135.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "136",
@@ -2146,8 +2504,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/136.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "137",
@@ -2161,7 +2521,11 @@ window.DIET_DATA = {
       "school": "東京大学",
       "faculty": "経済学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/137.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "138",
@@ -2177,8 +2541,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/138.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "139",
@@ -2192,7 +2558,11 @@ window.DIET_DATA = {
       "school": "米国メリーランド大学",
       "faculty": "不明",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/139.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "140",
@@ -2205,7 +2575,11 @@ window.DIET_DATA = {
       "birthplace": "新潟県",
       "school": "中国黒龍江大学",
       "faculty": "不明",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/140.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/140.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "141",
@@ -2221,8 +2595,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/141.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "142",
@@ -2238,8 +2614,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/142.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "143",
@@ -2252,7 +2630,11 @@ window.DIET_DATA = {
       "birthplace": "奈良県",
       "school": "専修大学",
       "faculty": "経営学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/143.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/143.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "144",
@@ -2268,8 +2650,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/144.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "145",
@@ -2285,8 +2669,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/145.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "146",
@@ -2300,7 +2686,11 @@ window.DIET_DATA = {
       "school": "東京大学",
       "faculty": "法学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/146.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "147",
@@ -2313,7 +2703,11 @@ window.DIET_DATA = {
       "birthplace": "熊本県",
       "school": "早稲田大学",
       "faculty": "教育学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/147.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/147.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "148",
@@ -2329,8 +2723,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/148.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "149",
@@ -2343,7 +2739,11 @@ window.DIET_DATA = {
       "birthplace": "沖縄県",
       "school": "沖縄国際大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/149.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/149.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "150",
@@ -2359,8 +2759,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/150.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "151",
@@ -2376,8 +2778,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/151.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "152",
@@ -2393,8 +2797,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/152.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "153",
@@ -2410,8 +2816,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/153.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "154",
@@ -2427,8 +2835,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/154.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "155",
@@ -2442,7 +2852,11 @@ window.DIET_DATA = {
       "school": "長崎大学",
       "faculty": "医学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/155.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "156",
@@ -2458,8 +2872,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/156.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "157",
@@ -2472,7 +2888,11 @@ window.DIET_DATA = {
       "birthplace": "福岡県",
       "school": "東京国際大学",
       "faculty": "教養学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/157.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/157.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "158",
@@ -2488,8 +2908,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/158.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "159",
@@ -2505,8 +2927,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/159.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "160",
@@ -2522,8 +2946,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/160.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "161",
@@ -2539,8 +2965,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/161.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "162",
@@ -2556,8 +2984,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/162.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "163",
@@ -2570,7 +3000,11 @@ window.DIET_DATA = {
       "birthplace": "神奈川県",
       "school": "米国ジョージタウン大学",
       "faculty": "不明",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/163.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/163.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "164",
@@ -2586,8 +3020,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/164.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "165",
@@ -2600,7 +3036,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "早稲田大学",
       "faculty": "政治経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/165.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/165.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "166",
@@ -2616,8 +3056,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/166.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "167",
@@ -2633,8 +3075,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/167.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "168",
@@ -2650,8 +3094,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/168.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "169",
@@ -2667,8 +3113,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/169.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "170",
@@ -2684,8 +3132,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/172.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "171",
@@ -2701,8 +3151,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/173.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "172",
@@ -2718,8 +3170,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/174.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "173",
@@ -2735,8 +3189,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/175.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "174",
@@ -2752,8 +3208,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/176.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "175",
@@ -2766,7 +3224,11 @@ window.DIET_DATA = {
       "birthplace": "千葉県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/177.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/177.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "176",
@@ -2779,7 +3241,11 @@ window.DIET_DATA = {
       "birthplace": "北海道",
       "school": "東京大学",
       "faculty": "工学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/178.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/178.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "177",
@@ -2795,8 +3261,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/179.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "178",
@@ -2812,8 +3280,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/180.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "179",
@@ -2827,7 +3297,11 @@ window.DIET_DATA = {
       "school": "東京大学",
       "faculty": "法学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/170.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "180",
@@ -2843,8 +3317,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/171.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "181",
@@ -2860,8 +3336,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/181.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "182",
@@ -2874,7 +3352,11 @@ window.DIET_DATA = {
       "birthplace": "茨城県",
       "school": "大東文化大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/182.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/182.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "183",
@@ -2887,7 +3369,11 @@ window.DIET_DATA = {
       "birthplace": "滋賀県",
       "school": "同志社大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/183.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/183.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "184",
@@ -2903,8 +3389,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/184.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "185",
@@ -2920,8 +3408,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/185.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "186",
@@ -2934,7 +3424,11 @@ window.DIET_DATA = {
       "birthplace": "新潟県",
       "school": "学習院大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/186.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/186.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "187",
@@ -2950,8 +3444,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/187.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "188",
@@ -2967,8 +3463,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/188.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "189",
@@ -2984,8 +3482,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/189.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "190",
@@ -2998,7 +3498,11 @@ window.DIET_DATA = {
       "birthplace": "福島県",
       "school": "中央大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/190.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/190.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "191",
@@ -3014,8 +3518,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/191.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "192",
@@ -3031,8 +3537,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/192.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "193",
@@ -3045,7 +3553,11 @@ window.DIET_DATA = {
       "birthplace": "岩手県",
       "school": "群馬県立女子大学",
       "faculty": "国際コミュニケーション学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/193.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/193.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "194",
@@ -3058,7 +3570,11 @@ window.DIET_DATA = {
       "birthplace": "北海道",
       "school": "創価大学",
       "faculty": "大学院経済研究科",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/194.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/194.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "195",
@@ -3074,8 +3590,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/195.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "196",
@@ -3091,8 +3609,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/196.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "197",
@@ -3108,8 +3628,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/197.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "198",
@@ -3125,8 +3647,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/198.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "199",
@@ -3142,8 +3666,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/199.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "200",
@@ -3159,8 +3685,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/200.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "201",
@@ -3176,8 +3704,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/201.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "202",
@@ -3193,8 +3723,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/202.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "203",
@@ -3210,8 +3742,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/203.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "204",
@@ -3224,7 +3758,11 @@ window.DIET_DATA = {
       "birthplace": "福岡県",
       "school": "東海大学",
       "faculty": "不明",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/204.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/204.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "205",
@@ -3237,7 +3775,11 @@ window.DIET_DATA = {
       "birthplace": "群馬県",
       "school": "早稲田大学",
       "faculty": "教育学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/205.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/205.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "206",
@@ -3250,7 +3792,11 @@ window.DIET_DATA = {
       "birthplace": "宮城県",
       "school": "東北学院大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/206.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/206.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "207",
@@ -3266,8 +3812,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/207.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "208",
@@ -3280,7 +3828,11 @@ window.DIET_DATA = {
       "birthplace": "広島県",
       "school": "帝京大学",
       "faculty": "医学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/208.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/208.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "209",
@@ -3296,8 +3848,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/209.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "210",
@@ -3313,8 +3867,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/210.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "211",
@@ -3330,8 +3886,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/211.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "212",
@@ -3345,7 +3903,11 @@ window.DIET_DATA = {
       "school": "東京大学",
       "faculty": "法学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/212.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "213",
@@ -3358,7 +3920,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "早稲田大学",
       "faculty": "教育学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/213.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/213.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "214",
@@ -3374,8 +3940,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/214.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "215",
@@ -3391,8 +3959,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/215.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "216",
@@ -3405,7 +3975,11 @@ window.DIET_DATA = {
       "birthplace": "茨城県",
       "school": "茨城キリスト教学園高等学校",
       "faculty": "N/A",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/216.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/216.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "217",
@@ -3418,7 +3992,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/217.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/217.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "218",
@@ -3434,8 +4012,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/218.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "219",
@@ -3451,8 +4031,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/219.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "220",
@@ -3468,8 +4050,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/220.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "221",
@@ -3485,8 +4069,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/221.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "222",
@@ -3502,8 +4088,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/222.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "223",
@@ -3519,8 +4107,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/223.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "224",
@@ -3536,8 +4126,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/224.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "225",
@@ -3550,7 +4142,11 @@ window.DIET_DATA = {
       "birthplace": "三重県",
       "school": "名古屋音楽大学",
       "faculty": "音楽学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/225.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/225.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "226",
@@ -3566,8 +4162,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/226.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthplace"
-      ]
+        "birthplace",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "227",
@@ -3580,7 +4178,11 @@ window.DIET_DATA = {
       "birthplace": "岩手県",
       "school": "大阪府立大学",
       "faculty": "工学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/227.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/227.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "228",
@@ -3596,8 +4198,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/228.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "229",
@@ -3610,7 +4214,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "早稲田大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/229.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/229.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "230",
@@ -3623,7 +4231,11 @@ window.DIET_DATA = {
       "birthplace": "奈良県",
       "school": "神戸大学",
       "faculty": "経営学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/230.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/230.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "231",
@@ -3639,8 +4251,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/231.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "232",
@@ -3653,7 +4267,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "立教大学",
       "faculty": "社会学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/232.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/232.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "233",
@@ -3669,8 +4287,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/233.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "234",
@@ -3684,7 +4304,11 @@ window.DIET_DATA = {
       "school": "國學院大学",
       "faculty": "文学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/234.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "235",
@@ -3700,8 +4324,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/235.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "236",
@@ -3717,8 +4343,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/236.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "237",
@@ -3734,8 +4362,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/237.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "238",
@@ -3751,8 +4381,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/238.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "239",
@@ -3768,8 +4400,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/239.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate"
-      ]
+        "birthdate",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "240",
@@ -3785,8 +4419,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/240.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "241",
@@ -3802,8 +4438,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/241.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "242",
@@ -3819,8 +4457,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/242.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "243",
@@ -3836,8 +4476,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/243.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "244",
@@ -3853,8 +4495,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/244.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "245",
@@ -3870,8 +4514,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/245.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "246",
@@ -3887,8 +4533,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/246.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "247",
@@ -3901,7 +4549,11 @@ window.DIET_DATA = {
       "birthplace": "茨城県",
       "school": "白鴎大学",
       "faculty": "不明",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/247.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/247.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "248",
@@ -3917,8 +4569,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/248.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "249",
@@ -3931,7 +4585,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "青山学院大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/249.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/249.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "250",
@@ -3947,8 +4605,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/250.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "251",
@@ -3964,8 +4624,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/251.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "252",
@@ -3978,7 +4640,11 @@ window.DIET_DATA = {
       "birthplace": "岐阜県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/252.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/252.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "253",
@@ -3994,8 +4660,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/253.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "254",
@@ -4011,8 +4679,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/254.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "255",
@@ -4028,8 +4698,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/255.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "256",
@@ -4045,8 +4717,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/256.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "257",
@@ -4062,8 +4736,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/257.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "258",
@@ -4079,8 +4755,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/258.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "259",
@@ -4093,7 +4771,11 @@ window.DIET_DATA = {
       "birthplace": "千葉県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/259.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/259.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "260",
@@ -4106,7 +4788,11 @@ window.DIET_DATA = {
       "birthplace": "長野県",
       "school": "早稲田大学",
       "faculty": "第一文学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/260.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/260.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "261",
@@ -4122,8 +4808,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/261.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "262",
@@ -4139,8 +4827,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/262.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "263",
@@ -4153,7 +4843,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "名古屋大学",
       "faculty": "文学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/263.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/263.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "264",
@@ -4167,7 +4861,11 @@ window.DIET_DATA = {
       "school": "学習院大学",
       "faculty": "文学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/267.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "265",
@@ -4183,8 +4881,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/264.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "266",
@@ -4200,8 +4900,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/265.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "267",
@@ -4217,8 +4919,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/266.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "268",
@@ -4231,7 +4935,11 @@ window.DIET_DATA = {
       "birthplace": "神奈川県",
       "school": "京都大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/268.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/268.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "269",
@@ -4247,8 +4955,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/269.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "270",
@@ -4261,7 +4971,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "創価大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/270.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/270.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "271",
@@ -4277,8 +4991,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/271.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "272",
@@ -4294,8 +5010,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/273.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "273",
@@ -4311,8 +5029,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/275.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "274",
@@ -4325,7 +5045,11 @@ window.DIET_DATA = {
       "birthplace": "秋田県",
       "school": "秋田経済法科大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/274.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/274.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "275",
@@ -4339,7 +5063,11 @@ window.DIET_DATA = {
       "school": "東京大学",
       "faculty": "法学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/277.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "276",
@@ -4355,8 +5083,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/272.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "277",
@@ -4372,8 +5102,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/276.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "278",
@@ -4386,7 +5118,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "早稲田大学",
       "faculty": "政治経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/279.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/279.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "279",
@@ -4402,8 +5138,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/280.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthplace"
-      ]
+        "birthplace",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "280",
@@ -4419,8 +5157,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/281.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "281",
@@ -4436,8 +5176,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/282.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "282",
@@ -4453,8 +5195,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/286.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthplace"
-      ]
+        "birthplace",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "283",
@@ -4467,7 +5211,11 @@ window.DIET_DATA = {
       "birthplace": "高知県",
       "school": "防衛大学",
       "faculty": "不明",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/289.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/289.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "284",
@@ -4480,7 +5228,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "防衛大学",
       "faculty": "校理工学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/290.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/290.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "285",
@@ -4496,8 +5248,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/287.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "286",
@@ -4513,8 +5267,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/291.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "287",
@@ -4530,8 +5286,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/294.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "288",
@@ -4547,8 +5305,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/295.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "289",
@@ -4564,8 +5324,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/296.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "290",
@@ -4581,8 +5343,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/297.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "291",
@@ -4595,7 +5359,11 @@ window.DIET_DATA = {
       "birthplace": "茨城県",
       "school": "成蹊大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/299.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/299.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "292",
@@ -4611,8 +5379,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/300.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "293",
@@ -4625,7 +5395,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "愛知県立蟹江高等学校",
       "faculty": "N/A",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/301.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/301.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "294",
@@ -4641,8 +5415,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/302.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "295",
@@ -4655,7 +5431,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "ブリガムヤング大学",
       "faculty": "不明",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/303.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/303.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "296",
@@ -4671,8 +5451,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/278.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "297",
@@ -4685,7 +5467,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "青山学院大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/283.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/283.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "298",
@@ -4701,8 +5487,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/284.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "299",
@@ -4718,8 +5506,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/285.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "300",
@@ -4735,8 +5525,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/288.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "301",
@@ -4752,8 +5544,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/292.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "302",
@@ -4769,8 +5563,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/293.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "303",
@@ -4786,8 +5582,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/298.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "304",
@@ -4800,7 +5598,11 @@ window.DIET_DATA = {
       "birthplace": "広島県",
       "school": "青山学院大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/304.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/304.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "305",
@@ -4813,7 +5615,11 @@ window.DIET_DATA = {
       "birthplace": "徳島県",
       "school": "東京大学",
       "faculty": "教養学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/305.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/305.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "306",
@@ -4829,8 +5635,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/306.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "307",
@@ -4846,8 +5654,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/307.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "308",
@@ -4863,8 +5673,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/308.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "309",
@@ -4880,8 +5692,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/309.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "310",
@@ -4897,8 +5711,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/310.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "311",
@@ -4911,7 +5727,11 @@ window.DIET_DATA = {
       "birthplace": "熊本県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/311.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/311.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "312",
@@ -4927,8 +5747,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/312.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "313",
@@ -4941,7 +5763,11 @@ window.DIET_DATA = {
       "birthplace": "新潟県",
       "school": "新潟大学",
       "faculty": "大学院法学研究科",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/313.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/313.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "314",
@@ -4957,8 +5783,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/314.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthplace"
-      ]
+        "birthplace",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "315",
@@ -4972,7 +5800,11 @@ window.DIET_DATA = {
       "school": "上智大学",
       "faculty": "経済学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/315.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "316",
@@ -4988,8 +5820,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/316.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "317",
@@ -5005,8 +5839,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/317.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "318",
@@ -5022,8 +5858,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/318.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "319",
@@ -5036,7 +5874,11 @@ window.DIET_DATA = {
       "birthplace": "茨城県",
       "school": "早稲田大学",
       "faculty": "政治経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/319.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/319.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "320",
@@ -5052,8 +5894,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/320.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "321",
@@ -5066,7 +5910,11 @@ window.DIET_DATA = {
       "birthplace": "福島県",
       "school": "東京大学",
       "faculty": "不明",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/321.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/321.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "322",
@@ -5079,7 +5927,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "一橋大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/322.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/322.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "323",
@@ -5095,8 +5947,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/323.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "324",
@@ -5109,7 +5963,11 @@ window.DIET_DATA = {
       "birthplace": "千葉県",
       "school": "早稲田大学",
       "faculty": "政経学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/324.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/324.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "325",
@@ -5125,8 +5983,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/325.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "326",
@@ -5139,7 +5999,11 @@ window.DIET_DATA = {
       "birthplace": "鹿児島県",
       "school": "慶應義塾大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/326.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/326.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "327",
@@ -5155,8 +6019,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/327.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "328",
@@ -5172,8 +6038,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/328.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "329",
@@ -5189,8 +6057,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/329.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "330",
@@ -5206,8 +6076,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/330.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "331",
@@ -5223,8 +6095,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/331.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "332",
@@ -5237,7 +6111,11 @@ window.DIET_DATA = {
       "birthplace": "愛媛県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/332.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/332.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "333",
@@ -5250,7 +6128,11 @@ window.DIET_DATA = {
       "birthplace": "神奈川県",
       "school": "横浜国立大学",
       "faculty": "教育学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/333.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/333.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "334",
@@ -5266,8 +6148,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/334.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "335",
@@ -5280,7 +6164,11 @@ window.DIET_DATA = {
       "birthplace": "茨城県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/335.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/335.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "336",
@@ -5296,8 +6184,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/337.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "337",
@@ -5310,7 +6200,11 @@ window.DIET_DATA = {
       "birthplace": "福岡県",
       "school": "早稲田大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/338.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/338.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "338",
@@ -5323,7 +6217,11 @@ window.DIET_DATA = {
       "birthplace": "北海道",
       "school": "北海道教育大学",
       "faculty": "札幌校教育学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/339.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/339.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "339",
@@ -5340,8 +6238,10 @@ window.DIET_DATA = {
       "secondary_source": "wikipedia",
       "secondary_fields": [
         "birthplace",
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "340",
@@ -5357,8 +6257,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/341.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "341",
@@ -5371,7 +6273,11 @@ window.DIET_DATA = {
       "birthplace": "奈良県",
       "school": "近畿大学",
       "faculty": "通信教育部法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/342.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/342.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "342",
@@ -5387,8 +6293,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/336.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "343",
@@ -5404,8 +6312,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/343.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "344",
@@ -5421,8 +6331,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/344.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "345",
@@ -5438,8 +6350,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/345.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "346",
@@ -5455,8 +6369,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/346.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "347",
@@ -5469,7 +6385,11 @@ window.DIET_DATA = {
       "birthplace": "岐阜県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/347.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/347.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "348",
@@ -5482,7 +6402,11 @@ window.DIET_DATA = {
       "birthplace": "岡山県",
       "school": "学習院大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/348.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/348.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "349",
@@ -5498,8 +6422,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/349.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "350",
@@ -5515,8 +6441,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/350.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "351",
@@ -5530,7 +6458,11 @@ window.DIET_DATA = {
       "school": "成蹊大学",
       "faculty": "経済学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/351.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "352",
@@ -5543,7 +6475,11 @@ window.DIET_DATA = {
       "birthplace": "静岡県",
       "school": "信州大学",
       "faculty": "工学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/352.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/352.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "353",
@@ -5559,8 +6495,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/353.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "354",
@@ -5576,8 +6514,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/354.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "355",
@@ -5593,8 +6533,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/355.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "356",
@@ -5607,7 +6549,11 @@ window.DIET_DATA = {
       "birthplace": "群馬県",
       "school": "ジョンズホプキンス大学",
       "faculty": "不明",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/356.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/356.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "357",
@@ -5623,8 +6569,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/357.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "358",
@@ -5640,8 +6588,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/358.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "359",
@@ -5657,8 +6607,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/359.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "360",
@@ -5671,7 +6623,11 @@ window.DIET_DATA = {
       "birthplace": "長野県",
       "school": "一橋大学",
       "faculty": "社会学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/360.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/360.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "361",
@@ -5687,8 +6643,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/361.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "362",
@@ -5704,8 +6662,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/362.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "363",
@@ -5721,8 +6681,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/363.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "364",
@@ -5738,8 +6700,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/364.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "365",
@@ -5755,8 +6719,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/365.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "366",
@@ -5772,8 +6738,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/366.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "367",
@@ -5789,8 +6757,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/367.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "368",
@@ -5806,8 +6776,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/368.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "369",
@@ -5823,8 +6795,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/369.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "370",
@@ -5840,8 +6814,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/370.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "371",
@@ -5857,8 +6833,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/371.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "372",
@@ -5874,8 +6852,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/372.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "373",
@@ -5891,8 +6871,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/373.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "374",
@@ -5905,7 +6887,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "成蹊大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/374.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/374.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "375",
@@ -5921,8 +6907,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/375.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "376",
@@ -5938,8 +6926,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/376.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "377",
@@ -5955,8 +6945,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/377.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "378",
@@ -5972,8 +6964,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/378.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "379",
@@ -5986,7 +6980,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "学習院大学",
       "faculty": "大学院人文科学研究科",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/379.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/379.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "380",
@@ -6002,8 +7000,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/380.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "381",
@@ -6019,8 +7019,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/381.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "382",
@@ -6036,8 +7038,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/382.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "383",
@@ -6053,8 +7057,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/383.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "384",
@@ -6070,8 +7076,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/384.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "385",
@@ -6084,7 +7092,11 @@ window.DIET_DATA = {
       "birthplace": "北海道",
       "school": "慶應義塾大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/385.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/385.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "386",
@@ -6100,8 +7112,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/386.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "387",
@@ -6117,8 +7131,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/387.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "388",
@@ -6134,8 +7150,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/388.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "389",
@@ -6151,8 +7169,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/389.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "390",
@@ -6168,8 +7188,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/390.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "391",
@@ -6182,7 +7204,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東京大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/391.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/391.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "392",
@@ -6195,7 +7221,11 @@ window.DIET_DATA = {
       "birthplace": "兵庫県",
       "school": "東京大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/392.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/392.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "393",
@@ -6208,7 +7238,11 @@ window.DIET_DATA = {
       "birthplace": "神奈川県",
       "school": "東京大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/393.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/393.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "394",
@@ -6224,8 +7258,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/394.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "395",
@@ -6238,7 +7274,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/395.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/395.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "396",
@@ -6251,7 +7291,11 @@ window.DIET_DATA = {
       "birthplace": "鹿児島県",
       "school": "早稲田大学",
       "faculty": "不明",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/396.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/396.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "397",
@@ -6267,8 +7311,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/397.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "398",
@@ -6284,8 +7330,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/398.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "399",
@@ -6298,7 +7346,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/399.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/399.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "400",
@@ -6314,8 +7366,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/400.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "401",
@@ -6328,7 +7382,11 @@ window.DIET_DATA = {
       "birthplace": "秋田県",
       "school": "慶應義塾大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/401.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/401.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "402",
@@ -6341,7 +7399,11 @@ window.DIET_DATA = {
       "birthplace": "福岡県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/402.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/402.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "403",
@@ -6357,8 +7419,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/403.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "404",
@@ -6374,8 +7438,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/404.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "405",
@@ -6388,7 +7454,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "東京大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/406.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/406.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "406",
@@ -6404,8 +7474,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/405.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "407",
@@ -6421,8 +7493,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/407.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "408",
@@ -6438,8 +7512,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/408.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "409",
@@ -6455,8 +7531,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/409.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "410",
@@ -6472,8 +7550,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/410.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "411",
@@ -6489,8 +7569,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/411.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "412",
@@ -6506,8 +7588,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/412.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "413",
@@ -6523,8 +7607,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/413.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "414",
@@ -6540,8 +7626,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/414.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "415",
@@ -6557,8 +7645,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/415.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "416",
@@ -6574,8 +7664,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/416.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "417",
@@ -6591,8 +7683,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/417.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "418",
@@ -6608,8 +7702,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/418.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "419",
@@ -6622,7 +7718,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "上智大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/419.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/419.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "420",
@@ -6635,7 +7735,11 @@ window.DIET_DATA = {
       "birthplace": "宮城県",
       "school": "東北福祉大学",
       "faculty": "不明",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/420.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/420.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "421",
@@ -6648,7 +7752,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "早稲田大学",
       "faculty": "政治経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/421.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/421.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "422",
@@ -6661,7 +7769,11 @@ window.DIET_DATA = {
       "birthplace": "鹿児島県",
       "school": "旧鹿児島県立日新高校",
       "faculty": "N/A",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/422.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/422.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "423",
@@ -6674,7 +7786,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/423.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/423.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "424",
@@ -6690,8 +7806,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/424.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "425",
@@ -6707,8 +7825,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/425.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "426",
@@ -6721,7 +7841,11 @@ window.DIET_DATA = {
       "birthplace": "北海道",
       "school": "慶應義塾大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/426.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/426.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "427",
@@ -6737,8 +7861,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/427.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "428",
@@ -6754,8 +7880,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/428.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "429",
@@ -6771,8 +7899,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/429.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "430",
@@ -6788,8 +7918,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/430.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "431",
@@ -6805,8 +7937,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/431.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "432",
@@ -6819,7 +7953,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "立命館大学",
       "faculty": "政策科学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/432.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/432.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "433",
@@ -6835,8 +7973,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/433.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "434",
@@ -6852,8 +7992,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/434.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "435",
@@ -6869,8 +8011,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/435.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "436",
@@ -6883,7 +8027,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/436.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/436.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "437",
@@ -6899,8 +8047,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/437.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "438",
@@ -6913,7 +8063,11 @@ window.DIET_DATA = {
       "birthplace": "広島県",
       "school": "京都大学",
       "faculty": "文学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/438.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/438.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "439",
@@ -6926,7 +8080,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "南山大学",
       "faculty": "総合政策学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/439.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/439.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "440",
@@ -6942,8 +8100,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/441.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "441",
@@ -6959,8 +8119,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/440.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "442",
@@ -6973,7 +8135,11 @@ window.DIET_DATA = {
       "birthplace": "和歌山県",
       "school": "関西大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/442.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/442.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "443",
@@ -6986,7 +8152,11 @@ window.DIET_DATA = {
       "birthplace": "静岡県",
       "school": "立教大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/443.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/443.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "444",
@@ -7002,8 +8172,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/444.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "445",
@@ -7019,8 +8191,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/445.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "446",
@@ -7036,8 +8210,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/446.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "447",
@@ -7053,8 +8229,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/447.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "448",
@@ -7070,8 +8248,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/448.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "449",
@@ -7087,8 +8267,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/449.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "450",
@@ -7104,8 +8286,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/450.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "451",
@@ -7118,7 +8302,11 @@ window.DIET_DATA = {
       "birthplace": "神奈川県",
       "school": "慶應義塾大学",
       "faculty": "文学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/451.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/451.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "452",
@@ -7134,8 +8322,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/452.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "453",
@@ -7149,7 +8339,11 @@ window.DIET_DATA = {
       "school": "慶應義塾大学",
       "faculty": "経済学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/453.html",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "454",
@@ -7165,8 +8359,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/454.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "455",
@@ -7182,8 +8378,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/455.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "456",
@@ -7196,7 +8394,11 @@ window.DIET_DATA = {
       "birthplace": "新潟県",
       "school": "東京大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/456.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/456.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "457",
@@ -7209,7 +8411,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "早稲田大学",
       "faculty": "法学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/457.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/457.html",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "458",
@@ -7225,8 +8431,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/460.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "459",
@@ -7242,8 +8450,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/461.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "460",
@@ -7256,7 +8466,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東日本学園大学",
       "faculty": "歯学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/462.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/462.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "461",
@@ -7272,8 +8486,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/463.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "462",
@@ -7289,8 +8505,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/464.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "463",
@@ -7306,8 +8524,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/465.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "464",
@@ -7323,8 +8543,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/458.html",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "465",
@@ -7337,7 +8559,11 @@ window.DIET_DATA = {
       "birthplace": "北海道",
       "school": "早稲田大学",
       "faculty": "商学部",
-      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/459.html"
+      "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/459.html",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "466",
@@ -7350,7 +8576,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "千葉大学",
       "faculty": "教育学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007006.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007006.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "467",
@@ -7363,7 +8593,11 @@ window.DIET_DATA = {
       "birthplace": "島根県",
       "school": "早稲田大学",
       "faculty": "教育学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010001.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010001.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "468",
@@ -7376,7 +8610,11 @@ window.DIET_DATA = {
       "birthplace": "新潟県",
       "school": "慶應義塾大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022002.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022002.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "469",
@@ -7389,7 +8627,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "中央大学",
       "faculty": "文学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022003.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022003.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "470",
@@ -7405,8 +8647,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010003.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthplace"
-      ]
+        "birthplace",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "471",
@@ -7419,7 +8663,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/5998003.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/5998003.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "472",
@@ -7435,8 +8683,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016003.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "473",
@@ -7450,7 +8700,11 @@ window.DIET_DATA = {
       "school": "法政大学",
       "faculty": "不明",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016004.htm",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "474",
@@ -7463,7 +8717,11 @@ window.DIET_DATA = {
       "birthplace": "福井県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7014002.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7014002.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "475",
@@ -7476,7 +8734,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "大阪府立茨木高校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025002.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025002.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "476",
@@ -7489,7 +8751,11 @@ window.DIET_DATA = {
       "birthplace": "福井県",
       "school": "京都大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025003.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025003.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "477",
@@ -7503,7 +8769,11 @@ window.DIET_DATA = {
       "school": "国際基督教大学",
       "faculty": "不明",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7001006.htm",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "478",
@@ -7516,7 +8786,11 @@ window.DIET_DATA = {
       "birthplace": "神奈川県",
       "school": "慶應義塾大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025004.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025004.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "479",
@@ -7532,8 +8806,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025005.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthplace"
-      ]
+        "birthplace",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "480",
@@ -7546,7 +8822,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "恵泉女学園短期大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022004.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022004.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "481",
@@ -7559,7 +8839,11 @@ window.DIET_DATA = {
       "birthplace": "千葉県",
       "school": "千葉県立長生高等学校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007007.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007007.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "482",
@@ -7572,7 +8856,11 @@ window.DIET_DATA = {
       "birthplace": "秋田県",
       "school": "早稲田大学",
       "faculty": "第二文学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010005.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010005.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "483",
@@ -7585,7 +8873,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東京大学",
       "faculty": "医学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016009.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016009.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "484",
@@ -7598,7 +8890,11 @@ window.DIET_DATA = {
       "birthplace": "茨城県",
       "school": "聖徳大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025045.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025045.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "485",
@@ -7611,7 +8907,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "創価大学",
       "faculty": "工学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010006.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010006.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "486",
@@ -7627,8 +8927,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019003.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "487",
@@ -7641,7 +8943,11 @@ window.DIET_DATA = {
       "birthplace": "奈良県",
       "school": "東京大学",
       "faculty": "医学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013010.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013010.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "488",
@@ -7654,7 +8960,11 @@ window.DIET_DATA = {
       "birthplace": "島根県",
       "school": "中央大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010007.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010007.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "489",
@@ -7667,7 +8977,11 @@ window.DIET_DATA = {
       "birthplace": "兵庫県",
       "school": "東京大学",
       "faculty": "教育学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025007.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025007.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "490",
@@ -7680,7 +8994,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "早稲田大学",
       "faculty": "大学院理工学研究科",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025008.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025008.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "491",
@@ -7693,7 +9011,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東京電機大学",
       "faculty": "工学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013011.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013011.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "492",
@@ -7706,7 +9028,11 @@ window.DIET_DATA = {
       "birthplace": "香川県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010008.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010008.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "493",
@@ -7719,7 +9045,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "金城学院大学",
       "faculty": "文学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016006.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016006.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "494",
@@ -7732,7 +9062,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "関西大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016005.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016005.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "495",
@@ -7746,7 +9080,11 @@ window.DIET_DATA = {
       "school": "関西外国語大学",
       "faculty": "外国語学部",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025009.htm",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "496",
@@ -7759,7 +9097,11 @@ window.DIET_DATA = {
       "birthplace": "神奈川県",
       "school": "日本大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013006.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013006.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "497",
@@ -7775,8 +9117,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010009.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "498",
@@ -7789,7 +9133,11 @@ window.DIET_DATA = {
       "birthplace": "長野県",
       "school": "信州大学",
       "faculty": "人文学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022005.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022005.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "499",
@@ -7802,7 +9150,11 @@ window.DIET_DATA = {
       "birthplace": "沖縄県",
       "school": "琉球大学",
       "faculty": "理工学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016007.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016007.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "500",
@@ -7815,7 +9167,11 @@ window.DIET_DATA = {
       "birthplace": "沖縄県",
       "school": "八雲学園高等学校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016010.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016010.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "501",
@@ -7828,7 +9184,11 @@ window.DIET_DATA = {
       "birthplace": "福島県",
       "school": "福島大学",
       "faculty": "行政社会学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016011.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016011.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "502",
@@ -7841,7 +9201,11 @@ window.DIET_DATA = {
       "birthplace": "北海道",
       "school": "淑徳大学",
       "faculty": "社会福祉学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019005.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019005.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "503",
@@ -7854,7 +9218,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東京女子医科大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025038.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025038.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "504",
@@ -7867,7 +9235,11 @@ window.DIET_DATA = {
       "birthplace": "熊本県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025010.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025010.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "505",
@@ -7880,7 +9252,11 @@ window.DIET_DATA = {
       "birthplace": "神奈川県",
       "school": "東京大学",
       "faculty": "農学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022006.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022006.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "506",
@@ -7896,8 +9272,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019042.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "507",
@@ -7910,7 +9288,11 @@ window.DIET_DATA = {
       "birthplace": "富山県",
       "school": "富山県立富山高等学校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025064.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025064.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "508",
@@ -7923,7 +9305,11 @@ window.DIET_DATA = {
       "birthplace": "栃木県",
       "school": "共立女子大学",
       "faculty": "文芸学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010013.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010013.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "509",
@@ -7936,7 +9322,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "大阪大学",
       "faculty": "医学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025035.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025035.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "510",
@@ -7949,7 +9339,11 @@ window.DIET_DATA = {
       "birthplace": "千葉県",
       "school": "日本大学",
       "faculty": "文理学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022007.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022007.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "511",
@@ -7965,8 +9359,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019006.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "512",
@@ -7979,7 +9375,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "立命館大学",
       "faculty": "文学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019007.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019007.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "513",
@@ -7995,8 +9395,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013001.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthplace"
-      ]
+        "birthplace",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "514",
@@ -8009,7 +9411,11 @@ window.DIET_DATA = {
       "birthplace": "埼玉県",
       "school": "法政大学",
       "faculty": "大学院社会科学研究科",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025011.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025011.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "515",
@@ -8022,7 +9428,11 @@ window.DIET_DATA = {
       "birthplace": "福岡県",
       "school": "北九州大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010018.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010018.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "516",
@@ -8035,7 +9445,11 @@ window.DIET_DATA = {
       "birthplace": "福岡県",
       "school": "日本大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007017.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007017.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "517",
@@ -8048,7 +9462,11 @@ window.DIET_DATA = {
       "birthplace": "埼玉県",
       "school": "駿河台大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025013.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025013.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "518",
@@ -8061,7 +9479,11 @@ window.DIET_DATA = {
       "birthplace": "兵庫県",
       "school": "日本体育大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025014.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025014.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "519",
@@ -8074,7 +9496,11 @@ window.DIET_DATA = {
       "birthplace": "石川県",
       "school": "東京大学",
       "faculty": "文学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004012.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004012.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "520",
@@ -8087,7 +9513,11 @@ window.DIET_DATA = {
       "birthplace": "福岡県",
       "school": "労働福祉事業団九州リハビリテーション大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016012.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016012.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "521",
@@ -8100,7 +9530,11 @@ window.DIET_DATA = {
       "birthplace": "福岡県",
       "school": "武蔵野音楽大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025012.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025012.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "522",
@@ -8113,7 +9547,11 @@ window.DIET_DATA = {
       "birthplace": "京都府",
       "school": "早稲田大学",
       "faculty": "教育学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025015.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025015.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "523",
@@ -8126,7 +9564,11 @@ window.DIET_DATA = {
       "birthplace": "山梨県",
       "school": "山梨県立甲府西高校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019008.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019008.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "524",
@@ -8140,7 +9582,11 @@ window.DIET_DATA = {
       "school": "法政大学",
       "faculty": "工学部",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022008.htm",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "525",
@@ -8153,7 +9599,11 @@ window.DIET_DATA = {
       "birthplace": "鹿児島県",
       "school": "早稲田大学",
       "faculty": "政治経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025032.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025032.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "526",
@@ -8166,7 +9616,11 @@ window.DIET_DATA = {
       "birthplace": "福岡県",
       "school": "福岡県立筑紫高校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022009.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022009.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "527",
@@ -8179,7 +9633,11 @@ window.DIET_DATA = {
       "birthplace": "岡山県",
       "school": "拓殖大学",
       "faculty": "政経学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016013.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016013.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "528",
@@ -8192,7 +9650,11 @@ window.DIET_DATA = {
       "birthplace": "神奈川県",
       "school": "東京大学",
       "faculty": "大学院農学生命科学研究科",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025016.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025016.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "529",
@@ -8205,7 +9667,11 @@ window.DIET_DATA = {
       "birthplace": "高知県",
       "school": "国立高知工業高等専門学校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022012.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022012.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "530",
@@ -8221,8 +9687,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010020.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "531",
@@ -8236,7 +9704,11 @@ window.DIET_DATA = {
       "school": "慶應義塾大学",
       "faculty": "理工学部",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016014.htm",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "532",
@@ -8249,7 +9721,11 @@ window.DIET_DATA = {
       "birthplace": "兵庫県",
       "school": "甲南大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019011.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019011.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "533",
@@ -8262,7 +9738,11 @@ window.DIET_DATA = {
       "birthplace": "埼玉県",
       "school": "京都大学",
       "faculty": "農学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019012.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019012.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "534",
@@ -8275,7 +9755,11 @@ window.DIET_DATA = {
       "birthplace": "北海道",
       "school": "北海道教育大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019013.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019013.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "535",
@@ -8288,7 +9772,11 @@ window.DIET_DATA = {
       "birthplace": "茨城県",
       "school": "専修大学",
       "faculty": "商学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022010.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022010.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "536",
@@ -8301,7 +9789,11 @@ window.DIET_DATA = {
       "birthplace": "神奈川県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022013.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022013.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "537",
@@ -8314,7 +9806,11 @@ window.DIET_DATA = {
       "birthplace": "群馬県",
       "school": "日本医科大学",
       "faculty": "医学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025017.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025017.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "538",
@@ -8327,7 +9823,11 @@ window.DIET_DATA = {
       "birthplace": "福井県",
       "school": "関西大学",
       "faculty": "文学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022014.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022014.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "539",
@@ -8340,7 +9840,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "福山大学",
       "faculty": "薬学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022015.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022015.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "540",
@@ -8353,7 +9857,11 @@ window.DIET_DATA = {
       "birthplace": "京都府",
       "school": "立命館大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007022.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007022.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "541",
@@ -8366,7 +9874,11 @@ window.DIET_DATA = {
       "birthplace": "北海道",
       "school": "東京医科歯科大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025018.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025018.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "542",
@@ -8379,7 +9891,11 @@ window.DIET_DATA = {
       "birthplace": "北海道",
       "school": "北海道岩見沢緑陵高等学校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019016.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019016.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "543",
@@ -8392,7 +9908,11 @@ window.DIET_DATA = {
       "birthplace": "山口県",
       "school": "中央大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013019.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013019.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "544",
@@ -8405,7 +9925,11 @@ window.DIET_DATA = {
       "birthplace": "長野県",
       "school": "早稲田大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025020.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025020.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "545",
@@ -8418,7 +9942,11 @@ window.DIET_DATA = {
       "birthplace": "岩手県",
       "school": "千葉大学",
       "faculty": "法経学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016015.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016015.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "546",
@@ -8432,7 +9960,11 @@ window.DIET_DATA = {
       "school": "神奈川県立平塚養護学校高等部",
       "faculty": "N/A",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019015.htm",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "547",
@@ -8445,7 +9977,11 @@ window.DIET_DATA = {
       "birthplace": "香川県",
       "school": "中央大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013016.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013016.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "548",
@@ -8461,8 +9997,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013017.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "549",
@@ -8475,7 +10013,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "法政大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022016.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022016.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "550",
@@ -8488,7 +10030,11 @@ window.DIET_DATA = {
       "birthplace": "愛媛県",
       "school": "明治大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022017.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022017.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "551",
@@ -8501,7 +10047,11 @@ window.DIET_DATA = {
       "birthplace": "埼玉県",
       "school": "中央大学",
       "faculty": "商学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019017.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019017.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "552",
@@ -8514,7 +10064,11 @@ window.DIET_DATA = {
       "birthplace": "兵庫県",
       "school": "京都大学",
       "faculty": "工学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025021.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025021.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "553",
@@ -8527,7 +10081,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東北大学",
       "faculty": "医学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/5998022.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/5998022.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "554",
@@ -8540,7 +10098,11 @@ window.DIET_DATA = {
       "birthplace": "兵庫県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013022.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013022.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "555",
@@ -8553,7 +10115,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "熊本県立多良木高等学校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025022.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025022.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "556",
@@ -8566,7 +10132,11 @@ window.DIET_DATA = {
       "birthplace": "福岡県",
       "school": "熊本大学",
       "faculty": "教育学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022019.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022019.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "557",
@@ -8582,8 +10152,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013021.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthplace"
-      ]
+        "birthplace",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "558",
@@ -8596,7 +10168,11 @@ window.DIET_DATA = {
       "birthplace": "福岡県",
       "school": "明治大学",
       "faculty": "政治経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016018.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016018.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "559",
@@ -8609,7 +10185,11 @@ window.DIET_DATA = {
       "birthplace": "大分県",
       "school": "早稲田大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022020.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022020.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "560",
@@ -8622,7 +10202,11 @@ window.DIET_DATA = {
       "birthplace": "三重県",
       "school": "南山大学",
       "faculty": "文学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025023.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025023.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "561",
@@ -8635,7 +10219,11 @@ window.DIET_DATA = {
       "birthplace": "徳島県",
       "school": "徳島大学",
       "faculty": "医学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010024.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010024.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "562",
@@ -8648,7 +10236,11 @@ window.DIET_DATA = {
       "birthplace": "新潟県",
       "school": "東京大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022018.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022018.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "563",
@@ -8661,7 +10253,11 @@ window.DIET_DATA = {
       "birthplace": "広島県",
       "school": "岡山大学",
       "faculty": "医学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025026.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025026.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "564",
@@ -8674,7 +10270,11 @@ window.DIET_DATA = {
       "birthplace": "千葉県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025041.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025041.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "565",
@@ -8687,7 +10287,11 @@ window.DIET_DATA = {
       "birthplace": "滋賀県",
       "school": "京都大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016017.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016017.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "566",
@@ -8700,7 +10304,11 @@ window.DIET_DATA = {
       "birthplace": "大分県",
       "school": "早稲田大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025024.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025024.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "567",
@@ -8713,7 +10321,11 @@ window.DIET_DATA = {
       "birthplace": "山梨県",
       "school": "東北大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025025.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025025.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "568",
@@ -8726,7 +10338,11 @@ window.DIET_DATA = {
       "birthplace": "兵庫県",
       "school": "奈良産業大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7023002.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7023002.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "569",
@@ -8739,7 +10355,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "愛知教育大学",
       "faculty": "教育学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010027.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010027.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "570",
@@ -8752,7 +10372,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "日本大学",
       "faculty": "芸術学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013024.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013024.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "571",
@@ -8765,7 +10389,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東北大学",
       "faculty": "理学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025028.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025028.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "572",
@@ -8781,8 +10409,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/5998030.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "573",
@@ -8795,7 +10425,11 @@ window.DIET_DATA = {
       "birthplace": "愛媛県",
       "school": "東北大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025029.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025029.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "574",
@@ -8808,7 +10442,11 @@ window.DIET_DATA = {
       "birthplace": "広島県",
       "school": "島根大学",
       "faculty": "総合理工学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025040.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025040.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "575",
@@ -8821,7 +10459,11 @@ window.DIET_DATA = {
       "birthplace": "奈良県",
       "school": "東京大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016019.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016019.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "576",
@@ -8834,7 +10476,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "東京大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016020.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016020.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "577",
@@ -8847,7 +10493,11 @@ window.DIET_DATA = {
       "birthplace": "神奈川県",
       "school": "青山学院女子短期大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025030.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025030.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "578",
@@ -8860,7 +10510,11 @@ window.DIET_DATA = {
       "birthplace": "広島県",
       "school": "中央大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019020.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019020.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "579",
@@ -8874,7 +10528,11 @@ window.DIET_DATA = {
       "school": "神奈川県立柿生高校",
       "faculty": "N/A",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022021.htm",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "580",
@@ -8887,7 +10545,11 @@ window.DIET_DATA = {
       "birthplace": "富山県",
       "school": "早稲田大学",
       "faculty": "社会科学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010029.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010029.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "581",
@@ -8900,7 +10562,11 @@ window.DIET_DATA = {
       "birthplace": "群馬県",
       "school": "明治学院大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019018.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019018.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "582",
@@ -8913,7 +10579,11 @@ window.DIET_DATA = {
       "birthplace": "福岡県",
       "school": "島根大学",
       "faculty": "教育学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019021.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019021.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "583",
@@ -8926,7 +10596,11 @@ window.DIET_DATA = {
       "birthplace": "徳島県",
       "school": "日本福祉大学",
       "faculty": "社会福祉学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025031.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025031.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "584",
@@ -8939,7 +10613,11 @@ window.DIET_DATA = {
       "birthplace": "秋田県",
       "school": "岩手大学",
       "faculty": "農学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016022.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016022.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "585",
@@ -8952,7 +10630,11 @@ window.DIET_DATA = {
       "birthplace": "静岡県",
       "school": "米国オハイオ州オタバイン大学",
       "faculty": "政治学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7001027.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7001027.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "586",
@@ -8965,7 +10647,11 @@ window.DIET_DATA = {
       "birthplace": "長崎県",
       "school": "東海大学",
       "faculty": "医学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016021.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016021.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "587",
@@ -8978,7 +10664,11 @@ window.DIET_DATA = {
       "birthplace": "兵庫県",
       "school": "関西学院大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004033.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004033.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "588",
@@ -8991,7 +10681,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "創価大学",
       "faculty": "経営学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013028.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013028.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "589",
@@ -9004,7 +10698,11 @@ window.DIET_DATA = {
       "birthplace": "福岡県",
       "school": "東京大学",
       "faculty": "文学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016023.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016023.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "590",
@@ -9017,7 +10715,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "愛知淑徳大学",
       "faculty": "文学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025033.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025033.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "591",
@@ -9031,7 +10733,11 @@ window.DIET_DATA = {
       "school": "不明",
       "faculty": "不明",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025034.htm",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "592",
@@ -9044,7 +10750,11 @@ window.DIET_DATA = {
       "birthplace": "北海道",
       "school": "拓殖大学",
       "faculty": "政経学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019023.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019023.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "593",
@@ -9058,7 +10768,11 @@ window.DIET_DATA = {
       "school": "北京大学",
       "faculty": "哲学部",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025019.htm",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "594",
@@ -9072,7 +10786,11 @@ window.DIET_DATA = {
       "school": "城西歯科大学",
       "faculty": "歯学部",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7003005.htm",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "595",
@@ -9085,7 +10803,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "大阪府立三国丘高等学校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016026.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016026.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "596",
@@ -9098,7 +10820,11 @@ window.DIET_DATA = {
       "birthplace": "栃木県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022023.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022023.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "597",
@@ -9111,7 +10837,11 @@ window.DIET_DATA = {
       "birthplace": "栃木県",
       "school": "明治大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013030.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013030.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "598",
@@ -9125,7 +10855,11 @@ window.DIET_DATA = {
       "school": "一橋大学",
       "faculty": "経済学部",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019026.htm",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "599",
@@ -9138,7 +10872,11 @@ window.DIET_DATA = {
       "birthplace": "兵庫県",
       "school": "中央大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019027.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019027.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "600",
@@ -9151,7 +10889,11 @@ window.DIET_DATA = {
       "birthplace": "沖縄県",
       "school": "北九州大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025027.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025027.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "601",
@@ -9164,7 +10906,11 @@ window.DIET_DATA = {
       "birthplace": "福井県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013032.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013032.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "602",
@@ -9177,7 +10923,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "早稲田大学",
       "faculty": "政治経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7017001.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7017001.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "603",
@@ -9190,7 +10940,11 @@ window.DIET_DATA = {
       "birthplace": "山形県",
       "school": "慶應義塾大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022024.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022024.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "604",
@@ -9206,8 +10960,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010033.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "605",
@@ -9220,7 +10976,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "青山学院大学",
       "faculty": "国際政治経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019024.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019024.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "606",
@@ -9233,7 +10993,11 @@ window.DIET_DATA = {
       "birthplace": "青森県",
       "school": "玉川学園女子短期大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016025.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016025.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "607",
@@ -9246,7 +11010,11 @@ window.DIET_DATA = {
       "birthplace": "埼玉県",
       "school": "京都大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004036.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004036.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "608",
@@ -9259,7 +11027,11 @@ window.DIET_DATA = {
       "birthplace": "広島県",
       "school": "同志社大学",
       "faculty": "神学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019025.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019025.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "609",
@@ -9272,7 +11044,11 @@ window.DIET_DATA = {
       "birthplace": "京都府",
       "school": "神戸大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7001001.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7001001.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "610",
@@ -9285,7 +11061,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "京都工芸繊維大学",
       "faculty": "工芸学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025036.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025036.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "611",
@@ -9298,7 +11078,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "早稲田大学",
       "faculty": "教育学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022025.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022025.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "612",
@@ -9311,7 +11095,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/5998036.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/5998036.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "613",
@@ -9325,7 +11113,11 @@ window.DIET_DATA = {
       "school": "早稲田大学",
       "faculty": "不明",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019030.htm",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "614",
@@ -9338,7 +11130,11 @@ window.DIET_DATA = {
       "birthplace": "広島県",
       "school": "ルーテル学院大学",
       "faculty": "総合人間学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022026.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022026.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "615",
@@ -9351,7 +11147,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "成蹊大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025037.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025037.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "616",
@@ -9364,7 +11164,11 @@ window.DIET_DATA = {
       "birthplace": "北海道",
       "school": "法政大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010036.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010036.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "617",
@@ -9377,7 +11181,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "東京医科歯科大学",
       "faculty": "医学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022028.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022028.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "618",
@@ -9390,7 +11198,11 @@ window.DIET_DATA = {
       "birthplace": "茨城県",
       "school": "流通経済大学",
       "faculty": "社会学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022027.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022027.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "619",
@@ -9403,7 +11215,11 @@ window.DIET_DATA = {
       "birthplace": "岐阜県",
       "school": "岐阜東高等学校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022029.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022029.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "620",
@@ -9416,7 +11232,11 @@ window.DIET_DATA = {
       "birthplace": "群馬県",
       "school": "慶應義塾大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/5986024.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/5986024.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "621",
@@ -9430,7 +11250,11 @@ window.DIET_DATA = {
       "school": "屋久島おおぞら高等学校",
       "faculty": "N/A",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025039.htm",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "622",
@@ -9443,7 +11267,11 @@ window.DIET_DATA = {
       "birthplace": "徳島県",
       "school": "慶應義塾大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010038.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010038.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "623",
@@ -9459,8 +11287,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022030.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthplace"
-      ]
+        "birthplace",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "624",
@@ -9473,7 +11303,11 @@ window.DIET_DATA = {
       "birthplace": "愛媛県",
       "school": "神戸大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019031.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019031.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "625",
@@ -9486,7 +11320,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "早稲田大学",
       "faculty": "政治経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007041.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007041.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "626",
@@ -9499,7 +11337,11 @@ window.DIET_DATA = {
       "birthplace": "京都府",
       "school": "京都大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025042.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025042.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "627",
@@ -9512,7 +11354,11 @@ window.DIET_DATA = {
       "birthplace": "広島県",
       "school": "早稲田大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025043.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025043.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "628",
@@ -9525,7 +11371,11 @@ window.DIET_DATA = {
       "birthplace": "京都府",
       "school": "滋賀大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007044.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007044.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "629",
@@ -9538,7 +11388,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "慶應義塾大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004043.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004043.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "630",
@@ -9551,7 +11405,11 @@ window.DIET_DATA = {
       "birthplace": "福岡県",
       "school": "京都大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004045.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004045.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "631",
@@ -9564,7 +11422,11 @@ window.DIET_DATA = {
       "birthplace": "富山県",
       "school": "富山大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025044.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025044.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "632",
@@ -9577,7 +11439,11 @@ window.DIET_DATA = {
       "birthplace": "富山県",
       "school": "慶應義塾大学",
       "faculty": "商学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7001037.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7001037.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "633",
@@ -9591,7 +11457,11 @@ window.DIET_DATA = {
       "school": "ラ・サール高校",
       "faculty": "N/A",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004046.htm",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "634",
@@ -9604,7 +11474,11 @@ window.DIET_DATA = {
       "birthplace": "山形県",
       "school": "日本大学",
       "faculty": "文理学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019032.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019032.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "635",
@@ -9617,7 +11491,11 @@ window.DIET_DATA = {
       "birthplace": "北海道",
       "school": "駒澤大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/5995054.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/5995054.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "636",
@@ -9630,7 +11508,11 @@ window.DIET_DATA = {
       "birthplace": "神奈川県",
       "school": "東海大学",
       "faculty": "体育学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025046.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025046.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "637",
@@ -9643,7 +11525,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "北海道大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010043.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010043.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "638",
@@ -9656,7 +11542,11 @@ window.DIET_DATA = {
       "birthplace": "千葉県",
       "school": "東北大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022031.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022031.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "639",
@@ -9669,7 +11559,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "ノースカロライナ州ウェイクフォレスト大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7021002.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7021002.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "640",
@@ -9682,7 +11576,11 @@ window.DIET_DATA = {
       "birthplace": "三重県",
       "school": "筑波大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016032.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016032.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "641",
@@ -9695,7 +11593,11 @@ window.DIET_DATA = {
       "birthplace": "兵庫県",
       "school": "神戸大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013045.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013045.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "642",
@@ -9708,7 +11610,11 @@ window.DIET_DATA = {
       "birthplace": "岡山県",
       "school": "愛媛大学",
       "faculty": "医学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025047.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025047.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "643",
@@ -9721,7 +11627,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "岡山大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025048.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025048.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "644",
@@ -9734,7 +11644,11 @@ window.DIET_DATA = {
       "birthplace": "熊本県",
       "school": "熊本県立熊本工業高校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013044.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013044.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "645",
@@ -9747,7 +11661,11 @@ window.DIET_DATA = {
       "birthplace": "北海道",
       "school": "拓殖大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025049.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025049.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "646",
@@ -9760,7 +11678,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "同志社大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025050.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025050.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "647",
@@ -9773,7 +11695,11 @@ window.DIET_DATA = {
       "birthplace": "長野県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013046.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013046.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "648",
@@ -9789,8 +11715,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025051.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "649",
@@ -9806,8 +11734,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016033.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthplace"
-      ]
+        "birthplace",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "650",
@@ -9820,7 +11750,11 @@ window.DIET_DATA = {
       "birthplace": "高知県",
       "school": "早稲田大学",
       "faculty": "社会科学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004050.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004050.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "651",
@@ -9833,7 +11767,11 @@ window.DIET_DATA = {
       "birthplace": "佐賀県",
       "school": "慶應義塾大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010045.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010045.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "652",
@@ -9846,7 +11784,11 @@ window.DIET_DATA = {
       "birthplace": "青森県",
       "school": "日本大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025052.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025052.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "653",
@@ -9859,7 +11801,11 @@ window.DIET_DATA = {
       "birthplace": "宮崎県",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/5998049.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/5998049.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "654",
@@ -9872,7 +11818,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "同志社大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/5998050.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/5998050.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "655",
@@ -9885,7 +11835,11 @@ window.DIET_DATA = {
       "birthplace": "徳島県",
       "school": "麻布獣医科大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025053.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025053.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "656",
@@ -9898,7 +11852,11 @@ window.DIET_DATA = {
       "birthplace": "鳥取県",
       "school": "鳥取大学",
       "faculty": "医学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022033.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022033.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "657",
@@ -9911,7 +11869,11 @@ window.DIET_DATA = {
       "birthplace": "愛知県",
       "school": "南山大学",
       "faculty": "経営学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010046.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010046.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "658",
@@ -9924,7 +11886,11 @@ window.DIET_DATA = {
       "birthplace": "熊本県",
       "school": "熊本農業高校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016034.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016034.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "659",
@@ -9937,7 +11903,11 @@ window.DIET_DATA = {
       "birthplace": "北海道",
       "school": "北海学園大学",
       "faculty": "工学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022034.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022034.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "660",
@@ -9950,7 +11920,11 @@ window.DIET_DATA = {
       "birthplace": "埼玉県",
       "school": "北海道大学",
       "faculty": "農学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007052.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007052.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "661",
@@ -9963,7 +11937,11 @@ window.DIET_DATA = {
       "birthplace": "埼玉県",
       "school": "慶應義塾大学",
       "faculty": "医学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007053.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007053.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "662",
@@ -9976,7 +11954,11 @@ window.DIET_DATA = {
       "birthplace": "福島県",
       "school": "東邦大学",
       "faculty": "医学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022035.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022035.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "663",
@@ -9989,7 +11971,11 @@ window.DIET_DATA = {
       "birthplace": "静岡県",
       "school": "東京大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013048.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013048.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "664",
@@ -10003,7 +11989,11 @@ window.DIET_DATA = {
       "school": "星薬科大学",
       "faculty": "不明",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019034.htm",
-      "manualLock": true
+      "manualLock": true,
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "665",
@@ -10016,7 +12006,11 @@ window.DIET_DATA = {
       "birthplace": "鳥取県",
       "school": "東京大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013049.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013049.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "666",
@@ -10029,7 +12023,11 @@ window.DIET_DATA = {
       "birthplace": "静岡県",
       "school": "早稲田大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007054.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007054.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "667",
@@ -10045,8 +12043,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007055.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthplace"
-      ]
+        "birthplace",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "668",
@@ -10063,8 +12063,10 @@ window.DIET_DATA = {
       "secondary_source": "wikipedia",
       "secondary_fields": [
         "birthplace",
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "669",
@@ -10077,7 +12079,11 @@ window.DIET_DATA = {
       "birthplace": "神奈川県",
       "school": "慶應義塾大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013050.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013050.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "670",
@@ -10090,7 +12096,11 @@ window.DIET_DATA = {
       "birthplace": "宮崎県",
       "school": "法政大学",
       "faculty": "第二法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004056.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004056.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "671",
@@ -10103,7 +12113,11 @@ window.DIET_DATA = {
       "birthplace": "京都府",
       "school": "東京大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025054.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025054.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "672",
@@ -10116,7 +12130,11 @@ window.DIET_DATA = {
       "birthplace": "熊本県",
       "school": "熊本県立鹿本高等学校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022036.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022036.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "673",
@@ -10129,7 +12147,11 @@ window.DIET_DATA = {
       "birthplace": "熊本県",
       "school": "専修大学",
       "faculty": "経営学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004057.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004057.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "674",
@@ -10145,8 +12167,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7001046.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthplace"
-      ]
+        "birthplace",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "675",
@@ -10159,7 +12183,11 @@ window.DIET_DATA = {
       "birthplace": "宮城県",
       "school": "千葉工業大学",
       "faculty": "工学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016036.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016036.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "676",
@@ -10175,8 +12203,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022037.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "677",
@@ -10189,7 +12219,11 @@ window.DIET_DATA = {
       "birthplace": "兵庫県",
       "school": "奈良教育大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004058.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004058.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "678",
@@ -10202,7 +12236,11 @@ window.DIET_DATA = {
       "birthplace": "静岡県",
       "school": "名古屋大学",
       "faculty": "大学院経済学研究科",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025055.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025055.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "679",
@@ -10215,7 +12253,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "明治大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010048.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010048.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "680",
@@ -10228,7 +12270,11 @@ window.DIET_DATA = {
       "birthplace": "埼玉県",
       "school": "埼玉大学",
       "faculty": "工学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016037.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016037.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "681",
@@ -10244,8 +12290,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010050.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthplace"
-      ]
+        "birthplace",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "682",
@@ -10258,7 +12306,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "大阪府立富田林高校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025056.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025056.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "683",
@@ -10271,7 +12323,11 @@ window.DIET_DATA = {
       "birthplace": "大阪府",
       "school": "東京大学",
       "faculty": "工学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025057.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025057.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "684",
@@ -10284,7 +12340,11 @@ window.DIET_DATA = {
       "birthplace": "石川県",
       "school": "東京経済大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013053.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013053.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "685",
@@ -10297,7 +12357,11 @@ window.DIET_DATA = {
       "birthplace": "鹿児島県",
       "school": "鹿児島大学",
       "faculty": "教育学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022039.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022039.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "686",
@@ -10310,7 +12374,11 @@ window.DIET_DATA = {
       "birthplace": "和歌山県",
       "school": "大阪市立大学",
       "faculty": "大学院創造都市研究科",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025058.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025058.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "687",
@@ -10326,8 +12394,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007061.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "688",
@@ -10343,8 +12413,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7001047.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthplace"
-      ]
+        "birthplace",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "689",
@@ -10357,7 +12429,11 @@ window.DIET_DATA = {
       "birthplace": "広島県",
       "school": "同志社大学",
       "faculty": "文学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013054.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013054.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "690",
@@ -10370,7 +12446,11 @@ window.DIET_DATA = {
       "birthplace": "宮崎県",
       "school": "東北大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025059.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025059.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "691",
@@ -10383,7 +12463,11 @@ window.DIET_DATA = {
       "birthplace": "福井県",
       "school": "日本大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/5992051.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/5992051.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "692",
@@ -10396,7 +12480,11 @@ window.DIET_DATA = {
       "birthplace": "佐賀県",
       "school": "慶應義塾大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013060.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7013060.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "693",
@@ -10409,7 +12497,11 @@ window.DIET_DATA = {
       "birthplace": "京都府",
       "school": "東京大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016042.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016042.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "694",
@@ -10422,7 +12514,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "聖心女子大学",
       "faculty": "文学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004013.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004013.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "695",
@@ -10435,7 +12531,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "慶應義塾大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7012005.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7012005.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "696",
@@ -10448,7 +12548,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "京都大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016043.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016043.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "697",
@@ -10461,7 +12565,11 @@ window.DIET_DATA = {
       "birthplace": "千葉県",
       "school": "学習院大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025060.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025060.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "698",
@@ -10474,7 +12582,11 @@ window.DIET_DATA = {
       "birthplace": "青森県",
       "school": "イリノイ大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025061.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025061.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "699",
@@ -10487,7 +12599,11 @@ window.DIET_DATA = {
       "birthplace": "長崎県",
       "school": "皇學館大学",
       "faculty": "文学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022040.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022040.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "700",
@@ -10503,8 +12619,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022041.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthplace"
-      ]
+        "birthplace",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "701",
@@ -10517,7 +12635,11 @@ window.DIET_DATA = {
       "birthplace": "愛媛県",
       "school": "早稲田大学",
       "faculty": "政治経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004062.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004062.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "702",
@@ -10530,7 +12652,11 @@ window.DIET_DATA = {
       "birthplace": "岩手県",
       "school": "岩手県立盛岡工業高等学校",
       "faculty": "N/A",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019040.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019040.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "703",
@@ -10543,7 +12669,11 @@ window.DIET_DATA = {
       "birthplace": "北海道",
       "school": "北海道大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010052.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010052.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "704",
@@ -10556,7 +12686,11 @@ window.DIET_DATA = {
       "birthplace": "京都府",
       "school": "京都産業大学",
       "faculty": "不明",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022042.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022042.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "705",
@@ -10572,8 +12706,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7007071.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_day"
-      ]
+        "birthdate_day",
+        "gender"
+      ],
+      "gender": "女性"
     },
     {
       "id": "706",
@@ -10586,7 +12722,11 @@ window.DIET_DATA = {
       "birthplace": "大分県",
       "school": "九州大学",
       "faculty": "農学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010053.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010053.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "707",
@@ -10602,8 +12742,10 @@ window.DIET_DATA = {
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025006.htm",
       "secondary_source": "wikipedia",
       "secondary_fields": [
-        "birthdate_month_day"
-      ]
+        "birthdate_month_day",
+        "gender"
+      ],
+      "gender": "男性"
     },
     {
       "id": "708",
@@ -10616,7 +12758,11 @@ window.DIET_DATA = {
       "birthplace": "東京都",
       "school": "青山学院大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004060.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7004060.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "709",
@@ -10629,7 +12775,11 @@ window.DIET_DATA = {
       "birthplace": "岐阜県",
       "school": "近畿大学",
       "faculty": "短期大学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025062.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025062.htm",
+      "gender": "女性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "710",
@@ -10642,7 +12792,11 @@ window.DIET_DATA = {
       "birthplace": "茨城県",
       "school": "埼玉大学",
       "faculty": "理学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022043.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7022043.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "711",
@@ -10655,7 +12809,11 @@ window.DIET_DATA = {
       "birthplace": "宮崎県",
       "school": "京都大学",
       "faculty": "法学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025063.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025063.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     },
     {
       "id": "712",
@@ -10668,7 +12826,11 @@ window.DIET_DATA = {
       "birthplace": "岐阜県",
       "school": "名古屋大学",
       "faculty": "経済学部",
-      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010055.htm"
+      "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7010055.htm",
+      "gender": "男性",
+      "secondary_fields": [
+        "gender"
+      ]
     }
   ]
 };
