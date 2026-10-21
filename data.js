@@ -1,5 +1,5 @@
 window.DIET_DATA = {
-  "last_updated": "2026-10-21T21:25:34.910589",
+  "last_updated": "2026-10-21T21:39:01.105581",
   "sources": [
     "衆議院公式ウェブサイト (https://www.shugiin.go.jp/)",
     "参議院公式ウェブサイト (https://www.sangiin.go.jp/)",
@@ -474,15 +474,17 @@ window.DIET_DATA = {
       "house": "衆議院",
       "party": "中道",
       "elections": 5,
-      "birthdate": "1974年12月",
+      "birthdate": "1974年12月10日",
       "birthplace": "兵庫県",
       "school": "東京大学",
       "faculty": "不明",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/026.html",
       "gender": "男性",
       "secondary_fields": [
-        "gender"
-      ]
+        "gender",
+        "birthdate_day"
+      ],
+      "secondary_source": "wikipedia"
     },
     {
       "id": "027",
@@ -2067,15 +2069,17 @@ window.DIET_DATA = {
       "house": "衆議院",
       "party": "自民",
       "elections": 3,
-      "birthdate": "1974年5月",
+      "birthdate": "1974年5月17日",
       "birthplace": "京都府",
       "school": "東京大学",
       "faculty": "法学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/113.html",
       "gender": "男性",
       "secondary_fields": [
-        "gender"
-      ]
+        "gender",
+        "birthdate_day"
+      ],
+      "secondary_source": "wikipedia"
     },
     {
       "id": "114",
@@ -2309,15 +2313,17 @@ window.DIET_DATA = {
       "house": "衆議院",
       "party": "自民",
       "elections": 9,
-      "birthdate": "1953年3月",
+      "birthdate": "1953年3月1日",
       "birthplace": "静岡県",
       "school": "東京大学",
       "faculty": "教養学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/126.html",
       "gender": "女性",
       "secondary_fields": [
-        "gender"
-      ]
+        "gender",
+        "birthdate_day"
+      ],
+      "secondary_source": "wikipedia"
     },
     {
       "id": "127",
@@ -2510,15 +2516,17 @@ window.DIET_DATA = {
       "house": "衆議院",
       "party": "自民",
       "elections": 3,
-      "birthdate": "1970年9月",
+      "birthdate": "1970年9月27日",
       "birthplace": "青森県",
       "school": "東京大学",
       "faculty": "経済学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/137.html",
       "gender": "男性",
       "secondary_fields": [
-        "gender"
-      ]
+        "gender",
+        "birthdate_day"
+      ],
+      "secondary_source": "wikipedia"
     },
     {
       "id": "138",
@@ -2546,15 +2554,17 @@ window.DIET_DATA = {
       "house": "衆議院",
       "party": "自民",
       "elections": 6,
-      "birthdate": "1970年",
+      "birthdate": "1970年10月13日",
       "birthplace": "東京都",
       "school": "米国メリーランド大学",
       "faculty": "不明",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/139.html",
       "gender": "男性",
       "secondary_fields": [
-        "gender"
-      ]
+        "gender",
+        "birthdate_month_day"
+      ],
+      "secondary_source": "wikipedia"
     },
     {
       "id": "140",
@@ -2838,15 +2848,17 @@ window.DIET_DATA = {
       "house": "衆議院",
       "party": "自民",
       "elections": 4,
-      "birthdate": "1979年3月",
+      "birthdate": "1979年3月20日",
       "birthplace": "山口県",
       "school": "長崎大学",
       "faculty": "医学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/155.html",
       "gender": "女性",
       "secondary_fields": [
-        "gender"
-      ]
+        "gender",
+        "birthdate_day"
+      ],
+      "secondary_source": "wikipedia"
     },
     {
       "id": "156",
@@ -3887,15 +3899,17 @@ window.DIET_DATA = {
       "house": "衆議院",
       "party": "自民",
       "elections": 7,
-      "birthdate": "1977年2月",
+      "birthdate": "1977年2月9日",
       "birthplace": "外国",
       "school": "東京大学",
       "faculty": "法学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/212.html",
       "gender": "男性",
       "secondary_fields": [
-        "gender"
-      ]
+        "gender",
+        "birthdate_day"
+      ],
+      "secondary_source": "wikipedia"
     },
     {
       "id": "213",
@@ -4843,15 +4857,17 @@ window.DIET_DATA = {
       "house": "衆議院",
       "party": "自民",
       "elections": 6,
-      "birthdate": "1966年10月",
+      "birthdate": "1966年10月18日",
       "birthplace": "外国",
       "school": "学習院大学",
       "faculty": "文学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/267.html",
       "gender": "男性",
       "secondary_fields": [
-        "gender"
-      ]
+        "gender",
+        "birthdate_day"
+      ],
+      "secondary_source": "wikipedia"
     },
     {
       "id": "265",
@@ -5044,15 +5060,17 @@ window.DIET_DATA = {
       "house": "衆議院",
       "party": "参政",
       "elections": 3,
-      "birthdate": "1974年10月",
+      "birthdate": "1974年10月10日",
       "birthplace": "千葉県",
       "school": "東京大学",
       "faculty": "法学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/277.html",
       "gender": "女性",
       "secondary_fields": [
-        "gender"
-      ]
+        "gender",
+        "birthdate_day"
+      ],
+      "secondary_source": "wikipedia"
     },
     {
       "id": "276",
@@ -5780,15 +5798,17 @@ window.DIET_DATA = {
       "house": "衆議院",
       "party": "自民",
       "elections": 8,
-      "birthdate": "1954年8月",
+      "birthdate": "1954年8月7日",
       "birthplace": "沖縄県",
       "school": "上智大学",
       "faculty": "経済学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/315.html",
       "gender": "男性",
       "secondary_fields": [
-        "gender"
-      ]
+        "gender",
+        "birthdate_day"
+      ],
+      "secondary_source": "wikipedia"
     },
     {
       "id": "316",
@@ -6437,15 +6457,17 @@ window.DIET_DATA = {
       "house": "衆議院",
       "party": "国民",
       "elections": 2,
-      "birthdate": "1985年1月",
+      "birthdate": "1985年1月4日",
       "birthplace": "外国",
       "school": "成蹊大学",
       "faculty": "経済学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/351.html",
       "gender": "男性",
       "secondary_fields": [
-        "gender"
-      ]
+        "gender",
+        "birthdate_day"
+      ],
+      "secondary_source": "wikipedia"
     },
     {
       "id": "352",
@@ -8317,15 +8339,18 @@ window.DIET_DATA = {
       "house": "衆議院",
       "party": "自民",
       "elections": 2,
-      "birthdate": "1964年1月",
-      "birthplace": "不明",
+      "birthdate": "1964年1月11日",
+      "birthplace": "長野県",
       "school": "慶應義塾大学",
       "faculty": "経済学部",
       "profile_url": "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/453.html",
       "gender": "男性",
       "secondary_fields": [
-        "gender"
-      ]
+        "gender",
+        "birthdate_day",
+        "birthplace"
+      ],
+      "secondary_source": "wikipedia"
     },
     {
       "id": "454",
@@ -8677,15 +8702,17 @@ window.DIET_DATA = {
       "house": "参議院",
       "party": "自民",
       "elections": 2,
-      "birthdate": "1975年9月",
+      "birthdate": "1975年9月19日",
       "birthplace": "熊本県",
       "school": "法政大学",
       "faculty": "不明",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7016004.htm",
       "gender": "男性",
       "secondary_fields": [
-        "gender"
-      ]
+        "gender",
+        "birthdate_day"
+      ],
+      "secondary_source": "wikipedia"
     },
     {
       "id": "474",
@@ -10703,15 +10730,18 @@ window.DIET_DATA = {
       "house": "参議院",
       "party": "自民",
       "elections": 1,
-      "birthdate": "不明",
+      "birthdate": "1967年3月10日",
       "birthplace": "千葉県",
-      "school": "不明",
+      "school": "順天堂大学",
       "faculty": "不明",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7025034.htm",
       "gender": "男性",
       "secondary_fields": [
-        "gender"
-      ]
+        "gender",
+        "birthdate",
+        "school"
+      ],
+      "secondary_source": "wikipedia"
     },
     {
       "id": "592",
@@ -11079,15 +11109,17 @@ window.DIET_DATA = {
       "house": "参議院",
       "party": "自民",
       "elections": 2,
-      "birthdate": "不明",
+      "birthdate": "1975年3月23日",
       "birthplace": "秋田県",
       "school": "早稲田大学",
       "faculty": "不明",
       "profile_url": "https://www.sangiin.go.jp/japanese/joho1/kousei/giin/profile/7019030.htm",
       "gender": "女性",
       "secondary_fields": [
-        "gender"
-      ]
+        "gender",
+        "birthdate"
+      ],
+      "secondary_source": "wikipedia"
     },
     {
       "id": "614",
