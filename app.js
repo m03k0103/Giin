@@ -350,6 +350,18 @@ function renderGenerationChart() {
         chartData.sort((a, b) => b.total - a.total);
     } else if (sortMode === 'count_asc') {
         chartData.sort((a, b) => a.total - b.total);
+    } else if (sortMode === 'female_desc') {
+        chartData.sort((a, b) => {
+            const ratioA = a.total > 0 ? (a.female / a.total) : -1;
+            const ratioB = b.total > 0 ? (b.female / b.total) : -1;
+            return ratioB - ratioA || b.total - a.total;
+        });
+    } else if (sortMode === 'female_asc') {
+        chartData.sort((a, b) => {
+            const ratioA = a.total > 0 ? (a.female / a.total) : 999;
+            const ratioB = b.total > 0 ? (b.female / b.total) : 999;
+            return ratioA - ratioB || a.total - b.total;
+        });
     } // 'age_asc' の場合は GENERATION_KEYS 順のまま
 
     const maxCount = Math.max(...chartData.map(d => d.total), 1);
@@ -360,6 +372,9 @@ function renderGenerationChart() {
         row.className = 'bar-row';
 
         const percentage = totalCount > 0 ? ((item.total / totalCount) * 100).toFixed(1) : '0.0';
+        const femaleRatio = item.total > 0 ? ((item.female / item.total) * 100).toFixed(1) : null;
+        const femaleRatioDisplay = femaleRatio !== null ? `${femaleRatio}%` : '-';
+        const femaleBadgeHtml = `<span class="bar-female-badge" title="${item.name}の女性比率: ${femaleRatioDisplay}">女性比率 ${femaleRatioDisplay}</span>`;
 
         let trackHtml = '';
         let valueHtml = '';
@@ -367,10 +382,9 @@ function renderGenerationChart() {
         if (genderMode === 'color') {
             const maleWidth = maxCount > 0 ? ((item.male / maxCount) * 100).toFixed(1) : '0';
             const femaleWidth = maxCount > 0 ? ((item.female / maxCount) * 100).toFixed(1) : '0';
-            const femaleRatio = item.total > 0 ? ((item.female / item.total) * 100).toFixed(1) : '0.0';
 
             trackHtml = `
-                <div class="bar-track stacked" title="${item.name}: 全体 ${item.total}名 (男性 ${item.male}名, 女性 ${item.female}名 / 女性比率 ${femaleRatio}%)">
+                <div class="bar-track stacked" title="${item.name}: 全体 ${item.total}名 (男性 ${item.male}名, 女性 ${item.female}名 / 女性比率 ${femaleRatioDisplay})">
                     ${item.male > 0 ? `<div class="bar-fill male" style="width: ${maleWidth}%;" title="男性: ${item.male}名"></div>` : ''}
                     ${item.female > 0 ? `<div class="bar-fill female" style="width: ${femaleWidth}%;" title="女性: ${item.female}名"></div>` : ''}
                 </div>
@@ -380,12 +394,13 @@ function renderGenerationChart() {
                     <span>${item.total}名</span>
                     <span class="bar-percentage">(${percentage}%)</span>
                     <span class="bar-gender-detail">(男:${item.male} 女:${item.female})</span>
+                    ${femaleBadgeHtml}
                 </div>
             `;
         } else {
             const totalWidth = maxCount > 0 ? ((item.total / maxCount) * 100).toFixed(1) : '0';
             trackHtml = `
-                <div class="bar-track" title="${item.name}: ${item.total}名 (${percentage}%)">
+                <div class="bar-track" title="${item.name}: ${item.total}名 (${percentage}%) / 女性比率: ${femaleRatioDisplay}">
                     <div class="bar-fill" style="width: ${totalWidth}%;"></div>
                 </div>
             `;
@@ -393,6 +408,7 @@ function renderGenerationChart() {
                 <div class="bar-value">
                     <span>${item.total}名</span>
                     <span class="bar-percentage">(${percentage}%)</span>
+                    ${femaleBadgeHtml}
                 </div>
             `;
         }
