@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('filter-house').addEventListener('change', renderMembersList);
     document.getElementById('filter-party').addEventListener('change', renderMembersList);
+    document.getElementById('filter-gender').addEventListener('change', renderMembersList);
     document.getElementById('filter-birthplace').addEventListener('change', renderMembersList);
     document.getElementById('filter-school').addEventListener('change', renderMembersList);
     
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('sort-party').addEventListener('click', () => handleTableSort('party'));
     document.getElementById('sort-elections').addEventListener('click', () => handleTableSort('elections'));
     document.getElementById('sort-age').addEventListener('click', () => handleTableSort('age'));
+    document.getElementById('sort-gender').addEventListener('click', () => handleTableSort('gender'));
     document.getElementById('sort-birthplace').addEventListener('click', () => handleTableSort('birthplace'));
     document.getElementById('sort-school').addEventListener('click', () => handleTableSort('school'));
     document.getElementById('sort-faculty').addEventListener('click', () => handleTableSort('faculty'));
@@ -91,11 +93,16 @@ function computeStats(members, filterFn) {
         median = ages[mid];
     }
     
+    const femaleCount = filtered.filter(m => m.gender === '女性').length;
+    const femaleRatio = filtered.length > 0 ? Math.round((femaleCount / filtered.length) * 1000) / 10 : 0;
+
     return {
         mean: mean,
         median: median,
         max: ages[ages.length - 1],
-        count: filtered.length
+        count: filtered.length,
+        femaleCount: femaleCount,
+        femaleRatio: femaleRatio
     };
 }
 
@@ -288,12 +295,16 @@ function updateSummary(summary) {
         document.getElementById('shugiin-mean').textContent = formatAge(summary.shugiin.mean);
         document.getElementById('shugiin-median').textContent = formatAge(summary.shugiin.median);
         document.getElementById('shugiin-max').textContent = formatAge(summary.shugiin.max);
+        const shugFem = document.getElementById('shugiin-female');
+        if (shugFem) shugFem.textContent = `${summary.shugiin.femaleCount}名 (${summary.shugiin.femaleRatio}%)`;
     }
 
     if (summary.sangiin) {
         document.getElementById('sangiin-mean').textContent = formatAge(summary.sangiin.mean);
         document.getElementById('sangiin-median').textContent = formatAge(summary.sangiin.median);
         document.getElementById('sangiin-max').textContent = formatAge(summary.sangiin.max);
+        const sangFem = document.getElementById('sangiin-female');
+        if (sangFem) sangFem.textContent = `${summary.sangiin.femaleCount}名 (${summary.sangiin.femaleRatio}%)`;
     }
 }
 
@@ -412,6 +423,7 @@ function updateSortHeaders() {
     const partyTh = document.getElementById('sort-party');
     const elecTh = document.getElementById('sort-elections');
     const ageTh = document.getElementById('sort-age');
+    const genderTh = document.getElementById('sort-gender');
     const bpTh = document.getElementById('sort-birthplace');
     const schTh = document.getElementById('sort-school');
     const facTh = document.getElementById('sort-faculty');
@@ -421,6 +433,7 @@ function updateSortHeaders() {
     if (partyTh) partyTh.textContent = `会派 ${currentSort.field === 'party' ? (currentSort.direction === 1 ? '▲' : '▼') : ''}`;
     if (elecTh) elecTh.textContent = `当選回数 ${currentSort.field === 'elections' ? (currentSort.direction === -1 ? '▼' : '▲') : ''}`;
     if (ageTh) ageTh.textContent = `年齢 ${currentSort.field === 'age' ? (currentSort.direction === -1 ? '▼' : '▲') : ''}`;
+    if (genderTh) genderTh.textContent = `性別 ${currentSort.field === 'gender' ? (currentSort.direction === 1 ? '▲' : '▼') : ''}`;
     if (bpTh) bpTh.textContent = `出身地 ${currentSort.field === 'birthplace' ? (currentSort.direction === 1 ? '▲' : '▼') : ''}`;
     if (schTh) schTh.textContent = `出身校 ${currentSort.field === 'school' ? (currentSort.direction === 1 ? '▲' : '▼') : ''}`;
     if (facTh) facTh.textContent = `学部名 ${currentSort.field === 'faculty' ? (currentSort.direction === 1 ? '▲' : '▼') : ''}`;
@@ -428,16 +441,18 @@ function updateSortHeaders() {
 
 function renderMembersList() {
     const houseFilter = document.getElementById('filter-house').value;
+    const genderFilter = document.getElementById('filter-gender') ? document.getElementById('filter-gender').value : 'all';
     const partyFilter = document.getElementById('filter-party').value;
     const birthplaceFilter = document.getElementById('filter-birthplace') ? document.getElementById('filter-birthplace').value : 'all';
     const schoolFilter = document.getElementById('filter-school') ? document.getElementById('filter-school').value : 'all';
     
     let filtered = globalData.members.filter(m => {
         const matchHouse = houseFilter === 'all' || m.house === houseFilter;
+        const matchGender = genderFilter === 'all' || m.gender === genderFilter;
         const matchParty = partyFilter === 'all' || m.party === partyFilter;
         const matchBirthplace = birthplaceFilter === 'all' || (m.birthplace || '不明') === birthplaceFilter;
         const matchSchool = schoolFilter === 'all' || (m.school || '不明') === schoolFilter;
-        return matchHouse && matchParty && matchBirthplace && matchSchool;
+        return matchHouse && matchGender && matchParty && matchBirthplace && matchSchool;
     });
 
     filtered.sort((a, b) => {
@@ -460,6 +475,13 @@ function renderMembersList() {
             const idxB = orderB !== -1 ? orderB : 999;
             if (idxA !== idxB) {
                 return (idxA - idxB) * currentSort.direction;
+            }
+            return (a.id || '').localeCompare(b.id || '') * currentSort.direction;
+        } else if (currentSort.field === 'gender') {
+            const gA = a.gender || '';
+            const gB = b.gender || '';
+            if (gA !== gB) {
+                return gA.localeCompare(gB, 'ja') * currentSort.direction;
             }
             return (a.id || '').localeCompare(b.id || '') * currentSort.direction;
         } else if (currentSort.field === 'school') {
@@ -562,6 +584,12 @@ function renderMembersList() {
             ? `<span class="source-wiki" title="Wikipedia（二次情報源）より取得">${facultyText}</span>` 
             : facultyText;
 
+        const isWikiGender = secFields.includes('gender');
+        const genderText = m.gender || '-';
+        const genderDisplay = isWikiGender 
+            ? `<span class="source-wiki" title="Wikipedia（二次情報源）より取得">${genderText}</span>` 
+            : genderText;
+
         tr.innerHTML = `
             <td>${m.id || '-'}</td>
             <td>${nameCell}</td>
@@ -570,6 +598,7 @@ function renderMembersList() {
             <td>${elecDisplay}</td>
             <td>${bdateDisplay}</td>
             <td>${ageDisplay}</td>
+            <td>${genderDisplay}</td>
             <td>${bplaceDisplay}</td>
             <td>${schoolDisplay}</td>
             <td>${facultyDisplay}</td>

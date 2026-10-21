@@ -80,5 +80,22 @@ class TestWikiClient(unittest.TestCase):
                 if expected_schools:
                     self.assertIn(data.get('school'), expected_schools)
 
+    def test_resolve_all_members_gender(self):
+        sample_members = [
+            {"id": "001", "name": "逢沢  一郎"},
+            {"id": "010", "name": "浅田 眞澄美"},
+            {"id": "018", "name": "あべ  俊子"},
+            {"id": "070", "name": "浮島  智子"},
+            {"id": "187", "name": "斉藤  りえ"},
+            {"id": "653", "name": "福島 みずほ"}
+        ]
+        genders = wiki_client.resolve_all_members_gender(sample_members)
+        self.assertEqual(genders.get("001"), "男性")
+        self.assertEqual(genders.get("010"), "女性")
+        self.assertEqual(genders.get("018"), "女性")
+        self.assertEqual(genders.get("070"), "女性")
+        self.assertEqual(genders.get("187"), "女性")
+        self.assertEqual(genders.get("653"), "女性")
+
 if __name__ == '__main__':
     unittest.main()

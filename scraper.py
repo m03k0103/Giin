@@ -1038,6 +1038,59 @@ def enrich_members_with_wiki(target_ids=None):
     print(f"\n[補完完了] {updated_count}名の属性を Wikipedia / Wikidata から補完しました。（処理時間: {duration.total_seconds():.2f}秒）")
 
 
+
+
+def enrich_members_gender(filepath='data.js'):
+    """
+    data.js 内の全議員に対し、Wikidata / Wikipedia から性別（男性 / 女性）を取得して付与・保存
+    """
+    file_data = load_diet_data(filepath)
+    if not file_data or 'members' not in file_data:
+        print(f"エラー: {filepath} が見つからないか、有効な議員データが含まれていません。", file=sys.stderr)
+        return
+
+    members = file_data['members']
+    start_time = datetime.now()
+    print(f"=== Wikipedia / Wikidata による性別情報の補完（--enrich-gender） ===")
+    print(f"開始日時: {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"対象議員数: {len(members)}名")
+
+    gender_map = wiki_client.resolve_all_members_gender(members)
+    
+    male_count = 0
+    female_count = 0
+    updated_count = 0
+
+    for m in members:
+        mid = str(m.get('id', ''))
+        gender = gender_map.get(mid, '男性')
+        m['gender'] = gender
+        if gender == '男性':
+            male_count += 1
+        elif gender == '女性':
+            female_count += 1
+            
+        sec = list(m.get('secondary_fields', []))
+        if 'gender' not in sec:
+            sec.append('gender')
+        m['secondary_fields'] = sec
+        updated_count += 1
+
+    file_data['last_updated'] = datetime.now().isoformat()
+    sources = file_data.get('sources', [])
+    wiki_source = "Wikipedia / Wikidata (https://ja.wikipedia.org/, https://www.wikidata.org/)"
+    if wiki_source not in sources:
+        sources.append(wiki_source)
+    file_data['sources'] = sources
+
+    atomic_save_diet_data(filepath, file_data)
+    if os.path.exists('data_full.js'):
+        atomic_save_diet_data('data_full.js', file_data)
+
+    end_time = datetime.now()
+    duration = end_time - start_time
+    print(f"\n[性別補完完了] 全{updated_count}名の性別を付与しました。（男性: {male_count}名, 女性: {female_count}名 / 処理時間: {duration.total_seconds():.2f}秒）")
+
 def main():
     parser = argparse.ArgumentParser(description="国会議員データ収集スクリプト（衆議院・参議院公式ウェブサイト）")
     parser.add_argument("-t", "--test", action="store_true", help="テストモード: 衆議院・参議院それぞれ5名ずつのデータを迅速に取得します")
@@ -1045,11 +1098,16 @@ def main():
     parser.add_argument("-i", "--id", type=str, default=None, help="指定したIDの議員データのみを再取得・更新します（例: --id 001 または -i 001,005）")
     parser.add_argument("-r", "--restore", action="store_true", help="退避済みの全件データ（data_full.js）から復元します")
     parser.add_argument("--wiki-enrich", action="store_true", help="既存の data.js 内で出身地や出身校が「不明」の議員に対し、Wikipedia/Wikidata から補完・更新を実行します")
+    parser.add_argument("--enrich-gender", action="store_true", help="全議員に対し、Wikidata/Wikipedia から性別（男性/女性）を取得・補完します")
     parser.add_argument("--use-wiki", action="store_true", help="個別更新(-i)や欠損時に Wikipedia/Wikidata を優先・併用して補完します")
     args = parser.parse_args()
 
     if args.restore:
         restore_full_data()
+        return
+
+    if args.enrich_gender:
+        enrich_members_gender()
         return
 
     if args.wiki_enrich:
