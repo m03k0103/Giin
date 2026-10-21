@@ -14,13 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('filter-house').addEventListener('change', renderMembersList);
     document.getElementById('filter-party').addEventListener('change', renderMembersList);
+    document.getElementById('filter-birthplace').addEventListener('change', renderMembersList);
     document.getElementById('filter-school').addEventListener('change', renderMembersList);
     
     document.getElementById('sort-id').addEventListener('click', () => handleTableSort('id'));
+    document.getElementById('sort-name').addEventListener('click', () => handleTableSort('name'));
+    document.getElementById('sort-party').addEventListener('click', () => handleTableSort('party'));
     document.getElementById('sort-elections').addEventListener('click', () => handleTableSort('elections'));
     document.getElementById('sort-age').addEventListener('click', () => handleTableSort('age'));
     document.getElementById('sort-birthplace').addEventListener('click', () => handleTableSort('birthplace'));
     document.getElementById('sort-school').addEventListener('click', () => handleTableSort('school'));
+    document.getElementById('sort-faculty').addEventListener('click', () => handleTableSort('faculty'));
 
     document.getElementById('birthplace-house-filter').addEventListener('change', renderBirthplaceChart);
     document.getElementById('birthplace-sort').addEventListener('change', renderBirthplaceChart);
@@ -145,6 +149,7 @@ async function fetchData() {
         updateHeader(data.last_updated, refDate);
         updateSummary(globalData.summary);
         populatePartyFilter(globalData.parties);
+        populateBirthplaceFilter(enrichedMembers);
         populateSchoolFilter(enrichedMembers);
         renderPartyTable(globalData.parties);
         renderBirthplaceChart();
@@ -307,6 +312,42 @@ function populatePartyFilter(parties) {
     });
 }
 
+function populateBirthplaceFilter(members) {
+    const select = document.getElementById('filter-birthplace');
+    if (!select) return;
+
+    const bpCounts = {};
+    members.forEach(m => {
+        const bp = m.birthplace || '不明';
+        bpCounts[bp] = (bpCounts[bp] || 0) + 1;
+    });
+
+    select.innerHTML = '<option value="all">すべて (全都道府県)</option>';
+    
+    // PREFECTURE_ORDER に基づき地域順（北海道〜沖縄・外国・不明）で追加
+    const added = new Set();
+    PREFECTURE_ORDER.forEach(bp => {
+        const count = bpCounts[bp] || 0;
+        if (count > 0) {
+            const option = document.createElement('option');
+            option.value = bp;
+            option.textContent = `${bp} (${count}名)`;
+            select.appendChild(option);
+            added.add(bp);
+        }
+    });
+
+    // 既存定義外の地域があれば末尾に追加
+    Object.keys(bpCounts).forEach(bp => {
+        if (!added.has(bp) && bpCounts[bp] > 0) {
+            const option = document.createElement('option');
+            option.value = bp;
+            option.textContent = `${bp} (${bpCounts[bp]}名)`;
+            select.appendChild(option);
+        }
+    });
+}
+
 function populateSchoolFilter(members) {
     const select = document.getElementById('filter-school');
     if (!select) return;
@@ -367,28 +408,36 @@ function handleTableSort(field) {
 
 function updateSortHeaders() {
     const idTh = document.getElementById('sort-id');
+    const nameTh = document.getElementById('sort-name');
+    const partyTh = document.getElementById('sort-party');
     const elecTh = document.getElementById('sort-elections');
     const ageTh = document.getElementById('sort-age');
     const bpTh = document.getElementById('sort-birthplace');
     const schTh = document.getElementById('sort-school');
+    const facTh = document.getElementById('sort-faculty');
 
     if (idTh) idTh.textContent = `ID ${currentSort.field === 'id' ? (currentSort.direction === 1 ? '▲' : '▼') : ''}`;
+    if (nameTh) nameTh.textContent = `氏名 ${currentSort.field === 'name' ? (currentSort.direction === 1 ? '▲' : '▼') : ''}`;
+    if (partyTh) partyTh.textContent = `会派 ${currentSort.field === 'party' ? (currentSort.direction === 1 ? '▲' : '▼') : ''}`;
     if (elecTh) elecTh.textContent = `当選回数 ${currentSort.field === 'elections' ? (currentSort.direction === -1 ? '▼' : '▲') : ''}`;
     if (ageTh) ageTh.textContent = `年齢 ${currentSort.field === 'age' ? (currentSort.direction === -1 ? '▼' : '▲') : ''}`;
     if (bpTh) bpTh.textContent = `出身地 ${currentSort.field === 'birthplace' ? (currentSort.direction === 1 ? '▲' : '▼') : ''}`;
     if (schTh) schTh.textContent = `出身校 ${currentSort.field === 'school' ? (currentSort.direction === 1 ? '▲' : '▼') : ''}`;
+    if (facTh) facTh.textContent = `学部名 ${currentSort.field === 'faculty' ? (currentSort.direction === 1 ? '▲' : '▼') : ''}`;
 }
 
 function renderMembersList() {
     const houseFilter = document.getElementById('filter-house').value;
     const partyFilter = document.getElementById('filter-party').value;
+    const birthplaceFilter = document.getElementById('filter-birthplace') ? document.getElementById('filter-birthplace').value : 'all';
     const schoolFilter = document.getElementById('filter-school') ? document.getElementById('filter-school').value : 'all';
     
     let filtered = globalData.members.filter(m => {
         const matchHouse = houseFilter === 'all' || m.house === houseFilter;
         const matchParty = partyFilter === 'all' || m.party === partyFilter;
+        const matchBirthplace = birthplaceFilter === 'all' || (m.birthplace || '不明') === birthplaceFilter;
         const matchSchool = schoolFilter === 'all' || (m.school || '不明') === schoolFilter;
-        return matchHouse && matchParty && matchSchool;
+        return matchHouse && matchParty && matchBirthplace && matchSchool;
     });
 
     filtered.sort((a, b) => {
@@ -418,6 +467,34 @@ function renderMembersList() {
             const sB = b.school || '不明';
             if (sA !== sB) {
                 return sA.localeCompare(sB, 'ja') * currentSort.direction;
+            }
+            return (a.id || '').localeCompare(b.id || '') * currentSort.direction;
+        } else if (currentSort.field === 'name') {
+            const nA = a.name || '';
+            const nB = b.name || '';
+            if (nA !== nB) {
+                return nA.localeCompare(nB, 'ja') * currentSort.direction;
+            }
+            return (a.id || '').localeCompare(b.id || '') * currentSort.direction;
+        } else if (currentSort.field === 'party') {
+            const pA = a.party || '';
+            const pB = b.party || '';
+            if (pA !== pB) {
+                return pA.localeCompare(pB, 'ja') * currentSort.direction;
+            }
+            return (a.id || '').localeCompare(b.id || '') * currentSort.direction;
+        } else if (currentSort.field === 'faculty') {
+            const fA = a.faculty || '-';
+            const fB = b.faculty || '-';
+            const isEmpA = fA === '-' || fA === 'N/A' || fA === '';
+            const isEmpB = fB === '-' || fB === 'N/A' || fB === '';
+            if (isEmpA && isEmpB) {
+                return (a.id || '').localeCompare(b.id || '') * currentSort.direction;
+            }
+            if (isEmpA) return 1;
+            if (isEmpB) return -1;
+            if (fA !== fB) {
+                return fA.localeCompare(fB, 'ja') * currentSort.direction;
             }
             return (a.id || '').localeCompare(b.id || '') * currentSort.direction;
         } else {

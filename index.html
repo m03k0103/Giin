@@ -107,7 +107,7 @@
                         <option value="参議院">参議院</option>
                     </select>
                 </div>
-                
+
                 <div class="filter-group">
                     <label for="birthplace-sort">並び順:</label>
                     <select id="birthplace-sort">
@@ -126,7 +126,7 @@
                     </select>
                 </div>
             </div>
-            
+
             <div class="chart-card">
                 <div id="birthplace-chart" class="bar-chart-container">
                     <!-- JavaScriptで棒グラフを挿入 -->
@@ -138,7 +138,7 @@
         <!-- 個別リストセクション -->
         <section id="members-section" class="section">
             <h2>議員 個別リスト</h2>
-            
+
             <div class="controls">
                 <div class="filter-group">
                     <label for="filter-house">議院:</label>
@@ -148,11 +148,19 @@
                         <option value="参議院">参議院</option>
                     </select>
                 </div>
-                
+
                 <div class="filter-group">
                     <label for="filter-party">会派:</label>
                     <select id="filter-party">
                         <option value="all">すべて</option>
+                        <!-- JavaScriptで挿入 -->
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filter-birthplace">出身地:</label>
+                    <select id="filter-birthplace">
+                        <option value="all">すべて (全都道府県)</option>
                         <!-- JavaScriptで挿入 -->
                     </select>
                 </div>
@@ -176,15 +184,15 @@
                     <thead>
                         <tr>
                             <th class="sortable" id="sort-id">ID ▲</th>
-                            <th>氏名</th>
+                            <th class="sortable" id="sort-name">氏名</th>
                             <th>議院</th>
-                            <th>会派</th>
+                            <th class="sortable" id="sort-party">会派</th>
                             <th class="sortable" id="sort-elections">当選回数</th>
                             <th>生年月日</th>
                             <th class="sortable" id="sort-age">年齢</th>
                             <th class="sortable" id="sort-birthplace">出身地</th>
                             <th class="sortable" id="sort-school">出身校</th>
-                            <th>学部名</th>
+                            <th class="sortable" id="sort-faculty">学部名</th>
                         </tr>
                     </thead>
                     <tbody>
