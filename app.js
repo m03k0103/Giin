@@ -38,9 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * 生年月（日）または生年文字列から基準日（当年1月1日時点）での満年齢を計算する
- * - 年月日 / 年月の場合: 基準日（当年1月1日時点）での満年齢
- * - 生年のみの場合: 当年1月1日時点での年齢（当年 - 生年）
+ * 生年月（日）または生年文字列から基準日（当日時点）での満年齢を計算する
+ * - 年月日 / 年月の場合: 基準日（当日時点）での満年齢
+ * - 生年のみの場合: 当年時点での推計年齢（当年 - 生年）
  */
 function calculateAge(birthdateStr, refDate) {
     if (!birthdateStr || birthdateStr === "不明") return null;
@@ -125,9 +125,9 @@ async function fetchData() {
             throw new Error("議員データ（window.DIET_DATA）が見つかりません。data.js が正しく読み込まれているか確認してください。");
         }
         
-        // 年齢の基準日: 当年1月1日時点
+        // 年齢の基準日: 当日時点
         const now = new Date();
-        const refDate = new Date(now.getFullYear(), 0, 1);
+        const refDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
         
         // 各議員レコードに対して生年月（日）から動的に年齢を計算・付与
         const enrichedMembers = (data.members || []).map(m => ({
@@ -498,7 +498,7 @@ function renderGenerationChart() {
 }
 
 function updateHeader(lastUpdatedStr, refDate) {
-    const formattedRef = `${refDate.getFullYear()}年1月1日時点`;
+    const formattedRef = `${refDate.getFullYear()}年${refDate.getMonth() + 1}月${refDate.getDate()}日時点`;
     let updateText = `年齢基準日: ${formattedRef}`;
     
     if (lastUpdatedStr) {
