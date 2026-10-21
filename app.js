@@ -391,7 +391,7 @@ function renderGenerationChart() {
             `;
             valueHtml = `
                 <div class="bar-value">
-                    <span>${item.total}名</span>
+                    <span class="bar-count">${item.total}名</span>
                     <span class="bar-percentage">(${percentage}%)</span>
                     <span class="bar-gender-detail">(男:${item.male} 女:${item.female})</span>
                     ${femaleBadgeHtml}
@@ -406,7 +406,7 @@ function renderGenerationChart() {
             `;
             valueHtml = `
                 <div class="bar-value">
-                    <span>${item.total}名</span>
+                    <span class="bar-count">${item.total}名</span>
                     <span class="bar-percentage">(${percentage}%)</span>
                     ${femaleBadgeHtml}
                 </div>
