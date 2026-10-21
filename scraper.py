@@ -959,16 +959,17 @@ def enrich_members_with_wiki(target_ids=None):
             continue
             
         need_bdate = not m.get('birthdate') or m.get('birthdate') == '不明'
+        need_bdate_sub = bool(m.get('birthdate') and not re.search(r'\d+年\d+月\d+日', m.get('birthdate')))
         need_bplace = not m.get('birthplace') or m.get('birthplace') == '不明'
         need_school = not m.get('school') or m.get('school') == '不明'
         
-        if not (need_bdate or need_bplace or need_school):
+        if not (need_bdate or need_bdate_sub or need_bplace or need_school):
             continue
             
         name = m.get('name')
         house = m.get('house')
         print(f"[ID: {mid}] {name} ({house}) の補完データを Wikipedia から照会中...")
-        time.sleep(1.0)
+        time.sleep(0.5)
         
         try:
             wdata = wiki_client.get_secondary_member_data(
@@ -989,6 +990,14 @@ def enrich_members_with_wiki(target_ids=None):
                 field_updated = True
                 if 'birthdate' not in updated_fields:
                     updated_fields.append('birthdate')
+            elif need_bdate_sub and wdata.get('birthdate'):
+                new_bdate, sec_type = wiki_client.validate_and_extract_birthdate_supplement(m.get('birthdate'), wdata.get('birthdate'))
+                if new_bdate:
+                    m['birthdate'] = new_bdate
+                    print(f"  -> [生年月日の月日補完] {m['birthdate']} ({sec_type})")
+                    field_updated = True
+                    if sec_type not in updated_fields:
+                        updated_fields.append(sec_type)
                 
             if need_bplace and wdata.get('birthplace') and wdata['birthplace'] != '不明':
                 m['birthplace'] = wdata['birthplace']
