@@ -59,6 +59,8 @@ def strip_wikitext(text):
     t = re.sub(r'\[\[(?:[^|\]\n]+\|)?([^\]\n]+)\]\]', r'\1', t)
     # 残存する [[ や ]] の除去
     t = t.replace('[[', '').replace(']]', '')
+    # {{Ublist|A|B}} や {{Flatlist|...}} の展開
+    t = re.sub(r'\{\{(?:Ublist|Unbulleted\s*list|Flatlist|ubl)\s*\|\s*([^\}]+)\}\}', lambda m: '\n'.join([x.strip() for x in m.group(1).split('|') if x.strip() and not '=' in x]), t, flags=re.IGNORECASE)
     # {{...}} テンプレート（生年月日以外の装飾、仮リンク等）の除去
     t = re.sub(r'\{\{[^\}]+\}\}', '', t)
     # 前後の空白と連続改行を整理
@@ -300,7 +302,7 @@ def get_secondary_member_data(name, house=None, extract_birthplace_fn=None, extr
         fields = extract_infobox_fields(content)
         
         # 生年月日の抽出
-        raw_bdate = fields.get('生年月日')
+        raw_bdate = fields.get('生年月日') or fields.get('birth_date')
         if raw_bdate:
             res['birthdate'] = parse_wiki_birthdate(raw_bdate)
             
@@ -312,7 +314,7 @@ def get_secondary_member_data(name, house=None, extract_birthplace_fn=None, extr
                 res['birthdate'] = parse_wiki_birthdate(lead_match.group(1))
 
         # 出身地の抽出
-        raw_bplace = fields.get('出生地') or fields.get('出身地')
+        raw_bplace = fields.get('出生地') or fields.get('出身地') or fields.get('birth_place')
         if raw_bplace:
             clean_bplace = strip_wikitext(raw_bplace)
             if extract_birthplace_fn:
@@ -323,15 +325,15 @@ def get_secondary_member_data(name, house=None, extract_birthplace_fn=None, extr
                 res['birthplace'] = clean_bplace
 
         # 出身校の抽出
-        raw_school = fields.get('学歴') or fields.get('出身校')
+        raw_school = fields.get('学歴') or fields.get('出身校') or fields.get('alma_mater')
         if raw_school:
             clean_school = strip_wikitext(raw_school)
             if extract_school_fn:
-                # 複数行ある場合は最初の大学または主要校を優先
-                first_line = clean_school.splitlines()[0] if clean_school else ""
-                sch, fac = extract_school_fn(first_line)
+                # 複数行ある場合は大学（優先度高）を抽出、無ければ1行目を優先
+                sch, fac = extract_school_fn(clean_school)
                 if not sch or sch == '不明':
-                    sch, fac = extract_school_fn(clean_school)
+                    first_line = clean_school.splitlines()[0] if clean_school else ""
+                    sch, fac = extract_school_fn(first_line)
                 res['school'] = sch
                 res['faculty'] = fac
             else:
