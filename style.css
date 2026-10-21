@@ -378,3 +378,117 @@ select:focus {
         gap: 12px;
     }
 }
+
+/* 年代別グラフ & 性別色分けスタイル */
+.generation-legend {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-box {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+}
+
+.legend-box.male, .bar-fill.male {
+    background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+}
+
+.legend-box.female, .bar-fill.female {
+    background: linear-gradient(90deg, #ec4899, #db2777);
+}
+
+.bar-track.stacked {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bar-track.stacked .bar-fill {
+    border-radius: 0;
+}
+
+.bar-track.stacked .bar-fill:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.bar-track.stacked .bar-fill:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#generation-chart {
+    overflow-x: auto;
+}
+
+#generation-chart .bar-row {
+    grid-template-columns: 60px 1fr 340px;
+    min-width: 580px;
+}
+
+#generation-chart .bar-value {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+#generation-chart .bar-value .bar-count {
+    min-width: 44px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+#generation-chart .bar-value .bar-percentage {
+    min-width: 54px;
+    font-variant-numeric: tabular-nums;
+}
+
+#generation-chart .bar-value .bar-gender-detail {
+    min-width: 110px;
+    font-size: 0.75rem;
+    font-weight: normal;
+    color: var(--text-secondary);
+    font-variant-numeric: tabular-nums;
+}
+
+.bar-gender-detail {
+    font-size: 0.75rem;
+    font-weight: normal;
+    color: var(--text-secondary);
+    margin-left: 4px;
+}
+
+.bar-female-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 86px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #be185d;
+    background-color: #fdf2f8;
+    border: 1px solid #fbcfe8;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 4px;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
+}
