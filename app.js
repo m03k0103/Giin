@@ -31,6 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('birthplace-house-filter').addEventListener('change', renderBirthplaceChart);
     document.getElementById('birthplace-sort').addEventListener('change', renderBirthplaceChart);
     document.getElementById('birthplace-display-mode').addEventListener('change', renderBirthplaceChart);
+    document.getElementById('generation-house-filter').addEventListener('change', renderGenerationChart);
+    document.getElementById('generation-gender-mode').addEventListener('change', renderGenerationChart);
+    document.getElementById('generation-sort').addEventListener('change', renderGenerationChart);
 });
 
 /**
@@ -160,6 +163,7 @@ async function fetchData() {
         populateSchoolFilter(enrichedMembers);
         renderPartyTable(globalData.parties);
         renderBirthplaceChart();
+        renderGenerationChart();
         
         // 初回は年齢の降順でソート
         globalData.members.sort((a, b) => {
@@ -272,6 +276,148 @@ function renderBirthplaceChart() {
     const distinctRegions = Object.keys(countMap).filter(k => countMap[k] > 0 && k !== '不明' && k !== '外国').length;
     document.getElementById('birthplace-chart-summary').textContent = 
         `集計対象: ${houseLabel}（計${totalCount}名） / 出身都道府県数: ${distinctRegions}/47都道府県`;
+}
+
+const GENERATION_KEYS = ['20代', '30代', '40代', '50代', '60代', '70代', '80代'];
+
+/**
+ * 年代別データ（棒グラフ）の描画
+ */
+function renderGenerationChart() {
+    const houseFilter = document.getElementById('generation-house-filter').value;
+    const genderMode = document.getElementById('generation-gender-mode').value;
+    const sortMode = document.getElementById('generation-sort').value;
+    const legendEl = document.getElementById('generation-legend');
+
+    if (genderMode === 'color') {
+        legendEl.style.display = 'flex';
+    } else {
+        legendEl.style.display = 'none';
+    }
+
+    const filteredMembers = globalData.members.filter(m => {
+        return houseFilter === 'all' || m.house === houseFilter;
+    });
+
+    const totalCount = filteredMembers.length;
+    const container = document.getElementById('generation-chart');
+    const summaryEl = document.getElementById('generation-chart-summary');
+
+    if (totalCount === 0) {
+        container.innerHTML = '<div style="padding: 20px; text-align: center; color: var(--text-secondary);">該当するデータがありません。</div>';
+        summaryEl.textContent = '';
+        return;
+    }
+
+    // 集計初期化
+    const genMap = {};
+    GENERATION_KEYS.forEach(g => {
+        genMap[g] = { name: g, total: 0, male: 0, female: 0 };
+    });
+    let others = { name: 'その他・不明', total: 0, male: 0, female: 0 };
+
+    filteredMembers.forEach(m => {
+        let key = null;
+        if (m.age !== null && m.age !== undefined) {
+            if (m.age >= 20 && m.age < 30) key = '20代';
+            else if (m.age >= 30 && m.age < 40) key = '30代';
+            else if (m.age >= 40 && m.age < 50) key = '40代';
+            else if (m.age >= 50 && m.age < 60) key = '50代';
+            else if (m.age >= 60 && m.age < 70) key = '60代';
+            else if (m.age >= 70 && m.age < 80) key = '70代';
+            else if (m.age >= 80 && m.age < 90) key = '80代';
+            else if (m.age >= 90) key = '90代以上';
+        }
+
+        const target = key ? (genMap[key] || (genMap[key] = { name: key, total: 0, male: 0, female: 0 })) : others;
+        target.total++;
+        if (m.gender === '女性') {
+            target.female++;
+        } else {
+            target.male++;
+        }
+    });
+
+    let chartData = GENERATION_KEYS.map(g => genMap[g]);
+    if (others.total > 0) {
+        chartData.push(others);
+    }
+
+    // ソート処理
+    if (sortMode === 'age_desc') {
+        chartData.reverse();
+    } else if (sortMode === 'count_desc') {
+        chartData.sort((a, b) => b.total - a.total);
+    } else if (sortMode === 'count_asc') {
+        chartData.sort((a, b) => a.total - b.total);
+    } // 'age_asc' の場合は GENERATION_KEYS 順のまま
+
+    const maxCount = Math.max(...chartData.map(d => d.total), 1);
+    container.innerHTML = '';
+
+    chartData.forEach(item => {
+        const row = document.createElement('div');
+        row.className = 'bar-row';
+
+        const percentage = totalCount > 0 ? ((item.total / totalCount) * 100).toFixed(1) : '0.0';
+
+        let trackHtml = '';
+        let valueHtml = '';
+
+        if (genderMode === 'color') {
+            const maleWidth = maxCount > 0 ? ((item.male / maxCount) * 100).toFixed(1) : '0';
+            const femaleWidth = maxCount > 0 ? ((item.female / maxCount) * 100).toFixed(1) : '0';
+            const femaleRatio = item.total > 0 ? ((item.female / item.total) * 100).toFixed(1) : '0.0';
+
+            trackHtml = `
+                <div class="bar-track stacked" title="${item.name}: 全体 ${item.total}名 (男性 ${item.male}名, 女性 ${item.female}名 / 女性比率 ${femaleRatio}%)">
+                    ${item.male > 0 ? `<div class="bar-fill male" style="width: ${maleWidth}%;" title="男性: ${item.male}名"></div>` : ''}
+                    ${item.female > 0 ? `<div class="bar-fill female" style="width: ${femaleWidth}%;" title="女性: ${item.female}名"></div>` : ''}
+                </div>
+            `;
+            valueHtml = `
+                <div class="bar-value">
+                    <span>${item.total}名</span>
+                    <span class="bar-percentage">(${percentage}%)</span>
+                    <span class="bar-gender-detail">(男:${item.male} 女:${item.female})</span>
+                </div>
+            `;
+        } else {
+            const totalWidth = maxCount > 0 ? ((item.total / maxCount) * 100).toFixed(1) : '0';
+            trackHtml = `
+                <div class="bar-track" title="${item.name}: ${item.total}名 (${percentage}%)">
+                    <div class="bar-fill" style="width: ${totalWidth}%;"></div>
+                </div>
+            `;
+            valueHtml = `
+                <div class="bar-value">
+                    <span>${item.total}名</span>
+                    <span class="bar-percentage">(${percentage}%)</span>
+                </div>
+            `;
+        }
+
+        row.innerHTML = `
+            <div class="bar-label">${item.name}</div>
+            ${trackHtml}
+            ${valueHtml}
+        `;
+        container.appendChild(row);
+    });
+
+    // サマリー生成
+    const houseLabel = houseFilter === 'all' ? '全体 (衆参両院)' : houseFilter;
+    const sortedByCount = [...chartData].sort((a, b) => b.total - a.total);
+    const topGen = sortedByCount[0];
+    const topGenText = topGen && topGen.total > 0 ? `最多年代: ${topGen.name}（${topGen.total}名, ${((topGen.total / totalCount) * 100).toFixed(1)}%）` : '';
+
+    const validGens = chartData.filter(d => d.total > 0);
+    const topFemaleGen = [...validGens].sort((a, b) => (b.female / b.total) - (a.female / a.total))[0];
+    const topFemaleText = topFemaleGen && topFemaleGen.female > 0 
+        ? ` / 女性比率最高: ${topFemaleGen.name}（${((topFemaleGen.female / topFemaleGen.total) * 100).toFixed(1)}%, ${topFemaleGen.female}名）` 
+        : '';
+
+    summaryEl.textContent = `集計対象: ${houseLabel}（計${totalCount}名） / ${topGenText}${topFemaleText}`;
 }
 
 function updateHeader(lastUpdatedStr, refDate) {
