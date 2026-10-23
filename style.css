@@ -358,11 +358,11 @@ select:focus {
 }
 
 .legend-badge.wiki {
-    background-color: #2563eb;
+    background-color: #ea580c;
 }
 
 .source-wiki {
-    color: #2563eb !important;
+    color: #c2410c !important;
     font-weight: 500;
 }
 
