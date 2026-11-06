@@ -42,6 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
  * - 年月日 / 年月の場合: 基準日（当日時点）での満年齢
  * - 生年のみの場合: 当年時点での推計年齢（当年 - 生年）
  */
+/**
+ * HTML特殊文字のエスケープ
+ */
+function escapeHtml(str) {
+    if (str === null || str === undefined) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
 function calculateAge(birthdateStr, refDate) {
     if (!birthdateStr || birthdateStr === "不明") return null;
     
@@ -183,6 +196,86 @@ async function fetchData() {
     }
 }
 
+/**
+ * 汎用横棒グラフ行の描画（単色 / 男女スタックバー両対応）
+ * @param {HTMLElement} container - 描画先コンテナ
+ * @param {Array} chartData - 各項目データ [{ name, count/total, male, female, barClass }]
+ * @param {Object} options - { totalCount, maxCount, genderMode }
+ */
+function renderBarChartRows(container, chartData, options) {
+    const { totalCount, maxCount, genderMode } = options;
+    container.innerHTML = '';
+    const fragment = document.createDocumentFragment();
+
+    chartData.forEach(item => {
+        const count = item.count !== undefined ? item.count : (item.total || 0);
+        const male = item.male || 0;
+        const female = item.female || 0;
+
+        const row = document.createElement('div');
+        row.className = 'bar-row';
+
+        const percentage = totalCount > 0 ? ((count / totalCount) * 100).toFixed(1) : '0.0';
+        const femaleRatio = count > 0 ? ((female / count) * 100).toFixed(1) : null;
+        const femaleRatioDisplay = femaleRatio !== null ? `${femaleRatio}%` : '-';
+        const femaleBadgeHtml = `<span class="bar-female-badge" title="${item.name}の女性比率: ${femaleRatioDisplay}">女性比率 ${femaleRatioDisplay}</span>`;
+
+        let trackHtml = '';
+        let valueHtml = '';
+
+        if (genderMode === 'color') {
+            const maleWidth = maxCount > 0 ? ((male / maxCount) * 100).toFixed(1) : '0';
+            const femaleWidth = maxCount > 0 ? ((female / maxCount) * 100).toFixed(1) : '0';
+
+            trackHtml = `
+                <div class="bar-track stacked" title="${item.name}: 全体 ${count}名 (男性 ${male}名, 女性 ${female}名 / 女性比率 ${femaleRatioDisplay})">
+                    ${male > 0 ? `<div class="bar-fill male" style="width: ${maleWidth}%;" title="男性: ${male}名"></div>` : ''}
+                    ${female > 0 ? `<div class="bar-fill female" style="width: ${femaleWidth}%;" title="女性: ${female}名"></div>` : ''}
+                </div>
+            `;
+            valueHtml = `
+                <div class="bar-value">
+                    <span class="bar-count">${count}名</span>
+                    <span class="bar-percentage">(${percentage}%)</span>
+                    <span class="bar-gender-detail">(男:${male} 女:${female})</span>
+                    ${femaleBadgeHtml}
+                </div>
+            `;
+        } else {
+            const widthPercent = maxCount > 0 ? ((count / maxCount) * 100).toFixed(1) : '0';
+            let barClass = 'bar-fill';
+            if (item.barClass) {
+                barClass += ` ${item.barClass}`;
+            } else {
+                if (item.name === '外国') barClass += ' foreign';
+                if (item.name === '不明') barClass += ' unknown';
+            }
+
+            trackHtml = `
+                <div class="bar-track" title="${item.name}: ${count}名 (${percentage}%) / 女性比率: ${femaleRatioDisplay}">
+                    <div class="${barClass}" style="width: ${widthPercent}%;"></div>
+                </div>
+            `;
+            valueHtml = `
+                <div class="bar-value">
+                    <span class="bar-count">${count}名</span>
+                    <span class="bar-percentage">(${percentage}%)</span>
+                    ${femaleBadgeHtml}
+                </div>
+            `;
+        }
+
+        row.innerHTML = `
+            <div class="bar-label">${item.name}</div>
+            ${trackHtml}
+            ${valueHtml}
+        `;
+        fragment.appendChild(row);
+    });
+
+    if (fragment !== container) { container.appendChild(fragment); }
+}
+
 const PREFECTURE_ORDER = [
     '北海道', '青森県', '岩手県', '宮城県', '秋田県', '山形県', '福島県',
     '茨城県', '栃木県', '群馬県', '埼玉県', '千葉県', '東京都', '神奈川県',
@@ -275,65 +368,7 @@ function renderBirthplaceChart() {
     }
 
     const maxCount = Math.max(...chartData.map(d => d.count), 1);
-    container.innerHTML = '';
-
-    chartData.forEach(item => {
-        const row = document.createElement('div');
-        row.className = 'bar-row';
-
-        const percentage = totalCount > 0 ? ((item.count / totalCount) * 100).toFixed(1) : '0.0';
-        const femaleRatio = item.count > 0 ? ((item.female / item.count) * 100).toFixed(1) : null;
-        const femaleRatioDisplay = femaleRatio !== null ? `${femaleRatio}%` : '-';
-        const femaleBadgeHtml = `<span class="bar-female-badge" title="${item.name}の女性比率: ${femaleRatioDisplay}">女性比率 ${femaleRatioDisplay}</span>`;
-
-        let trackHtml = '';
-        let valueHtml = '';
-
-        if (genderMode === 'color') {
-            const maleWidth = maxCount > 0 ? ((item.male / maxCount) * 100).toFixed(1) : '0';
-            const femaleWidth = maxCount > 0 ? ((item.female / maxCount) * 100).toFixed(1) : '0';
-
-            trackHtml = `
-                <div class="bar-track stacked" title="${item.name}: 全体 ${item.count}名 (男性 ${item.male}名, 女性 ${item.female}名 / 女性比率 ${femaleRatioDisplay})">
-                    ${item.male > 0 ? `<div class="bar-fill male" style="width: ${maleWidth}%;" title="男性: ${item.male}名"></div>` : ''}
-                    ${item.female > 0 ? `<div class="bar-fill female" style="width: ${femaleWidth}%;" title="女性: ${item.female}名"></div>` : ''}
-                </div>
-            `;
-            valueHtml = `
-                <div class="bar-value">
-                    <span class="bar-count">${item.count}名</span>
-                    <span class="bar-percentage">(${percentage}%)</span>
-                    <span class="bar-gender-detail">(男:${item.male} 女:${item.female})</span>
-                    ${femaleBadgeHtml}
-                </div>
-            `;
-        } else {
-            const widthPercent = maxCount > 0 ? ((item.count / maxCount) * 100).toFixed(1) : '0';
-            let barClass = 'bar-fill';
-            if (item.name === '外国') barClass += ' foreign';
-            if (item.name === '不明') barClass += ' unknown';
-
-            trackHtml = `
-                <div class="bar-track" title="${item.name}: ${item.count}名 (${percentage}%) / 女性比率: ${femaleRatioDisplay}">
-                    <div class="${barClass}" style="width: ${widthPercent}%;"></div>
-                </div>
-            `;
-            valueHtml = `
-                <div class="bar-value">
-                    <span class="bar-count">${item.count}名</span>
-                    <span class="bar-percentage">(${percentage}%)</span>
-                    ${femaleBadgeHtml}
-                </div>
-            `;
-        }
-
-        row.innerHTML = `
-            <div class="bar-label">${item.name}</div>
-            ${trackHtml}
-            ${valueHtml}
-        `;
-        container.appendChild(row);
-    });
+    renderBarChartRows(container, chartData, { totalCount, maxCount, genderMode });
 
     const houseLabel = houseFilter === 'all' ? '全体 (衆参両院)' : houseFilter;
     const distinctRegions = Object.keys(statsMap).filter(k => statsMap[k].count > 0 && k !== '不明' && k !== '外国').length;
@@ -428,61 +463,7 @@ function renderGenerationChart() {
     } // 'age_asc' の場合は GENERATION_KEYS 順のまま
 
     const maxCount = Math.max(...chartData.map(d => d.total), 1);
-    container.innerHTML = '';
-
-    chartData.forEach(item => {
-        const row = document.createElement('div');
-        row.className = 'bar-row';
-
-        const percentage = totalCount > 0 ? ((item.total / totalCount) * 100).toFixed(1) : '0.0';
-        const femaleRatio = item.total > 0 ? ((item.female / item.total) * 100).toFixed(1) : null;
-        const femaleRatioDisplay = femaleRatio !== null ? `${femaleRatio}%` : '-';
-        const femaleBadgeHtml = `<span class="bar-female-badge" title="${item.name}の女性比率: ${femaleRatioDisplay}">女性比率 ${femaleRatioDisplay}</span>`;
-
-        let trackHtml = '';
-        let valueHtml = '';
-
-        if (genderMode === 'color') {
-            const maleWidth = maxCount > 0 ? ((item.male / maxCount) * 100).toFixed(1) : '0';
-            const femaleWidth = maxCount > 0 ? ((item.female / maxCount) * 100).toFixed(1) : '0';
-
-            trackHtml = `
-                <div class="bar-track stacked" title="${item.name}: 全体 ${item.total}名 (男性 ${item.male}名, 女性 ${item.female}名 / 女性比率 ${femaleRatioDisplay})">
-                    ${item.male > 0 ? `<div class="bar-fill male" style="width: ${maleWidth}%;" title="男性: ${item.male}名"></div>` : ''}
-                    ${item.female > 0 ? `<div class="bar-fill female" style="width: ${femaleWidth}%;" title="女性: ${item.female}名"></div>` : ''}
-                </div>
-            `;
-            valueHtml = `
-                <div class="bar-value">
-                    <span class="bar-count">${item.total}名</span>
-                    <span class="bar-percentage">(${percentage}%)</span>
-                    <span class="bar-gender-detail">(男:${item.male} 女:${item.female})</span>
-                    ${femaleBadgeHtml}
-                </div>
-            `;
-        } else {
-            const totalWidth = maxCount > 0 ? ((item.total / maxCount) * 100).toFixed(1) : '0';
-            trackHtml = `
-                <div class="bar-track" title="${item.name}: ${item.total}名 (${percentage}%) / 女性比率: ${femaleRatioDisplay}">
-                    <div class="bar-fill" style="width: ${totalWidth}%;"></div>
-                </div>
-            `;
-            valueHtml = `
-                <div class="bar-value">
-                    <span class="bar-count">${item.total}名</span>
-                    <span class="bar-percentage">(${percentage}%)</span>
-                    ${femaleBadgeHtml}
-                </div>
-            `;
-        }
-
-        row.innerHTML = `
-            <div class="bar-label">${item.name}</div>
-            ${trackHtml}
-            ${valueHtml}
-        `;
-        container.appendChild(row);
-    });
+    renderBarChartRows(container, chartData, { totalCount, maxCount, genderMode });
 
     // サマリー生成
     const houseLabel = houseFilter === 'all' ? '全体 (衆参両院)' : houseFilter;
@@ -612,6 +593,7 @@ function populateSchoolFilter(members) {
 function renderPartyTable(parties) {
     const tbody = document.querySelector('#party-table tbody');
     tbody.innerHTML = '';
+    const fragment = document.createDocumentFragment();
     
     const partyArray = Object.keys(parties).map(key => ({
         name: key,
@@ -627,8 +609,9 @@ function renderPartyTable(parties) {
             <td>${formatAge(party.median)}</td>
             <td>${formatAge(party.max)}</td>
         `;
-        tbody.appendChild(tr);
+        fragment.appendChild(tr);
     });
+    if (fragment !== tbody) { tbody.appendChild(fragment); }
 }
 
 function handleTableSort(field) {
@@ -751,6 +734,7 @@ function renderMembersList() {
 
     const tbody = document.querySelector('#members-table tbody');
     tbody.innerHTML = '';
+    const fragment = document.createDocumentFragment();
 
     filtered.forEach(m => {
         const tr = document.createElement('tr');
@@ -828,8 +812,9 @@ function renderMembersList() {
             <td>${schoolDisplay}</td>
             <td>${facultyDisplay}</td>
         `;
-        tbody.appendChild(tr);
+        fragment.appendChild(tr);
     });
 
+    if (fragment !== tbody) { tbody.appendChild(fragment); }
     document.getElementById('pagination-info').textContent = `表示件数: ${filtered.length}件`;
 }
