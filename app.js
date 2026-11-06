@@ -38,9 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * 生年月（日）または生年文字列から基準日（当年1月1日時点）での満年齢を計算する
- * - 年月日 / 年月の場合: 基準日（当年1月1日時点）での満年齢
- * - 生年のみの場合: 当年1月1日時点での年齢（当年 - 生年）
+ * 生年月（日）または生年文字列から基準日（当日時点）での満年齢を計算する
+ * - 年月日 / 年月の場合: 基準日（当日時点）での満年齢
+ * - 生年のみの場合: 当年時点での推計年齢（当年 - 生年）
  */
 function calculateAge(birthdateStr, refDate) {
     if (!birthdateStr || birthdateStr === "不明") return null;
@@ -125,9 +125,9 @@ async function fetchData() {
             throw new Error("議員データ（window.DIET_DATA）が見つかりません。data.js が正しく読み込まれているか確認してください。");
         }
         
-        // 年齢の基準日: 当年1月1日時点
+        // 年齢の基準日: 当日時点
         const now = new Date();
-        const refDate = new Date(now.getFullYear(), 0, 1);
+        const refDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
         
         // 各議員レコードに対して生年月（日）から動的に年齢を計算・付与
         const enrichedMembers = (data.members || []).map(m => ({
@@ -167,6 +167,8 @@ async function fetchData() {
         renderGenerationChart();
         
         // 初回は年齢の降順でソート
+        currentSort = { field: 'age', direction: -1 };
+        updateSortHeaders();
         globalData.members.sort((a, b) => {
             if (a.age === null) return 1;
             if (b.age === null) return -1;
@@ -498,7 +500,7 @@ function renderGenerationChart() {
 }
 
 function updateHeader(lastUpdatedStr, refDate) {
-    const formattedRef = `${refDate.getFullYear()}年1月1日時点`;
+    const formattedRef = `${refDate.getFullYear()}年${refDate.getMonth() + 1}月${refDate.getDate()}日時点`;
     let updateText = `年齢基準日: ${formattedRef}`;
     
     if (lastUpdatedStr) {
@@ -767,19 +769,19 @@ function renderMembersList() {
         let bdateDisplay = m.birthdate || '-';
         if (m.birthdate) {
             if (isWikiBdateDay) {
-                // 日のみ補完: YYYY年M月 は通常色、D日 のみ青色
+                // 日のみ補完: YYYY年M月 は通常色、D日 のみオレンジ色
                 const match = m.birthdate.match(/^(\d+年\d+月)(\d+日)$/);
                 if (match) {
                     bdateDisplay = `${match[1]}<span class="source-wiki" title="日をWikipediaより補完">${match[2]}</span>`;
                 }
             } else if (isWikiBdateMonthDay) {
-                // 月日を補完: YYYY年 は通常色、M月D日 のみ青色
+                // 月日を補完: YYYY年 は通常色、M月D日 のみオレンジ色
                 const match = m.birthdate.match(/^(\d+年)(\d+月\d+日)$/);
                 if (match) {
                     bdateDisplay = `${match[1]}<span class="source-wiki" title="月日をWikipediaより補完">${match[2]}</span>`;
                 }
             } else if (isWikiBdateFull) {
-                // 公式に生年月日未記載で全量補完: 生年は通常色、月日のみ青色
+                // 公式に生年月日未記載で全量補完: 生年は通常色、月日のみオレンジ色
                 const match = m.birthdate.match(/^(\d+年)(.*)$/);
                 if (match) {
                     bdateDisplay = `${match[1]}<span class="source-wiki" title="月日をWikipediaより補完">${match[2]}</span>`;
