@@ -167,6 +167,8 @@ async function fetchData() {
         renderGenerationChart();
         
         // 初回は年齢の降順でソート
+        currentSort = { field: 'age', direction: -1 };
+        updateSortHeaders();
         globalData.members.sort((a, b) => {
             if (a.age === null) return 1;
             if (b.age === null) return -1;
@@ -767,19 +769,19 @@ function renderMembersList() {
         let bdateDisplay = m.birthdate || '-';
         if (m.birthdate) {
             if (isWikiBdateDay) {
-                // 日のみ補完: YYYY年M月 は通常色、D日 のみ青色
+                // 日のみ補完: YYYY年M月 は通常色、D日 のみオレンジ色
                 const match = m.birthdate.match(/^(\d+年\d+月)(\d+日)$/);
                 if (match) {
                     bdateDisplay = `${match[1]}<span class="source-wiki" title="日をWikipediaより補完">${match[2]}</span>`;
                 }
             } else if (isWikiBdateMonthDay) {
-                // 月日を補完: YYYY年 は通常色、M月D日 のみ青色
+                // 月日を補完: YYYY年 は通常色、M月D日 のみオレンジ色
                 const match = m.birthdate.match(/^(\d+年)(\d+月\d+日)$/);
                 if (match) {
                     bdateDisplay = `${match[1]}<span class="source-wiki" title="月日をWikipediaより補完">${match[2]}</span>`;
                 }
             } else if (isWikiBdateFull) {
-                // 公式に生年月日未記載で全量補完: 生年は通常色、月日のみ青色
+                // 公式に生年月日未記載で全量補完: 生年は通常色、月日のみオレンジ色
                 const match = m.birthdate.match(/^(\d+年)(.*)$/);
                 if (match) {
                     bdateDisplay = `${match[1]}<span class="source-wiki" title="月日をWikipediaより補完">${match[2]}</span>`;

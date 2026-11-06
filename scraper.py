@@ -226,30 +226,6 @@ CITY_TO_PREF = {
     '熊本市': '熊本県', '八代': '熊本県', '大分市': '大分県', '別府': '大分県', '中津': '大分県', '宮崎市': '宮崎県', '都城': '宮崎県', '鹿児島市': '鹿児島県', '霧島': '鹿児島県', '那覇': '沖縄県'
 }
 
-def kanji_to_int(kstr):
-    """
-    漢数字および全角・半角数字を整数に変換
-    """
-    if not kstr:
-        return 0
-    kstr = unicodedata.normalize('NFKC', str(kstr)).strip()
-    if kstr.isdigit():
-        return int(kstr)
-    
-    if len(kstr) == 1:
-        return KANJI_NUMS.get(kstr, 0)
-        
-    if '十' in kstr:
-        parts = kstr.split('十')
-        tens = KANJI_NUMS.get(parts[0], 1) if parts[0] else 1
-        ones = KANJI_NUMS.get(parts[1], 0) if len(parts) > 1 and parts[1] else 0
-        return tens * 10 + ones
-        
-    val = 0
-    for ch in kstr:
-        val = val * 10 + KANJI_NUMS.get(ch, 0)
-    return val
-
 def backup_existing_full_data():
     """
     既存の data.js に全件データが含まれている場合、data_full.js に退避

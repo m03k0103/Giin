@@ -433,7 +433,8 @@ select:focus {
     border-bottom-right-radius: 4px;
 }
 
-#birthplace-chart {
+/* 棒グラフ行（グリッドレイアウト & 右端整列） */
+#birthplace-chart, #generation-chart {
     overflow-x: auto;
 }
 
@@ -442,72 +443,36 @@ select:focus {
     min-width: 600px;
 }
 
-#birthplace-chart .bar-value {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    white-space: nowrap;
-}
-
-#birthplace-chart .bar-value .bar-count {
-    min-width: 44px;
-    text-align: right;
-    font-variant-numeric: tabular-nums;
-}
-
-#birthplace-chart .bar-value .bar-percentage {
-    min-width: 54px;
-    font-variant-numeric: tabular-nums;
-}
-
-#birthplace-chart .bar-value .bar-gender-detail {
-    min-width: 110px;
-    font-size: 0.75rem;
-    font-weight: normal;
-    color: var(--text-secondary);
-    font-variant-numeric: tabular-nums;
-}
-
-#generation-chart {
-    overflow-x: auto;
-}
-
 #generation-chart .bar-row {
     grid-template-columns: 60px 1fr 340px;
     min-width: 580px;
 }
 
-#generation-chart .bar-value {
+/* 棒グラフ数値欄共通スタイル（等幅整列） */
+.bar-chart-container .bar-value {
     display: flex;
     align-items: center;
     gap: 4px;
     white-space: nowrap;
 }
 
-#generation-chart .bar-value .bar-count {
+.bar-chart-container .bar-value .bar-count {
     min-width: 44px;
     text-align: right;
     font-variant-numeric: tabular-nums;
 }
 
-#generation-chart .bar-value .bar-percentage {
+.bar-chart-container .bar-value .bar-percentage {
     min-width: 54px;
     font-variant-numeric: tabular-nums;
 }
 
-#generation-chart .bar-value .bar-gender-detail {
+.bar-chart-container .bar-value .bar-gender-detail {
     min-width: 110px;
     font-size: 0.75rem;
     font-weight: normal;
     color: var(--text-secondary);
     font-variant-numeric: tabular-nums;
-}
-
-.bar-gender-detail {
-    font-size: 0.75rem;
-    font-weight: normal;
-    color: var(--text-secondary);
-    margin-left: 4px;
 }
 
 .bar-female-badge {
