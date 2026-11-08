@@ -14,3 +14,7 @@ Thumbs.db
 data_full.js
 data_test.js
 error_logs.txt
+
+# ローカルサーバー状態管理
+.server_port
+.server_pid
