@@ -13,8 +13,8 @@
 |:---:|:---|:---|:---|:---:|
 | **Track [Secondary-Source-Wikipedia]** | **公認二次データソース（Wikipedia/Wikidata）連携基盤** | **公式障害時フォールバック & 属性欠損自動補完**<br>- `wiki_client.py`（Wikidata SPARQL & Wikipedia MediaWiki API）の新設<br>- `scraper.py` の公式取得障害時自動フォールバックおよび欠損補完（`--wiki-enrich`）<br>- `manualLock: true` 最優先保護と補完メタデータ（`secondary_source`）の付与 | 公式サイト通信障害時の事業継続性確保、出身地・生年月日欠損レコードの客観的解決 | **【完了】 (Drop 8)** |
 | **Track [Data-Integrity]** | **データ保護・保存堅牢化・リポジトリ整理** | **`manualLock` 対応・アトミック保存・重複ファイル整理・標準ヘッダー**<br>- `scraper.py` の手動修正データ保護フラグ（`manualLock: true`）対応<br>- `data.json` 廃止と `data.js` への一本化・一時ファイル経由アトミック書き込み（`os.replace`）<br>- Git 管理対象からの重複バックアップ（`data_full.*`）除外・`.gitignore` 整備<br>- 標準ブラウザヘッダー（Chrome 128相当）およびレートリミット（0.35〜1.0秒）の厳格適用 | スクレイピング再取得時の手動修正データ保護、保存中断によるファイル破損防止、リポジトリ軽量化 | **【完了】 (Drop 7)** |
-| **Track [Testing]** | **統合テストスイート・パーサー回帰テスト基盤構築** | **`testing/run_test_suite.py` の新設・パーサー回帰テスト網羅**<br>- 生年月日、出身地、出身校・学部の全過去エッジケース（ID 036, 070, 234, 315, 477, 546, 591, 594, 621, 633 等）の単体テスト作成<br>- データセット整合性（712名欠損ゼロ・型チェック）およびHTML構造・JS構文スモークテストの1コマンド階層実行 | パーサー改修時の回帰バグ防止、品質保証の自動化 | 構想（次期候補） |
-| **Track [UI-Consistency-Perf]** | **初回ソート不整合是正・DOM描画最適化・XSS保護** | **ソート状態のUI同期 & `DocumentFragment` 一括描画 & エスケープ徹底**<br>- 初回読み込み時のソート状態（ヘッダー表示 `ID ▲` と実際の年齢降順の乖離）の解消<br>- 712行のテーブル描画を `DocumentFragment` による一括DOM挿入へ最適化<br>- 動的プロパティ描画時のHTMLサニタイズ・エスケープ処理の徹底 | 初期表示の整合性確保、一覧テーブル再描画の体感速度向上、堅牢なセキュリティ | 構想 |
+| **Track [Testing]** | **統合テストスイート・Design Quality Gate 構築** | **`testing/run_test_suite.py` の新設・4段階品質ゲート網羅**<br>- Gate 1（静的CSS/DOM/XSS検査）、Gate 2（パーサー21件単体回帰テスト）、Gate 3（712名データ整合性検査）、Gate 4（フロントエンド描画検証）の一括自動実行 | パーサー改修時の回帰バグ防止、Design Quality Gate による品質自動保証 | **【完了】 (Drop 22)** |
+| **Track [UI-Consistency-Perf]** | **初回ソート整合・DOM最適化・XSS保護・デザインハーネス準拠** | **ソート状態のUI完全同期 & `DocumentFragment` 一括描画 & `escapeHtml` 徹底 & Slate & Blue CSS トークン・Light/Dark テーマ対応**<br>- 初回読み込み時のソート状態（`currentSort = { field: 'id', direction: 1 }`）と静的マークアップ（`ID ▲`）の100%一致<br>- 件数ステータスバーのテーブル直上配置・0件項目除外（`BAN-02`）<br>- 全テーブル描画における `escapeHtml()` の網羅適用（`BAN-10`）<br>- `Design.md` §1.1 準拠の標準 Slate & Blue CSS トークン体系および `[data-theme="dark"]` / テーマ切替ボタン | 初期表示の完全整合、一覧テーブル描画高速化、堅牢なセキュリティ、統合デザインハーネス準拠 | **【完了】 (Drop 22)** |
 | **Track [Search-Filter-UX]** | **フリーワード検索（漢字・ふりがな）& 出身地フィルタ拡張** | **氏名/ふりがなインクリメンタル検索 & 出身地フィルタ（グラフ連動）**<br>- 氏名・ふりがなによるリアルタイムインクリメンタル検索ボックスの実装<br>- 出身地ドロップダウンフィルタの追加および棒グラフ行クリック時の連動絞り込み | 特定議員の即時検索、出身地軸での議員探索UXの大幅向上 | 構想 |
 | **Track [Analytics-Expansion]** | **属性分析チャートの拡充（学歴・当選回数・年代別）** | **出身校上位ランキング・当選回数分布・年代別ヒストグラム**<br>- 年代別（20代〜80代）の棒グラフ可視化 & 性別色分け切替機能<br>- 出身校別（トップ20等）の棒グラフ可視化<br>- 当選回数別の構成比チャート（新人・中堅・ベテラン比率） | 多角的な議会デモグラフィックス分析ダッシュボードへの進化 | **一部完了(Drop 14)**<br>(年代別グラフ配備済) |
 
@@ -100,6 +100,7 @@
 
 | Drop ID | 完了日 | 施策名 | 主な変更対象 | 到達成果・定量数値 | ステータス |
 |:---:|:---:|:---|:---|:---|:---:|
+| **Drop 22** | **2026-11-18** | **Track [Design-Harness]: 統合デザインハーネス準拠改修 & Design Quality Gate 統合テスト配備** | `style.css`<br>`index.html`<br>`app.js`<br>`testing/run_test_suite.py` | `Design.md` 準拠の標準 Slate & Blue トークン体系への移行、`[data-theme="dark"]` & テーマ切替ボタン（`localStorage` 永続化）、Sticky グラスモーフィズムヘッダー、初期ソート（`id` 昇順）・ヘッダー（`ID ▲`）の100%一致、件数ステータスバーのテーブル直上配置、0件選択肢除外（`BAN-02`）、全動的埋め込みへの `escapeHtml` 適用（`BAN-10`）、4段階品質ゲートを検証する `testing/run_test_suite.py` の配備（Gate 1〜4 完全合格）。 | **【完了】** |
 | **Drop 21** | **ローカルサーバー自動起動スクリプト (`start.bat`) 配備 & ポート 8007/8057 統合** | **2026-11-08** | 全プロジェクトポート規約準拠の `start.bat` 新設、ポート 8007/8057 自動探索、多重起動防止、状態記録ファイル (`.server_port`, `.server_pid`) の配備および `README.md` 更新。 |
 | **Drop 20** | **リファクタリングPhase 3（バックエンドモジュール分離 & 回帰テスト基盤）** | **2026-11-07** | `scraper.py` から `parsers.py`（属性抽出正規化）および `storage.py`（アトミック保存・退避復元）を分離し、`test_parsers.py`（21ケース）を新設。 |
 | **Drop 19** | 2026-11-07 | **Track [Refactoring] (Phase 2): フロントエンド共通化・一覧描画高速化・サニタイズ** | `app.js` | 出身地別・年代別棒グラフ描画ロジックの汎用コンポーネント化（`renderBarChartRows` 新設・約150行の重複排除）、一覧テーブル・会派テーブル描画の `DocumentFragment` 一括挿入によるリフロー削減・高速化、`escapeHtml` サニタイズ関数の配備 | **【完了】** |
@@ -125,6 +126,31 @@
 ---
 
 ## 4. アーカイブ：実装済み一覧（詳細）
+
+### 【Drop 22】Track [Design-Harness]: 統合デザインハーネス準拠改修 & Design Quality Gate 統合テスト配備（2026-11-18）
+- **背景・課題**: `D:\dev\Orchestration\Design.md`（統合デザインハーネス仕様書）および `GLOBAL_RULES.md` §6 に準拠するため、独自 CSS 変数（`--bg-color`, `--text-color`, `--card-bg` 等）の標準 Slate & Blue トークン体系への統一、Light / Dark 両対応、Sticky グラスモーフィズムヘッダーの導入が求められた。また、初回表示時のソートヘッダー（`ID ▲`）と実際の描画順の乖離解消、件数表示のテーブル直上への配置、0件選択肢の非露出（`BAN-02`）、全動的文字列埋め込みに対する `escapeHtml()` の徹底適用（`BAN-10`）、および Design Quality Gate 4段階を一括検証する統合テスト基盤（`testing/run_test_suite.py`）の配備が必要であった。
+- **技術的変更内容**:
+  1. `style.css`:
+     - `:root, [data-theme="light"]` に `Design.md` §1.1 の標準トークン（`--bg-primary`, `--bg-secondary`, `--bg-card`, `--bg-glass`, `--border-color`, `--text-primary`, `--text-secondary`, `--accent-primary`, `--color-wiki` 等）を完全配備。
+     - `[data-theme="dark"]` セレクタおよび対応するダークカラートークンを定義。
+     - `header`: Sticky グラスモーフィズム仕様（`position: sticky; top: 0; z-index: 100; background: var(--bg-glass); backdrop-filter: blur(14px);`）を適用。
+     - テーマ切替ボタン（`.theme-toggle-btn`）およびステータスバー（`.status-bar`）のスタイルを配備。
+     - Wikipedia補完情報（`.source-wiki`）および凡例ドットに `--color-wiki`（Light: `#c2410c` / Dark: `#fb923c`）を割り当て、両テーマで高コントラストを維持。
+  2. `index.html`:
+     - ヘッダー右端にテーマ切替ボタン（`<button id="theme-toggle" class="theme-toggle-btn">`）を新設。
+     - フィルターバー直下・テーブル直上に `<div id="status-bar" class="status-bar"><span id="pagination-info" class="pagination-info">表示: - 名 / 全 - 名</span></div>` を配置（下部から移動）。
+     - 初期ソートヘッダー（`<th class="sortable" id="sort-id">ID ▲</th>`）の整合。
+  3. `app.js`:
+     - `initTheme()` / `applyTheme()` / `getStoredTheme()` / `setStoredTheme()` を実装し、`localStorage` によるテーマ状態永続化（デフォルト `'light'`）および即時安全適用を配備。
+     - 初期ソートを `currentSort = { field: 'id', direction: 1 }` に設定し、データ配列を数値 ID 昇順でソート、ヘッダー表示と 100% 完全同期。
+     - `populatePartyFilter`, `populateBirthplaceFilter`, `populateSchoolFilter`: 人数 `count > 0` の項目のみを動的に追加し、0件選択肢を完全非表示（`BAN-02`）。
+     - `renderMembersList`: `m.id`, `m.name`, `m.house`, `m.party`, `m.profile_url`, `m.birthdate`, `m.birthplace`, `m.school`, `m.faculty`, `m.gender` 等のすべての動的文字列埋め込みに `escapeHtml()` を適用（`BAN-10`）。`DocumentFragment` による一括描画を維持。
+  4. `testing/run_test_suite.py`（新設）:
+     - Gate 1: 静的CSS/DOM/XSS検査（インライン `<style>` 0件、必須UI要素存在、標準トークン存在、`escapeHtml` 網羅、`DocumentFragment` 使用）
+     - Gate 2: バックエンド構文・パーサー回帰テスト（`py_compile`、`test_parsers.py` 21件単体テスト実行）
+     - Gate 3: 国会議員データ整合性検査（`data.js` 712件の必須属性欠損0件検証）
+     - Gate 4: フロントエンド描画・計算回帰テスト（Node.js による `test_render_runtime.js`、`test_chart.js`、`test_birthplace_chart.js`、`test_today.js`、`test_female_ratio.js` の一括実行）
+- **成果**: `Design.md` の4層デザインハーネスに完全準拠。Design Quality Gate 4段階すべて合格（PASS）。UI整合性、描画速度、アクセシビリティ、セキュリティの全方位向上を達成。
 
 ### 【Drop 21】ローカルサーバー起動自動化 (`start.bat`) & ポート 8007/8057 統合（2026-11-08）
 - **背景・課題**: 全プロジェクト横断のポート規約（Orchestration）において、Giin にデフォルトポート `8007`、フォールバックポート `8057` が割り当てられた。ローカルサーバー起動の簡易化、ポート衝突時の自動回避、二重起動防止（起動済みの場合はブラウザを開くだけにする）、および稼働状態ファイル（`.server_port`, `.server_pid`）の記録が求められた。
