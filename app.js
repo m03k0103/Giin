@@ -1,3 +1,13 @@
+// 即時テーマ適用（FOUC防止・安全フォールバック）
+try {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem) {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (typeof document !== 'undefined' && document.documentElement) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+    }
+} catch (e) {}
+
 let globalData = {
     members: [],
     summary: {},
@@ -9,7 +19,59 @@ let currentSort = {
     direction: 1 // 1 for ascending, -1 for descending
 };
 
+
+/**
+ * テーマ（Light / Dark）の初期化および切替制御 (Design.md §1.1)
+ */
+function getStoredTheme() {
+    try {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem) {
+            return localStorage.getItem('theme') || 'light';
+        }
+    } catch (e) {}
+    return 'light';
+}
+
+function setStoredTheme(theme) {
+    try {
+        if (typeof localStorage !== 'undefined' && localStorage.setItem) {
+            localStorage.setItem('theme', theme);
+        }
+    } catch (e) {}
+}
+
+function initTheme() {
+    const savedTheme = getStoredTheme();
+    applyTheme(savedTheme);
+
+    if (typeof document !== 'undefined') {
+        const toggleBtn = document.getElementById('theme-toggle');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                const currentTheme = (document.documentElement && document.documentElement.getAttribute('data-theme')) || 'light';
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                applyTheme(newTheme);
+                setStoredTheme(newTheme);
+            });
+        }
+    }
+}
+
+function applyTheme(theme) {
+    if (typeof document !== 'undefined' && document.documentElement) {
+        document.documentElement.setAttribute('data-theme', theme);
+        const toggleBtn = document.getElementById('theme-toggle');
+        if (toggleBtn) {
+            toggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+            const label = theme === 'dark' ? 'ライトテーマに切替' : 'ダークテーマに切替';
+            toggleBtn.setAttribute('aria-label', label);
+            toggleBtn.title = label;
+        }
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    initTheme();
     fetchData();
 
     document.getElementById('filter-house').addEventListener('change', renderMembersList);
@@ -179,13 +241,13 @@ async function fetchData() {
         renderBirthplaceChart();
         renderGenerationChart();
         
-        // 初回は年齢の降順でソート
-        currentSort = { field: 'age', direction: -1 };
+        // 初回はIDの昇順でソート（HTMLヘッダーの ID ▲ と完全同期: Design.md §1.4-2）
+        currentSort = { field: 'id', direction: 1 };
         updateSortHeaders();
         globalData.members.sort((a, b) => {
-            if (a.age === null) return 1;
-            if (b.age === null) return -1;
-            return (b.age - a.age);
+            const idA = parseInt(a.id, 10) || 0;
+            const idB = parseInt(b.id, 10) || 0;
+            return idA - idB;
         });
         
         renderMembersList();
@@ -516,16 +578,21 @@ function updateSummary(summary) {
 
 function populatePartyFilter(parties) {
     const select = document.getElementById('filter-party');
+    if (!select) return;
     const partyNames = Object.keys(parties).sort();
     
     // 既存のオプション（すべて以外）をクリア
     select.innerHTML = '<option value="all">すべて</option>';
     
     partyNames.forEach(party => {
-        const option = document.createElement('option');
-        option.value = party;
-        option.textContent = party;
-        select.appendChild(option);
+        const count = (parties[party] && parties[party].count) || 0;
+        // 0件要素は露出させない (Design.md BAN-02)
+        if (count > 0) {
+            const option = document.createElement('option');
+            option.value = party;
+            option.textContent = `${party} (${count}名)`;
+            select.appendChild(option);
+        }
     });
 }
 
@@ -583,10 +650,14 @@ function populateSchoolFilter(members) {
 
     select.innerHTML = '<option value="all">すべて (全校)</option>';
     schools.forEach(school => {
-        const option = document.createElement('option');
-        option.value = school;
-        option.textContent = `${school} (${schoolCounts[school]}名)`;
-        select.appendChild(option);
+        const count = schoolCounts[school] || 0;
+        // 0件要素は露出させない (Design.md BAN-02)
+        if (count > 0) {
+            const option = document.createElement('option');
+            option.value = school;
+            option.textContent = `${school} (${count}名)`;
+            select.appendChild(option);
+        }
     });
 }
 
@@ -728,7 +799,9 @@ function renderMembersList() {
             }
             return (a.id || '').localeCompare(b.id || '') * currentSort.direction;
         } else {
-            return (a.id || '').localeCompare(b.id || '') * currentSort.direction;
+            const idA = parseInt(a.id, 10) || 0;
+            const idB = parseInt(b.id, 10) || 0;
+            return (idA - idB) * currentSort.direction;
         }
     });
 
@@ -738,10 +811,12 @@ function renderMembersList() {
 
     filtered.forEach(m => {
         const tr = document.createElement('tr');
-        const nameCell = m.profile_url 
-            ? `<a href="${m.profile_url}" target="_blank" rel="noopener noreferrer" class="profile-link" title="公式プロフィールページを開く">${m.name} 🔗</a>`
-            : m.name;
-        const elecDisplay = m.elections !== undefined && m.elections !== null ? `${m.elections}回` : '-';
+        const safeName = escapeHtml(m.name || '-');
+        const safeUrl = m.profile_url ? escapeHtml(m.profile_url) : '';
+        const nameCell = safeUrl 
+            ? `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer" class="profile-link" title="公式プロフィールページを開く">${safeName} 🔗</a>`
+            : safeName;
+        const elecDisplay = (m.elections !== undefined && m.elections !== null) ? `${escapeHtml(m.elections)}回` : '-';
 
         const secFields = m.secondary_fields || (m.secondary_source === 'wikipedia' ? ['birthplace'] : []);
         const isWikiBdateFull = secFields.includes('birthdate');
@@ -750,60 +825,61 @@ function renderMembersList() {
         const isWikiBplace = secFields.includes('birthplace');
         const isWikiSchool = secFields.includes('school');
 
-        let bdateDisplay = m.birthdate || '-';
+        let bdateDisplay = escapeHtml(m.birthdate || '-');
         if (m.birthdate) {
+            const rawBdate = String(m.birthdate);
             if (isWikiBdateDay) {
                 // 日のみ補完: YYYY年M月 は通常色、D日 のみオレンジ色
-                const match = m.birthdate.match(/^(\d+年\d+月)(\d+日)$/);
+                const match = rawBdate.match(/^(\d+年\d+月)(\d+日)$/);
                 if (match) {
-                    bdateDisplay = `${match[1]}<span class="source-wiki" title="日をWikipediaより補完">${match[2]}</span>`;
+                    bdateDisplay = `${escapeHtml(match[1])}<span class="source-wiki" title="日をWikipediaより補完">${escapeHtml(match[2])}</span>`;
                 }
             } else if (isWikiBdateMonthDay) {
                 // 月日を補完: YYYY年 は通常色、M月D日 のみオレンジ色
-                const match = m.birthdate.match(/^(\d+年)(\d+月\d+日)$/);
+                const match = rawBdate.match(/^(\d+年)(\d+月\d+日)$/);
                 if (match) {
-                    bdateDisplay = `${match[1]}<span class="source-wiki" title="月日をWikipediaより補完">${match[2]}</span>`;
+                    bdateDisplay = `${escapeHtml(match[1])}<span class="source-wiki" title="月日をWikipediaより補完">${escapeHtml(match[2])}</span>`;
                 }
             } else if (isWikiBdateFull) {
                 // 公式に生年月日未記載で全量補完: 生年は通常色、月日のみオレンジ色
-                const match = m.birthdate.match(/^(\d+年)(.*)$/);
+                const match = rawBdate.match(/^(\d+年)(.*)$/);
                 if (match) {
-                    bdateDisplay = `${match[1]}<span class="source-wiki" title="月日をWikipediaより補完">${match[2]}</span>`;
+                    bdateDisplay = `${escapeHtml(match[1])}<span class="source-wiki" title="月日をWikipediaより補完">${escapeHtml(match[2])}</span>`;
                 } else {
-                    bdateDisplay = `<span class="source-wiki" title="Wikipediaより補完">${m.birthdate}</span>`;
+                    bdateDisplay = `<span class="source-wiki" title="Wikipediaより補完">${escapeHtml(rawBdate)}</span>`;
                 }
             }
         }
 
         // 年齢（生年に基づくため通常色を維持）
-        const ageDisplay = formatAge(m.age);
+        const ageDisplay = escapeHtml(formatAge(m.age));
 
-        const bplaceText = m.birthplace || '-';
+        const safeBplace = escapeHtml(m.birthplace || '-');
         const bplaceDisplay = isWikiBplace 
-            ? `<span class="source-wiki" title="Wikipedia（二次情報源）より取得">${bplaceText}</span>` 
-            : bplaceText;
+            ? `<span class="source-wiki" title="Wikipedia（二次情報源）より取得">${safeBplace}</span>` 
+            : safeBplace;
 
-        const schoolText = m.school || '-';
+        const safeSchool = escapeHtml(m.school || '-');
         const schoolDisplay = isWikiSchool 
-            ? `<span class="source-wiki" title="Wikipedia（二次情報源）より取得">${schoolText}</span>` 
-            : schoolText;
+            ? `<span class="source-wiki" title="Wikipedia（二次情報源）より取得">${safeSchool}</span>` 
+            : safeSchool;
 
-        const facultyText = m.faculty || '-';
+        const safeFaculty = escapeHtml(m.faculty || '-');
         const facultyDisplay = (isWikiSchool && m.faculty && m.faculty !== '-' && m.faculty !== 'N/A')
-            ? `<span class="source-wiki" title="Wikipedia（二次情報源）より取得">${facultyText}</span>` 
-            : facultyText;
+            ? `<span class="source-wiki" title="Wikipedia（二次情報源）より取得">${safeFaculty}</span>` 
+            : safeFaculty;
 
         const isWikiGender = secFields.includes('gender');
-        const genderText = m.gender || '-';
+        const safeGender = escapeHtml(m.gender || '-');
         const genderDisplay = isWikiGender 
-            ? `<span class="source-wiki" title="Wikipedia（二次情報源）より取得">${genderText}</span>` 
-            : genderText;
+            ? `<span class="source-wiki" title="Wikipedia（二次情報源）より取得">${safeGender}</span>` 
+            : safeGender;
 
         tr.innerHTML = `
-            <td>${m.id || '-'}</td>
+            <td>${escapeHtml(m.id || '-')}</td>
             <td>${nameCell}</td>
-            <td>${m.house}</td>
-            <td>${m.party}</td>
+            <td>${escapeHtml(m.house || '-')}</td>
+            <td>${escapeHtml(m.party || '-')}</td>
             <td>${elecDisplay}</td>
             <td>${bdateDisplay}</td>
             <td>${ageDisplay}</td>
@@ -816,5 +892,8 @@ function renderMembersList() {
     });
 
     if (fragment !== tbody) { tbody.appendChild(fragment); }
-    document.getElementById('pagination-info').textContent = `表示件数: ${filtered.length}件`;
+    const pagInfo = document.getElementById('pagination-info');
+    if (pagInfo) {
+        pagInfo.textContent = `表示: ${filtered.length} 名 / 全 ${globalData.members.length} 名`;
+    }
 }
