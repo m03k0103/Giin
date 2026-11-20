@@ -1,6 +1,6 @@
 # 国会議員 属性データ可視化ダッシュボード 改善・機能拡充マスタードキュメント (Drops.md)
 
-> 最終更新: 2026-11-08  
+> 最終更新: 2026-11-20  
 > 運用規約は [`GLOBAL_RULES.md`](file:///C:/Users/m03k0/.gemini/antigravity/rules/GLOBAL_RULES.md) 第3章7項、および [`AGENTS.md`](file:///d:/dev/Giin/AGENTS.md) に準拠します。  
 > 未着手の将来構想テーマは **「Track（トラック）」** として管理し、着手・完了した個別施策単位にはその時点の最新連番を付与して **「Drop（ドロップ）」** としてアーカイブ化します。  
 > 本ドキュメントは、国会議員 属性データ可視化ダッシュボードの継続的改善ロードマップおよび実施記録を一元管理するマスタードキュメントです。
@@ -15,6 +15,7 @@
 | **Track [Data-Integrity]** | **データ保護・保存堅牢化・リポジトリ整理** | **`manualLock` 対応・アトミック保存・重複ファイル整理・標準ヘッダー**<br>- `scraper.py` の手動修正データ保護フラグ（`manualLock: true`）対応<br>- `data.json` 廃止と `data.js` への一本化・一時ファイル経由アトミック書き込み（`os.replace`）<br>- Git 管理対象からの重複バックアップ（`data_full.*`）除外・`.gitignore` 整備<br>- 標準ブラウザヘッダー（Chrome 128相当）およびレートリミット（0.35〜1.0秒）の厳格適用 | スクレイピング再取得時の手動修正データ保護、保存中断によるファイル破損防止、リポジトリ軽量化 | **【完了】 (Drop 7)** |
 | **Track [Testing]** | **統合テストスイート・Design Quality Gate 構築** | **`testing/run_test_suite.py` の新設・4段階品質ゲート網羅**<br>- Gate 1（静的CSS/DOM/XSS検査）、Gate 2（パーサー21件単体回帰テスト）、Gate 3（712名データ整合性検査）、Gate 4（フロントエンド描画検証）の一括自動実行 | パーサー改修時の回帰バグ防止、Design Quality Gate による品質自動保証 | **【完了】 (Drop 22)** |
 | **Track [UI-Consistency-Perf]** | **初回ソート整合・DOM最適化・XSS保護・デザインハーネス準拠** | **ソート状態のUI完全同期 & `DocumentFragment` 一括描画 & `escapeHtml` 徹底 & Slate & Blue CSS トークン・Light/Dark テーマ対応**<br>- 初回読み込み時のソート状態（`currentSort = { field: 'id', direction: 1 }`）と静的マークアップ（`ID ▲`）の100%一致<br>- 件数ステータスバーのテーブル直上配置・0件項目除外（`BAN-02`）<br>- 全テーブル描画における `escapeHtml()` の網羅適用（`BAN-10`）<br>- `Design.md` §1.1 準拠の標準 Slate & Blue CSS トークン体系および `[data-theme="dark"]` / テーマ切替ボタン | 初期表示の完全整合、一覧テーブル描画高速化、堅牢なセキュリティ、統合デザインハーネス準拠 | **【完了】 (Drop 22)** |
+| **Track [Security-ZAP-DAST]** | **脆弱性スキャン（OWASP ZAP DAST）導入 & セキュリティ強化** | **CI/CD 自動スキャン・検出脆弱性管理・ローカル安全制約・多層防御**<br>- `.github/workflows/zap-dast.yml` による DAST 自動実行（PR/push: baseline, 週次: full）<br>- `.zap/evaluate_zap_report.py`（High リスクゲート判定 & 非ローカル拒否安全ガード）<br>- `.zap/rules.tsv` による誤検知ノイズ制御および静的ホスティングヘッダー管理<br>- `docs/security-scan.md` およびローカル Docker 実行スクリプト（`scripts/`）の配備<br>- `BAN-10`（`escapeHtml` 網羅適用）と連携した DOM-based XSS 防止 | CI/CD 自動脆弱性検出、High リスク混入防止、静的ホスティング特性に応じた適切なアラート管理、安全なローカル検証環境の確立 | **【完了】 (Drop 23)** |
 | **Track [Search-Filter-UX]** | **フリーワード検索（漢字・ふりがな）& 出身地フィルタ拡張** | **氏名/ふりがなインクリメンタル検索 & 出身地フィルタ（グラフ連動）**<br>- 氏名・ふりがなによるリアルタイムインクリメンタル検索ボックスの実装<br>- 出身地ドロップダウンフィルタの追加および棒グラフ行クリック時の連動絞り込み | 特定議員の即時検索、出身地軸での議員探索UXの大幅向上 | 構想 |
 | **Track [Analytics-Expansion]** | **属性分析チャートの拡充（学歴・当選回数・年代別）** | **出身校上位ランキング・当選回数分布・年代別ヒストグラム**<br>- 年代別（20代〜80代）の棒グラフ可視化 & 性別色分け切替機能<br>- 出身校別（トップ20等）の棒グラフ可視化<br>- 当選回数別の構成比チャート（新人・中堅・ベテラン比率） | 多角的な議会デモグラフィックス分析ダッシュボードへの進化 | **一部完了(Drop 14)**<br>(年代別グラフ配備済) |
 
@@ -72,6 +73,38 @@
 
 ---
 
+### 【Track: Security-ZAP-DAST】脆弱性スキャン（OWASP ZAP DAST）導入 & セキュリティ強化
+
+Web アプリケーションのセキュリティ品質を客観的・継続的に担保するため、OWASP ZAP（`ghcr.io/zaproxy/zaproxy:stable`）を用いた動的アプリケーションセキュリティテスト（DAST）パイプラインを構築し、静的ホスティング環境（GitHub Pages 等）特有のアラート管理および多層防御を確立する。
+
+| CR ID | 分類 | 内容 | 対象ファイル | 状態 |
+|:---:|:---:|:---|:---|:---:|
+| **CR-SEC-01** | CI/CD パイプライン | **GitHub Actions DAST ワークフロー新設**<br>PR および `main` ブランチプッシュ時のベースラインスキャン（パッシブスキャン中心）、および日曜週次定期フルスキャン（アクティブスキャンを含む詳細診断）を自動実行。High リスク検出時のみ CI 失敗とする判定ゲートを構築 | `.github/workflows/zap-dast.yml` | **【完了】 (Drop 23)** |
+| **CR-SEC-02** | レポート判定 & 安全制約 | **判定スクリプト配備 & 非ローカルスキャン拒否ガード**<br>ZAP レポート（JSON）を集計して High / Medium / Low / Informational を分類判定する `evaluate_zap_report.py` を配備。`--validate-target` オプションにより、`127.0.0.1` / `localhost` / `host.docker.internal` 以外の外部・本番 URL に対する誤スキャンを物理的に拒否するフェイルセーフを実装 | `.zap/evaluate_zap_report.py` | **【完了】 (Drop 23)** |
+| **CR-SEC-03** | ルール制御・チューニング | **スキャンルール制御ファイル（`rules.tsv`）の策定**<br>ローカル一時サーバー特有の無害な検出（Timestamp Disclosure 等）を `IGNORE` 設定し、GitHub Pages などの本番静的ホスティング側で管理されるべきセキュリティヘッダー（CSP, X-Frame-Options, HSTS 等）を `WARN` に設定してノイズを抑制 | `.zap/rules.tsv` | **【完了】 (Drop 23)** |
+| **CR-SEC-04** | ローカル実行支援 | **ローカル Docker 再現スクリプトの配備**<br>Windows PowerShell（`scripts/run-zap-scan.ps1`）および Bash（`scripts/run-zap-scan.sh`）により、ローカル Docker 環境で ZAP スキャンを 1 コマンドで再現・検証可能化 | `scripts/run-zap-scan.ps1`<br>`scripts/run-zap-scan.sh` | **【完了】 (Drop 23)** |
+| **CR-SEC-05** | ドキュメント & ガイド | **セキュリティスキャン仕様書の整備 & README 連携**<br>パイプライン仕様、ローカル実行手順、ルール調整ガイドをまとめた `docs/security-scan.md` を作成し、`README.md` にセクションおよびリンクを追加 | `docs/security-scan.md`<br>`README.md`<br>`.zap/.gitignore` | **【完了】 (Drop 23)** |
+| **CR-SEC-06** | XSS 脆弱性防御 (`BAN-10`) | **DOM-based XSS 対策の網羅徹底（既存連携）**<br>Drop 19〜22 にて `app.js` 内の全 20 箇所の動的文字列埋め込みに `escapeHtml()` を適用済み。`testing/run_test_suite.py`（Gate 1）によりエスケープ漏れ 0 件を静的検査で常時担保 | `app.js`<br>`testing/run_test_suite.py` | **【完了】 (Drop 22)** |
+
+#### 検出アラートの分類と対応方針
+
+ZAP DAST スキャンにより検出される主要なセキュリティアラートに対し、本プロジェクトの構成（静的 HTML/JS/CSS + GitHub Pages ホスティング）を踏まえた対応方針を以下のように定義・実装している：
+
+1. **High リスク (Risk Code 3)**:
+   - **検出実績**: **0 件**。
+   - **対応方針**: High リスクが検出された場合は CI を即時失敗（`exit 1`）とし、脆弱性が解消されるまでマージをブロックする。
+2. **Medium リスク (Risk Code 2)**:
+   - **`90003` (Sub Resource Integrity Attribute Missing)**: Google Fonts 等の外部動的 CDN CSS 読み込みに対する警告。CDN 側で動的にレスポンスが生成されるためハッシュ固定の SRI 付与は行わず、`.zap/rules.tsv` にて管理。
+   - **`10038` (Content Security Policy (CSP) Header Not Set)**: HTTP レスポンスヘッダーによる CSP 未設定に対する警告。静的ホスティング（GitHub Pages）ではサーバー側ヘッダー制御が制限されるため、`.zap/rules.tsv` で `WARN` 設定とし、将来的な `<meta http-equiv="Content-Security-Policy">` タグ導入の検討項目として整理。
+   - **`10020` (Anti-clickjacking Header - X-Frame-Options)**: クリックジャッキング防止ヘッダー未設定に対する警告。GitHub Pages 基盤側で管理されるため、CI 上のローカルサーバーでは `.zap/rules.tsv` にて `WARN` 扱いとする。
+3. **Low / Informational リスク (Risk Code 0〜1)**:
+   - **`10021` (X-Content-Type-Options Header Missing)**, **`10035` (Strict-Transport-Security Header Not Set)**, **`10063` (Permissions-Policy Header Not Set)**, **`90004` (Cross-Domain Misconfiguration)**: 静的ホスティング・CDN プロキシ層で付与・管理されるべきセキュリティヘッダー。`.zap/rules.tsv` にて `WARN` 設定。
+   - **`10096` (Timestamp Disclosure)**, **`10027` (Information Disclosure - Suspicious Comments)**, **`10049` (Storable and Cacheable Content)**, **`10050` (Retrieved from Cache)**: ローカル開発・CI 検証用の Python `http.server` に起因する無害なノイズ。`.zap/rules.tsv` にて `IGNORE` 設定。
+4. **XSS 対策 (`BAN-10`)**:
+   - DAST スキャンの重要対象である Cross-Site Scripting (XSS) に対し、フロントエンド側で全動的データ埋め込み（議員名、会派名、プロフィールURL、生年月日、出身地、出身校等）を `escapeHtml()` でサニタイズ処理。DOM-based XSS の侵入経路を完全に遮断。
+
+---
+
 ### 【Track: Search-Filter-UX】フリーワード検索（漢字・ふりがな）& 出身地フィルタ拡張
 
 議員一覧テーブルの探索性と利便性を向上させる。
@@ -96,10 +129,11 @@
 
 ---
 
-## 3. 実装済 Drop一覧（Drop 1 〜 Drop 19）
+## 3. 実装済 Drop一覧（Drop 1 〜 Drop 23）
 
 | Drop ID | 完了日 | 施策名 | 主な変更対象 | 到達成果・定量数値 | ステータス |
 |:---:|:---:|:---|:---|:---|:---:|
+| **Drop 23** | **2026-11-20** | **Track [Security-ZAP-DAST]: 脆弱性スキャン（OWASP ZAP DAST）パイプライン配備 & セキュリティ防御強化** | `.github/workflows/zap-dast.yml`<br>`.zap/evaluate_zap_report.py`<br>`.zap/rules.tsv`<br>`.zap/.gitignore`<br>`docs/security-scan.md`<br>`scripts/`<br>`README.md`<br>`Drops.md` | OWASP ZAP DAST 自動スキャンワークフロー（PR/push: baseline, 週次: full）新設、High リスク 0 件のゲート通過判定、非ローカル URL スキャン拒否安全ガード（`--validate-target`）、静的ホスティング向けルール制御（`rules.tsv` によるノイズ除外および CSP/SRI 等の WARN 管理）、ローカル Docker 再現スクリプト（PowerShell/Bash）および詳細仕様書（`docs/security-scan.md`）配備、`BAN-10`（`escapeHtml` 網羅適用）と連携した多層防御の確立、`test_zap_config.py` 合格。 | **【完了】** |
 | **Drop 22** | **2026-11-18** | **Track [Design-Harness]: 統合デザインハーネス準拠改修 & Design Quality Gate 統合テスト配備** | `style.css`<br>`index.html`<br>`app.js`<br>`testing/run_test_suite.py` | `Design.md` 準拠の標準 Slate & Blue トークン体系への移行、`[data-theme="dark"]` & テーマ切替ボタン（`localStorage` 永続化）、Sticky グラスモーフィズムヘッダー、初期ソート（`id` 昇順）・ヘッダー（`ID ▲`）の100%一致、件数ステータスバーのテーブル直上配置、0件選択肢除外（`BAN-02`）、全動的埋め込みへの `escapeHtml` 適用（`BAN-10`）、4段階品質ゲートを検証する `testing/run_test_suite.py` の配備（Gate 1〜4 完全合格）。 | **【完了】** |
 | **Drop 21** | **ローカルサーバー自動起動スクリプト (`start.bat`) 配備 & ポート 8007/8057 統合** | **2026-11-08** | 全プロジェクトポート規約準拠の `start.bat` 新設、ポート 8007/8057 自動探索、多重起動防止、状態記録ファイル (`.server_port`, `.server_pid`) の配備および `README.md` 更新。 |
 | **Drop 20** | **リファクタリングPhase 3（バックエンドモジュール分離 & 回帰テスト基盤）** | **2026-11-07** | `scraper.py` から `parsers.py`（属性抽出正規化）および `storage.py`（アトミック保存・退避復元）を分離し、`test_parsers.py`（21ケース）を新設。 |
@@ -126,6 +160,29 @@
 ---
 
 ## 4. アーカイブ：実装済み一覧（詳細）
+
+### 【Drop 23】Track [Security-ZAP-DAST]: 脆弱性スキャン（OWASP ZAP DAST）パイプライン配備 & セキュリティ防御強化（2026-11-20）
+- **背景・課題**: 国会議員ダッシュボードの公開運用に伴い、Web アプリケーションとしてのセキュリティ堅牢性を客観的・自動的に担保する体制が求められていた。特に、静的サイト環境における潜在的な動的脆弱性（DOM-based XSS、安全でない外部リソース読み込み、セキュリティヘッダー不備等）を CI/CD で自動検出し、High リスクの混入を未然に防止する動的脆弱性スキャン（DAST）基盤の導入が必要であった。また、CI 上で一時起動するローカル HTTP サーバー環境特有の無害なアラートと本番環境におけるセキュリティ課題を明確に分類・管理するルール設定、および外部サーバーに対する意図しない誤スキャンを物理的に防ぐ安全制約の実装が課題であった。
+- **技術的変更内容**:
+  1. `.github/workflows/zap-dast.yml`（新設）:
+     - PR および `main` ブランチプッシュ時の `zap-baseline.py`（パッシブスキャン中心・高速チェック）、および毎週日曜 04:00 JST の `zap-full-scan.py`（アクティブスキャンを含む包括診断）を自動実行する GitHub Actions ワークフローを配備。
+     - CI 環境内で `python3 -m http.server 8007 --bind 127.0.0.1` を一時起動し、`http://127.0.0.1:8007/index.html` に対して ZAP DAST を実行。
+     - スキャン結果の Artifact 保管（HTML / JSON / Markdown）、GitHub Actions Job Summary へのサマリー出力、PR への自動コメント連携を実装。
+  2. `.zap/evaluate_zap_report.py`（新設）:
+     - ZAP の JSON レポートをパースし、High (`riskcode == 3`), Medium (`riskcode == 2`), Low (`riskcode == 1`), Informational (`riskcode == 0`) を分類・集計する判定エンジンを配備。
+     - High リスク検出時のみ CI を失敗（`exit 1`）とし、Medium / Low は警告として通過させるゲート判定を実装。
+     - 安全制約ガード（`--validate-target`）: 対象 URL が `127.0.0.1`, `localhost`, `host.docker.internal` 以外の外部ホストまたは本番ドメインである場合、スキャン実行前に例外を送出して処理を即時中断するフェイルセーフを実装。
+  3. `.zap/rules.tsv`（新設）:
+     - ローカル一時サーバー特有の無害な検出（`10096` Timestamp Disclosure, `10027` Suspicious Comments, `10049` Storable Content, `10050` Cached Content）を `IGNORE` に設定し、CI ノイズを抑制。
+     - GitHub Pages などの静的ホスティング基盤層で管理されるべきセキュリティヘッダー（`10038` CSP, `10020` X-Frame-Options, `10021` X-Content-Type-Options, `10035` HSTS, `10063` Permissions-Policy, `90004` Cross-Domain）および動的 CDN リソースの SRI（`90003`）を `WARN` に設定して追跡管理。
+  4. `scripts/run-zap-scan.ps1`, `scripts/run-zap-scan.sh`（新設）:
+     - 開発者がローカル環境で Docker を用いて CI と同一の ZAP DAST スキャンを即座に再現・検証できるスクリプトを配備。
+  5. `docs/security-scan.md`, `README.md`（新設・更新）:
+     - パイプライン仕様、ローカル実行手順、安全制約、ルール調整方法をまとめた詳細ドキュメント `docs/security-scan.md` を作成。
+     - `README.md` に「セキュリティスキャン (OWASP ZAP DAST)」セクションを追加し、仕様書への導線を設置。
+  6. XSS 多層防御連携（`BAN-10` 既存強化）:
+     - DAST スキャンの重要検査項目である DOM-based XSS に対し、Drop 19〜22 で配備した `escapeHtml()` サニタイズ処理（`app.js` 全 20 箇所）によりスクリプトインジェクション耐性を確立。静的テスト（`testing/run_test_suite.py` Gate 1）と動的スキャン（ZAP DAST）の多層防御を実現。
+- **成果**: OWASP ZAP DAST 自動スキャンパイプラインの導入完了。High リスク 0 件（PASS）を確認。Orchestration 側の統合テスト（`D:\dev\Orchestration\zap\test_zap_config.py`）全 6 件合格、Giin 統合テスト（`testing/run_test_suite.py` Gate 1〜4）全件合格。
 
 ### 【Drop 22】Track [Design-Harness]: 統合デザインハーネス準拠改修 & Design Quality Gate 統合テスト配備（2026-11-18）
 - **背景・課題**: `D:\dev\Orchestration\Design.md`（統合デザインハーネス仕様書）および `GLOBAL_RULES.md` §6 に準拠するため、独自 CSS 変数（`--bg-color`, `--text-color`, `--card-bg` 等）の標準 Slate & Blue トークン体系への統一、Light / Dark 両対応、Sticky グラスモーフィズムヘッダーの導入が求められた。また、初回表示時のソートヘッダー（`ID ▲`）と実際の描画順の乖離解消、件数表示のテーブル直上への配置、0件選択肢の非露出（`BAN-02`）、全動的文字列埋め込みに対する `escapeHtml()` の徹底適用（`BAN-10`）、および Design Quality Gate 4段階を一括検証する統合テスト基盤（`testing/run_test_suite.py`）の配備が必要であった。
