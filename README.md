@@ -116,3 +116,7 @@ python -m http.server 8007
   - Wikidata（https://www.wikidata.org/）
 - **日本国民年齢データ（参考情報）**:
   - 国立社会保障・人口問題研究所「人口統計資料集(2024)」表12-8「都道府県別人口の平均年齢，中位数年齢および年齢構造指数：2022年」（https://www.ipss.go.jp/syoushika/tohkei/Popular/P_Detail2024.asp?fname=T12-08.htm）に基づく
+
+## セキュリティスキャン (OWASP ZAP DAST)
+
+GitHub Actions (`.github/workflows/zap-dast.yml`) により、PR / `main` プッシュ時のベースラインスキャンおよび定期フルスキャンを実施します。ローカル再現手順・`.zap/rules.tsv` の調整方法は [docs/security-scan.md](docs/security-scan.md) を参照してください。
